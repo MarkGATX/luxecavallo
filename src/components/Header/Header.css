@@ -1,17 +1,17 @@
 
 .cavaleLogoGold {
     display:block;
-    width:60%;     
+    width:50%;     
     filter: invert(90%) sepia(71%) saturate(1219%) hue-rotate(310deg) brightness(114%) contrast(106%);
-    right: calc(60% * -.5);
+    right: calc(50% * -.5);
     position:relative;
 
 }
 .cavaleLogo {
     display:block;
-    width:60%;
+    width:50%;
     filter: invert(3%) sepia(5%) saturate(5910%) hue-rotate(5deg) brightness(94%) contrast(84%);
-    left: calc(60% * -.5);
+    left: calc(50% * -.5);
     position:relative;
 
 }
