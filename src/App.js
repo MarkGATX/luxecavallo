@@ -4,7 +4,7 @@ import {ThemeProvider} from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import './App.css';
 
-let cavaleLightTheme = createTheme({
+let cavalloLightTheme = createTheme({
   palette: {
     mode:'light',
     background: {
@@ -55,10 +55,54 @@ let cavaleLightTheme = createTheme({
   },
 })
 
+cavalloLightTheme = createTheme(cavalloLightTheme, {
+  components: {
+    // Name of the component
+    MuiListItemButton: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          backgroundColor: cavalloLightTheme.palette.secondary.main,
+          color: cavalloLightTheme.palette.secondary.contrastText,
+          
+          '&:hover, &.Mui-focusVisible': {
+            backgroundColor: cavalloLightTheme.palette.headerBack.main,
+            color: cavalloLightTheme.palette.headerBack.contrastText,
+            scale:'105%',
+            '& svg:first-of-type': {
+              color: cavalloLightTheme.palette.headerBack.contrastText,
+            },
+           
+          },
+          '&:active': {
+            boxShadow: 'inset 0 2px 4px -1px rgba(0, 0, 0, .2), inset 0 4px 5px 0px rgba(0, 0, 0, .14), inset 0 1px 10px 0px rgba(0, 0, 0, .12)',
+          }
+        },
+      },
+    },
+    MuiListItemIcon: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          color: cavalloLightTheme.palette.secondary.contrastText,
+          
+          // '&:hover, &.Mui-focusVisible': {
+          //   color: cavalloLightTheme.palette.headerBack.contrastText,
+           
+          // },
+     
+        },
+      },
+    },
+  },
+});
+
 
 export default function App() {
   return (
-    <ThemeProvider theme={cavaleLightTheme}>
+    <ThemeProvider theme={cavalloLightTheme}>
       <CssBaseline/>
         <Header />
    </ThemeProvider>
