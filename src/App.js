@@ -34,6 +34,9 @@ let cavalloLightTheme = createTheme({
     tonalOffset: .2,
   },
   typography: {
+    fontFamily: "ainslie-sans", 
+    fontWeight: 400,
+    fontStyle: 'normal',
     h1: {
       fontFamily: 'aviano-flare'
     },

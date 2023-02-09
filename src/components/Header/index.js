@@ -18,7 +18,6 @@ import BlenderIcon from '@mui/icons-material/Blender';
 import Toolbar from "@mui/material/Toolbar";
 import InfoIcon from '@mui/icons-material/Info';
 import CallIcon from '@mui/icons-material/Call';
-import Divider from "@mui/material/Divider";
 
 
 const sideWidth = 200;
@@ -35,11 +34,7 @@ export default function Header() {
     const mainContrastText = useRef();
     const sideContrastHorse = useRef();
     const mainContrastHorse = useRef();
-    // const menuDrawer = useRef();
     const burger = useRef();
-
-   
-    
 
 
     function slideDrawer() {
@@ -47,13 +42,14 @@ export default function Header() {
         const menuDrawer = document.querySelector('.MuiDrawer-paper')
         console.log(menuDrawer)
         console.log(currentDrawer)
+        // true = drawer open, so if false, open drawer
         if (!currentDrawer) {
             gsap.to(sideContrastText.current, { duration: 1, x: -100 })
             gsap.to(sideContrastHorse.current, { duration: 1, x: -100 })
             gsap.to(mainContrastText.current, { duration: 1, x: -100 })
             gsap.to(mainContrastHorse.current, { duration: 1, x: -100 })
             gsap.to(burger.current, {duration:1, x:90})
-            gsap.to(menuDrawer, { duration: 1, ease: 'power2.out', x: 200, zIndex:1200 })
+            gsap.to(menuDrawer, { duration: 1, ease: 'power1.out', x: 200, zIndex:1200 })
         } else {
             gsap.to(menuDrawer, { duration: 1, ease: 'none', x: -200, zIndex:-1 })
             gsap.to(sideContrastText.current, { duration: 1, x: 0 })
@@ -89,13 +85,15 @@ export default function Header() {
                             zIndex: '-1',
                             left:'-200px',
                             position:'absolute',
-                            
+                            overflow:'hidden', 
+                            justifyContent: 'space-between',
+                            padding: '1rem 0 1rem 0' ,                          
                         },
                     }}
                     variant="permanent"
                     anchor="left"
                 >
-                    <Toolbar />
+                    {/* <Toolbar /> */}
                     <List>
                         {menuItems.map((item, index) => {
                             const text = Object.keys(item)[0];
@@ -113,8 +111,8 @@ export default function Header() {
                             );
                         })}
                     </List>
-                    <Toolbar />
-                    <Divider sx={{color:'primary.contrastText', borderColor:'secondary.contrastText'}}/>
+                    {/* <Toolbar /> */}
+                    {/* <Divider sx={{color:'primary.contrastText', borderColor:'secondary.contrastText'}}/> */}
                     <Toolbar />
                     <List>
                         {contactItems.map((item, index) => {
