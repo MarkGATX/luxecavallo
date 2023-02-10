@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const jewelrySchema = new Schema(
+const accessorySchema = new Schema(
     {
         name: {
             type:String,
@@ -27,6 +27,6 @@ const jewelrySchema = new Schema(
     }
 );
 
-const Jewelry = model('Jewelry', jewelrySchema);
+const Accessory = model('Accessory', accessorySchema);
 
-module.exports = Jewelry;
+module.exports = Accessory;
