@@ -18,11 +18,12 @@ import BlenderIcon from '@mui/icons-material/Blender';
 import Toolbar from "@mui/material/Toolbar";
 import InfoIcon from '@mui/icons-material/Info';
 import CallIcon from '@mui/icons-material/Call';
-
+import MaleIcon from '@mui/icons-material/Male';
+import FemaleIcon from '@mui/icons-material/Female';
 
 const sideWidth = 200;
 let drawerWidth = 200;
-const menuItems = [{ 'Clothes': CheckroomIcon }, { 'Accessories': DiamondIcon }, { 'Household': BlenderIcon }]
+const menuItems = [{ 'Men': MaleIcon }, {'Women': FemaleIcon}, { 'Accessories': DiamondIcon }, { 'Household': BlenderIcon }]
 const contactItems = [{ 'About Us': InfoIcon }, { 'Contact Us': CallIcon }]
 
 
