@@ -11,33 +11,13 @@ const womensSchema = new Schema(
         Gender: {
             type: String,
         },
-        Size: [
-            {
-                XS: {
-                    type: Number,
-                }
-            },
-            {
-                S: {
-                    type: Number,
-                }
-            },
-            {
-                M: {
-                    type: Number,
-                }
-            },
-            {
-                L: {
-                    type: Number,
-                },
-            },
-            {
-                XL: {
-                    type: Number,
-                }
-            }
-        ],
+        Size: {
+            XS: Number,
+            S: Number,
+            M: Number,
+            L: Number,
+            XL: Number
+        },
         imageURL: {
             type: String,
             required: true

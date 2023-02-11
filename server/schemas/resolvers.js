@@ -4,7 +4,7 @@ const {Mens, Womens, Accessory, Houseware} = require('../models')
 const resolvers = {
     Query: {
       mens: async () => {
-        // Get and return all documents from the classes collection
+        // Get and return all documents from the mens collection
         return await Mens.find({});
       },
       womens: async() => {

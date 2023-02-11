@@ -2,15 +2,13 @@
     {
         "Name":"Elegant 20's Dress",
         "Gender":"Women",
-        "Size": [
-            {
-                "XS":2,
-                "S":3,
-                "M":7,
-                "L":8,
-                "XL":0
-            }
-        ],
+        "Size": {
+            "XS": 2,
+            "S": 3,
+            "M": 5,
+            "L": 6,
+            "XL": 7
+            },
         "imageURL":"../../client/src/images/products/womens/20s_are_back.png",
         "Description":"Welcome back to the golden age of Downton Abbey, which we think is in the 1920's or Season 3, maybe 4. We just know Lady Mary got a bob haircut. Regardless, you can channel your Lady Mary in this dress inspired by the TV show that was inspired by history.",
         "Price":2600
@@ -18,15 +16,13 @@
     {
         "Name":"Blue",
         "Gender":"Women",
-        "Size": [
-            {
-                "XS":2,
-                "S":3,
-                "M":6,
-                "L":12,
-                "XL":20
-            }
-        ],
+        "Size": {
+            "XS": 2,
+            "S": 3,
+            "M": 5,
+            "L": 6,
+            "XL": 7
+            },
         "imageURL":"../../client/src/images/products/womens/blue.png",
         "Description":"It's got pockets. That's all you need to know.",
         "Price":2600
@@ -34,15 +30,13 @@
     {
         "Name":"Boho Mini-dress",
         "Gender":"Women",
-        "Size": [
-            {
-                "XS":2,
-                "S":1,
-                "M":23,
-                "L":12,
-                "XL":16
-            }
-        ],
+        "Size": {
+            "XS": 2,
+            "S": 3,
+            "M": 5,
+            "L": 6,
+            "XL": 7
+            },
         "imageURL":"../../client/src/images/products/womens/boho1.png",
         "Description":"Boho chic is back in luxury style with this amazingly comfortable mini-dress. Made from linen or maybe burlap. Purse and necklace accessories coming soon.",
         "Price":7600
@@ -50,15 +44,13 @@
     {
         "Name":"Pseudo Boho Mini-dress",
         "Gender":"Women",
-        "Size": [
-            {
-                "XS":2,
-                "S":3,
-                "M":23,
-                "L":6,
-                "XL":23
-            }
-        ],
+        "Size": {
+            "XS": 2,
+            "S": 3,
+            "M": 5,
+            "L": 6,
+            "XL": 7
+            },
         "imageURL":"../../client/src/images/products/womens/boho2.png",
         "Description":"Inspired by our own Boho Mini Dress, we made another version using 100% cotton with a slightly cleaner silhouette. Plus our Lead Designer resigned so we got to use the same pattern as the Boho Dress. Imitation is flattery or something like that. (No Francis, we're not paying you back pay for the design.)",
         "Price":1290
@@ -66,15 +58,13 @@
     {
         "Name":"Luxe Cavallo Dress3",
         "Gender":"Women",
-        "Size": [
-            {
-                "XS":2,
-                "S":2,
-                "M":145,
-                "L":13,
-                "XL":21
-            }
-        ],
+        "Size": {
+            "XS": 2,
+            "S": 3,
+            "M": 5,
+            "L": 6,
+            "XL": 7
+            },
         "imageURL":"../../client/src/images/products/womens/dark_silk_gold.png",
         "Description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
         "Price":16800
@@ -82,15 +72,13 @@
     {
         "Name":"Luxe Cavallo Dress4",
         "Gender":"Women",
-        "Size": [
-            {
-                "XS":2,
-                "S":2,
-                "M":145,
-                "L":13,
-                "XL":21
-            }
-        ],
+        "Size": {
+            "XS": 2,
+            "S": 3,
+            "M": 5,
+            "L": 6,
+            "XL": 7
+            },
         "imageURL":"../../client/src/images/products/womens/dark_silk_gold.png",
         "Description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
         "Price":16800
@@ -98,15 +86,13 @@
     {
         "Name":"Luxe Cavallo Dress5",
         "Gender":"Women",
-        "Size": [
-            {
-                "XS":2,
-                "S":2,
-                "M":145,
-                "L":13,
-                "XL":21
-            }
-        ],
+        "Size": {
+            "XS": 2,
+            "S": 3,
+            "M": 5,
+            "L": 6,
+            "XL": 7
+            },
         "imageURL":"../../client/src/images/products/womens/dark_silk_gold.png",
         "Description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
         "Price":16800
@@ -114,15 +100,13 @@
     {
         "Name":"Luxe Cavallo Dress6",
         "Gender":"Women",
-        "Size": [
-            {
-                "XS":2,
-                "S":2,
-                "M":145,
-                "L":13,
-                "XL":21
-            }
-        ],
+        "Size": {
+            "XS": 2,
+            "S": 3,
+            "M": 5,
+            "L": 6,
+            "XL": 7
+            },
         "imageURL":"../../client/src/images/products/womens/dark_silk_gold.png",
         "Description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
         "Price":16800
@@ -130,15 +114,13 @@
     {
         "Name":"Luxe Cavallo Dress7",
         "Gender":"Women",
-        "Size": [
-            {
-                "XS":2,
-                "S":2,
-                "M":145,
-                "L":13,
-                "XL":21
-            }
-        ],
+        "Size": {
+            "XS": 2,
+            "S": 3,
+            "M": 5,
+            "L": 6,
+            "XL": 7
+            },
         "imageURL":"../../client/src/images/products/womens/dark_silk_gold.png",
         "Description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
         "Price":16800
@@ -146,15 +128,13 @@
     {
         "Name":"Luxe Cavallo Dress8",
         "Gender":"Women",
-        "Size": [
-            {
-                "XS":2,
-                "S":2,
-                "M":145,
-                "L":13,
-                "XL":21
-            }
-        ],
+        "Size": {
+            "XS": 2,
+            "S": 3,
+            "M": 5,
+            "L": 6,
+            "XL": 7
+            },
         "imageURL":"../../client/src/images/products/womens/dark_silk_gold.png",
         "Description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
         "Price":16800
@@ -162,15 +142,13 @@
     {
         "Name":"Luxe Cavallo Dress9",
         "Gender":"Women",
-        "Size": [
-            {
-                "XS":2,
-                "S":2,
-                "M":145,
-                "L":13,
-                "XL":21
-            }
-        ],
+        "Size": {
+            "XS": 2,
+            "S": 3,
+            "M": 5,
+            "L": 6,
+            "XL": 7
+            },
         "imageURL":"../../client/src/images/products/womens/dark_silk_gold.png",
         "Description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
         "Price":16800
