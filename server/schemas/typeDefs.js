@@ -1,18 +1,59 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-//   # Define which fields are accessible from the Class model
-//   type Class {
-//     _id: ID
-//     name: String
-//     building: String
-//     creditHours: Int
-//   }
+  # Define which fields are accessible from the Mens model
+  type Mens {
+    Name: String!
+    Gender: String
+    Size: [Size]
+    imageURL: String!
+    Description: String!
+    Price: Float!
+  }
+  
+  type Size {
+    XS: Int
+    S: Int
+    M: Int
+    L: Int
+    XL: Int
+  }
 
-//   # Define which queries the front end is allowed to make and what data is returned
-//   type Query {
-//     classes: [Class]
-//   }
+  type Womens 
+  {
+    Name: String!
+  Gender: String
+  Size: [Size]
+  imageURL: String!
+  Description: String!
+  Price: Float!
+}
+
+type Accessory {
+    Name:String!
+    Price:Float!
+    Description:String!
+    Stock:Float!
+    imageURL:String!
+}
+
+type Houseware {
+    name:String!
+    price:Float!
+    description:String!
+    stock:Float!
+    imageURL:String!
+}
+  
+
+  
+type Query {
+    mens: [Mens]
+    womens: [Womens]
+    accessories: [Accessory]
+    housewares: [Houseware]
+  }
+  
 `;
 
 module.exports = typeDefs;

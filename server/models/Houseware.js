@@ -12,11 +12,11 @@ const housewareSchema = new Schema(
                 type:Number,
                 required:true,
             },
-        Description: {
+        description: {
             type:String,
             required:true,
         },
-        Stock: {
+        stock: {
             type:Number,
             required:true,
         },
