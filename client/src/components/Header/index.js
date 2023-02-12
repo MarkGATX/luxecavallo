@@ -102,7 +102,7 @@ export default function Header() {
                             console.log(Icon)
                             return (
                                 <ListItem key={index} disablePadding>
-                                    <ListItemButton >
+                                    <ListItemButton onClick={() => handlePageChange(text)}>
                                         <ListItemIcon>
                                             <Icon />
                                         </ListItemIcon>

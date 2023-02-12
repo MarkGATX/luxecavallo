@@ -104,10 +104,34 @@ cavalloLightTheme = createTheme(cavalloLightTheme, {
 
 
 export default function App() {
+  const [currentPage, setCurrentPage] = useState('Home');
+
+  const renderMainSection = () => {
+    if (currentPage === 'Home') {
+      return <Home />;
+    }
+    if (currentPage === 'MensProducts') {
+      return <MensProducts />;
+    }
+    if (currentPage === 'WomensProducts') {
+      return <WomensProducts />;
+    }
+    if (currentPage === 'AccessoryProducts') {
+      return <AccessoryProducts />;
+    }
+    if (currentPage === 'HousewareProducts') {
+      return <HousewareProducts />;
+    }
+    // return <Main />;
+  };
+
+  const handlePageChange = (page) => {document.documentElement.scrollTop = 0;setCurrentPage(page);}
+
   return (
     <ThemeProvider theme={cavalloLightTheme}>
       <CssBaseline/>
-        <Header />
+        <Header handlePageChange={handlePageChange} />
+        {renderMainSection()}
    </ThemeProvider>
   );
 }
