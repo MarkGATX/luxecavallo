@@ -1,8 +1,24 @@
 import Header from './components/Header';
+import Home from './components/Home';
+import MensProducts from './components/MensProducts';
+import WomensProducts from './components/WomensProducts';
+import AccessoryProducts from './components/AccessoryProducts';
+import HousewareProducts from './components/HousewareProducts';
 import { createTheme } from '@mui/material';
 import {ThemeProvider} from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
+import { useState } from 'react';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+} from "@apollo/client";
 import './App.css';
+
+const client = new ApolloClient({
+  uri: 'https://localhost:3001/graphql',
+  cache: new InMemoryCache(),
+});
 
 let cavalloLightTheme = createTheme({
   palette: {
@@ -110,28 +126,31 @@ export default function App() {
     if (currentPage === 'Home') {
       return <Home />;
     }
-    if (currentPage === 'MensProducts') {
+    if (currentPage === 'Men') {
       return <MensProducts />;
     }
-    if (currentPage === 'WomensProducts') {
+    if (currentPage === 'Women') {
       return <WomensProducts />;
     }
-    if (currentPage === 'AccessoryProducts') {
+    if (currentPage === 'Accessories') {
       return <AccessoryProducts />;
     }
-    if (currentPage === 'HousewareProducts') {
+    if (currentPage === 'Household') {
       return <HousewareProducts />;
     }
     // return <Main />;
   };
 
   const handlePageChange = (page) => {document.documentElement.scrollTop = 0;setCurrentPage(page);}
+  console.log(currentPage)
 
   return (
     <ThemeProvider theme={cavalloLightTheme}>
       <CssBaseline/>
+      <ApolloProvider client={client}>
         <Header handlePageChange={handlePageChange} />
         {renderMainSection()}
+        </ApolloProvider>
    </ThemeProvider>
   );
 }

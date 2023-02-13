@@ -29,7 +29,7 @@ const contactItems = [{ 'About Us': InfoIcon }, { 'Contact Us': CallIcon }]
 
 
 
-export default function Header() {
+export default function Header( {handlePageChange}) {
     const [currentDrawer, setCurrentDrawer] = useState(false);
     const sideContrastText = useRef();
     const mainContrastText = useRef();

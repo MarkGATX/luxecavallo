@@ -3,7 +3,7 @@ const {Mens, Womens, Accessory, Houseware} = require('../models')
 // Create the functions that fulfill the queries defined in `typeDefs.js`
 const resolvers = {
     Query: {
-      mens: async () => {
+      Mens: async () => {
         // Get and return all documents from the mens collection
         return await Mens.find({});
       },
