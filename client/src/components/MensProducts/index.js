@@ -1,14 +1,18 @@
-
+import React from 'react';
 import { useQuery } from '@apollo/client';
 import { Typography } from '@mui/material';
 import { QUERY_MENS } from '../../utils/queries';
 import ProductList from "../ProductList";
 
 
+
 export default function MensProducts() {
+     // Execute the query on component load
     const { loading, data } = useQuery(QUERY_MENS);
-    const products = data?.Name || [];
     console.log(data)
+    // Use optional chaining to check if data exists and if it has a Name property. If not, return an empty array to use.
+    // const products = data?.Name || [];
+    // console.log(data)
 
     return (
         <main>
@@ -16,14 +20,13 @@ export default function MensProducts() {
             <div >
                 <Typography>Mens</Typography>
               {/* If the data is still loading, render a loading message */}
-              {loading ? (
+              {/* {loading ? (
                 <div>Loading...</div>
               ) : (
                 <ProductList
-                  products={products}
-                  title="Some Feed for Thought(s)..."
+                 
                 />
-              )}
+              )} */}
             </div>
           </div>
         </main>

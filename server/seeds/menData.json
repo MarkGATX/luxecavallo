@@ -1,114 +1,114 @@
 [
     {
-        "Name":"Liberace Anniversary Celebration",
-        "Gender":"Men",
-        "Size": {
-            "XS": 2,
-            "S": 3,
-            "M": 5,
-            "L": 6,
-            "XL": 7
+        "name":"Liberace Anniversary Celebration",
+        "gender":"Men",
+        "size": {
+            "xs": 2,
+            "s": 3,
+            "m": 5,
+            "l": 6,
+            "xl": 7
             },
         "imageURL":"../../client/src/images/products/mens/liberace_anniversary.png",
-        "Description":"Celebrate the legend that is Liberace. Don't worry, we don't know who he is either, but our Grandparents think he was just wonderful.",
-        "Price":1000
+        "description":"Celebrate the legend that is Liberace. Don't worry, we don't know who he is either, but our Grandparents think he was just wonderful.",
+        "price":1000
     },
     {
-        "Name":"Button Front Shirt",
-        "Gender":"Men",
-        "Size": {
-            "XS": 2,
-            "S": 3,
-            "M": 5,
-            "L": 6,
-            "XL": 7
+        "name":"Button Front Shirt",
+        "gender":"Men",
+        "size": {
+            "xs": 2,
+            "s": 3,
+            "m": 5,
+            "l": 6,
+            "xl": 7
             },
         "imageURL":"../../client/src/images/products/mens/mens_button_front.png",
-        "Description":"Live comfortably knowing that our oversized buttons will keep our tight satin shirt pinned impossibly shut. Don't worry if the buttons aren't all the same size or shape. They still work and we had extras in the warehouse.",
-        "Price":300
+        "description":"Live comfortably knowing that our oversized buttons will keep our tight satin shirt pinned impossibly shut. Don't worry if the buttons aren't all the same size or shape. They still work and we had extras in the warehouse.",
+        "price":300
     },
     {
-        "Name":"Grey Fitted Jacket",
-        "Gender":"Men",
-        "Size": {
-            "XS": 2,
-            "S": 3,
-            "M": 5,
-            "L": 6,
-            "XL": 7
+        "name":"Grey Fitted Jacket",
+        "gender":"Men",
+        "size": {
+            "xs": 2,
+            "s": 3,
+            "m": 5,
+            "l": 6,
+            "xl": 7
             },
         "imageURL":"../../client/src/images/products/mens/mens_jacket.png",
-        "Description":"This fitted jacket is perfect for an after-work gathering of friends. Simply make sure you breathe in deep before buttoning the button because as soon as you relax this jacket will pop open. The price of luxury. Pocket 'square' sold separately.",
-        "Price":5000
+        "description":"This fitted jacket is perfect for an after-work gathering of friends. Simply make sure you breathe in deep before buttoning the button because as soon as you relax this jacket will pop open. The price of luxury. Pocket 'square' sold separately.",
+        "price":5000
     },
     {
-        "Name":"Official Harry Styles Collection",
-        "Gender":"Men",
-        "Size": {
-            "XS": 2,
-            "S": 3,
-            "M": 5,
-            "L": 6,
-            "XL": 7
+        "name":"Official Harry Styles Collection",
+        "gender":"Men",
+        "size": {
+            "xs": 2,
+            "s": 3,
+            "m": 5,
+            "l": 6,
+            "xl": 7
             },
         "imageURL":"../../client/src/images/products/mens/met_gala_look.png",
-        "Description":"You don't need a grammy when you wear our Harry Styles inspired outfit. Perfect for a night at your local sushi restaurant or your next important business meeting.",
-        "Price":5300
+        "description":"You don't need a grammy when you wear our Harry Styles inspired outfit. Perfect for a night at your local sushi restaurant or your next important business meeting.",
+        "price":5300
     },
     {
-        "Name":"Survivor Vest",
-        "Gender":"Men",
-        "Size": {
-            "XS": 2,
-            "S": 3,
-            "M": 5,
-            "L": 6,
-            "XL": 7
+        "name":"Survivor Vest",
+        "gender":"Men",
+        "size": {
+            "xs": 2,
+            "s": 3,
+            "m": 5,
+            "l": 6,
+            "xl": 7
             },
         "imageURL":"../../client/src/images/products/mens/nice_vest.png",
-        "Description":"Reflect on everything you've done to reach this level of success in your very own grey vest. This unique grey vest is unlike any other grey vest out there. Don't ask why. Just trust us.",
-        "Price":10023
+        "description":"Reflect on everything you've done to reach this level of success in your very own grey vest. This unique grey vest is unlike any other grey vest out there. Don't ask why. Just trust us.",
+        "price":10023
     },
     {
-        "Name":"More Patterns Suit set",
-        "Gender":"Men",
-        "Size": {
-            "XS": 2,
-            "S": 3,
-            "M": 5,
-            "L": 6,
-            "XL": 7
+        "name":"More Patterns Suit set",
+        "gender":"Men",
+        "size": {
+            "xs": 2,
+            "s": 3,
+            "m": 5,
+            "l": 6,
+            "xl": 7
             },
         "imageURL":"../../client/src/images/products/mens/plaid_on_plaid.png",
-        "Description":"Ignore anyone who says too much plaid is bad. As long as you style it with our plain blue suit then you'll stand out in any crowd.",
-        "Price":1000
+        "description":"Ignore anyone who says too much plaid is bad. As long as you style it with our plain blue suit then you'll stand out in any crowd.",
+        "price":1000
     },
     {
-        "Name":"Oyster Button Suit",
-        "Gender":"Men",
-        "Size": {
-            "XS": 2,
-            "S": 3,
-            "M": 5,
-            "L": 6,
-            "XL": 7
+        "name":"Oyster Button Suit",
+        "gender":"Men",
+        "size": {
+            "xs": 2,
+            "s": 3,
+            "m": 5,
+            "l": 6,
+            "xl": 7
             },
         "imageURL":"../../client/src/images/products/mens/suit_with_oyster_buttons.png",
-        "Description":"Ignore anyone who says too much plaid is bad. As long as you style it with our plain blue suit then you'll stand out in any crowd.",
-        "Price":2399
+        "description":"Ignore anyone who says too much plaid is bad. As long as you style it with our plain blue suit then you'll stand out in any crowd.",
+        "price":2399
     },
     {
-        "Name":"More Patterns Suit set2",
-        "Gender":"Men",
-        "Size": {
-            "XS": 2,
-            "S": 3,
-            "M": 5,
-            "L": 6,
-            "XL": 7
+        "name":"More Patterns Suit set2",
+        "gender":"Men",
+        "size": {
+            "xs": 2,
+            "s": 3,
+            "m": 5,
+            "l": 6,
+            "xl": 7
             },
         "imageURL":"../../client/src/images/products/mens/liberace_anniversary.png",
-        "Description":"Ignore anyone who says too much plaid is bad. As long as you style it with our plain blue suit then you'll stand out in any crowd.",
-        "Price":1000
+        "description":"Ignore anyone who says too much plaid is bad. As long as you style it with our plain blue suit then you'll stand out in any crowd.",
+        "price":1000
     }
 ]

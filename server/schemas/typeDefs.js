@@ -3,51 +3,55 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
   # Define which fields are accessible from the model
   type Mens {
-    Name: String!
-    Gender: String
-    Size: Size
+    _id: ID
+    name: String!
+    gender: String
+    size: Size
     imageURL: String!
-    Description: String!
-    Price: Float!
+    description: String!
+    price: Int!
   }
   
   type Womens {
-    Name: String!
-    Gender: String
-    Size: Size
+    _id: ID
+    name: String!
+    gender: String
+    size: Size
     imageURL: String!
-    Description: String!
-    Price: Float!
+    description: String!
+    price: Int!
   }
 
 type Size {
-    XS: Float
-    S: Float
-    M: Float
-    L: Float
-    XL: Float
+    xs: Int
+    s: Int
+    m: Int
+    l: Int
+    xl: Int
   }
 
 type Accessory {
-    Name:String!
-    Price:Float!
-    Description:String!
-    Stock:Float!
+  _id: ID
+    name:String!
+    price:Float!
+    description:String!
+    stock:Int!
     imageURL:String!
 }
 
 type Houseware {
+  _id: ID
     name:String!
     price:Float!
     description:String!
-    stock:Float!
+    stock:Int!
     imageURL:String!
 }
   
 
   
 type Query {
-    mens: [Mens]
+    mens: [Mens!]!
     womens: [Womens]
     accessories: [Accessory]
     housewares: [Houseware]

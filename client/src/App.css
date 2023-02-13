@@ -1,6 +1,10 @@
 @import url("https://use.typekit.net/luf5fof.css");
 
-
+main {
+  left:450px;
+  position:relative;
+  padding-top:2em;
+}
 
 /* h1, h2, h3, h4, h5, h5 {
   font-family: 'aviano-flare', sans-serif !important;

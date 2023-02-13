@@ -1,3 +1,4 @@
+import React from "react";
 import { Box } from "@mui/material";
 import { Typography } from "@mui/material";
 import cavaleLogo from '../../images/cavale_logo.svg'
@@ -112,8 +113,6 @@ export default function Header( {handlePageChange}) {
                             );
                         })}
                     </List>
-                    {/* <Toolbar /> */}
-                    {/* <Divider sx={{color:'primary.contrastText', borderColor:'secondary.contrastText'}}/> */}
                     <Toolbar />
                     <List>
                         {contactItems.map((item, index) => {

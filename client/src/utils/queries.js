@@ -1,22 +1,22 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_MENS = gql`
-  # create a GraphQL query to be executed by Apollo Client
+
   query getAllMens {
-    Mens {
+    mens {
         _id
-        Name
-        Gender
-        Size {
-            XS
-            S
-            M
-            L
-            XL
+        name
+        gender
+        size {
+            xs
+            s
+            m
+            l
+            xl
         }
         imageURL
-        Description
-        Price
+        description
+        price
     }
   }
 `;

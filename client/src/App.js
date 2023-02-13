@@ -1,3 +1,4 @@
+import React from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
 import MensProducts from './components/MensProducts';
@@ -16,7 +17,7 @@ import {
 import './App.css';
 
 const client = new ApolloClient({
-  uri: 'https://localhost:3001/graphql',
+  uri: 'http://localhost:3001/graphql',
   cache: new InMemoryCache(),
 });
 

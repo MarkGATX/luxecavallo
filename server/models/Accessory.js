@@ -2,20 +2,20 @@ const { Schema, model } = require('mongoose');
 
 const accessorySchema = new Schema(
     {
-        Name: {
+        name: {
             type:String,
             required:true,
             trim:true,
         },
-        Price: {
+        price: {
                 type:Number,
                 required:true,
             },
-        Description: {
+        description: {
             type:String,
             required:true,
         },
-        Stock: {
+        stock: {
             type:Number,
             required:true,
         },
