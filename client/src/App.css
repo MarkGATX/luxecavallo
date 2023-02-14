@@ -1,9 +1,13 @@
 @import url("https://use.typekit.net/luf5fof.css");
 
 main {
-  left:450px;
+  left:400px;
   position:relative;
-  padding-top:2em;
+  height:100vh;
+  overflow:auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
 }
 
 /* h1, h2, h3, h4, h5, h5 {

@@ -3,6 +3,8 @@ import { useQuery } from '@apollo/client';
 import { Typography } from '@mui/material';
 import { QUERY_MENS } from '../../utils/queries';
 import ProductList from "../ProductList";
+import Box from '@mui/material/Box';
+import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 
 
 
@@ -15,20 +17,18 @@ export default function MensProducts() {
     // console.log(data)
 
     return (
-        <main>
-          <div >
-            <div >
-                <Typography>Mens</Typography>
-              {/* If the data is still loading, render a loading message */}
-              {/* {loading ? (
-                <div>Loading...</div>
+        <Grid2 container component="main"  sx={{width:`calc(100% - 400px)`}}>
+          <Grid2 xs={12} sx={{height:'300px', paddingLeft:'50px'}}>
+            <Typography variant='h1' sx={{marginBottom:'50px', paddingTop:'50px' }}>Menswear
+            </Typography>
+            <Typography>Shop our selection of Menswear</Typography>
+            </Grid2>
+              {/* If the data is still loading, render a loading message  */}
+               {loading ? (
+                <div xs={12}>Loading...</div>
               ) : (
-                <ProductList
-                 
-                />
-              )} */}
-            </div>
-          </div>
-        </main>
+                <ProductList products={data.mens} />
+              )}
+        </Grid2>
       );
     };

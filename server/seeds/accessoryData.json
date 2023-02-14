@@ -4,69 +4,69 @@
         "price": 20,
         "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.2",
         "stock": 10,
-        "imageURL": "../../client/src/images/products/accessory/dark_bag.png"
+        "imageURL": "/images/products/accessory/dark_bag.png"
     },
     {
         "name": "Gold and Black Handbag3",
         "price": 20,
         "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
         "stock": 10,
-        "imageURL": "../../client/src/images/products/accessory/dark_bag.png"
+        "imageURL": "/images/products/accessory/dark_bag.png"
     },
     {
         "name": "Gold and Black Handbag4",
         "price": 20,
         "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
         "stock": 10,
-        "imageURL": "../../client/src/images/products/accessory/dark_bag.png"
+        "imageURL": "/images/products/accessory/dark_bag.png"
     },
     {
         "name": "Gold and Black Handbag5",
         "price": 20,
         "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
         "stock": 10,
-        "imageURL": "../../client/src/images/products/accessory/dark_bag.png"
+        "imageURL": "/images/products/accessory/dark_bag.png"
     },
     {
         "name": "Gold and Black Handbag6",
         "price": 20,
         "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
         "stock": 10,
-        "imageURL": "../../client/src/images/products/accessory/dark_bag.png"
+        "imageURL": "/images/products/accessory/dark_bag.png"
     },
     {
         "name": "Gold and Black Handbag7",
         "price": 20,
         "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
         "stock": 10,
-        "imageURL": "../../client/src/images/products/accessory/dark_bag.png"
+        "imageURL": "/images/products/accessory/dark_bag.png"
     },
     {
         "name": "Gold and Black Handbag8",
         "price": 20,
         "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
         "stock": 10,
-        "imageURL": "../../client/src/images/products/accessory/dark_bag.png"
+        "imageURL": "/images/products/accessory/dark_bag.png"
     },
     {
         "name": "Gold and Black Handbag9",
         "price": 20,
         "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
         "stock": 10,
-        "imageURL": "../../client/src/images/products/accessory/dark_bag.png"
+        "imageURL": "/images/products/accessory/dark_bag.png"
     },
     {
         "name": "Gold and Black Handbag0",
         "price": 20,
         "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
         "stock": 10,
-        "imageURL": "../../client/src/images/products/accessory/dark_bag.png"
+        "imageURL": "/images/products/accessory/dark_bag.png"
     },
     {
         "name": "Gold and Black Handbag11",
         "price": 20,
         "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
         "stock": 10,
-        "imageURL": "../../client/src/images/products/accessory/dark_bag.png"
+        "imageURL": "/images/products/accessory/dark_bag.png"
     }
 ]

@@ -9,7 +9,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/mens/liberace_anniversary.png",
+        "imageURL":"/images/products/mens/liberace_anniversary.png",
         "description":"Celebrate the legend that is Liberace. Don't worry, we don't know who he is either, but our Grandparents think he was just wonderful.",
         "price":1000
     },
@@ -23,7 +23,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/mens/mens_button_front.png",
+        "imageURL":"/images/products/mens/mens_button_front.png",
         "description":"Live comfortably knowing that our oversized buttons will keep our tight satin shirt pinned impossibly shut. Don't worry if the buttons aren't all the same size or shape. They still work and we had extras in the warehouse.",
         "price":300
     },
@@ -37,7 +37,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/mens/mens_jacket.png",
+        "imageURL":"/images/products/mens/mens_jacket.png",
         "description":"This fitted jacket is perfect for an after-work gathering of friends. Simply make sure you breathe in deep before buttoning the button because as soon as you relax this jacket will pop open. The price of luxury. Pocket 'square' sold separately.",
         "price":5000
     },
@@ -51,7 +51,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/mens/met_gala_look.png",
+        "imageURL":"/images/products/mens/met_gala_look.png",
         "description":"You don't need a grammy when you wear our Harry Styles inspired outfit. Perfect for a night at your local sushi restaurant or your next important business meeting.",
         "price":5300
     },
@@ -65,7 +65,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/mens/nice_vest.png",
+        "imageURL":"/images/products/mens/nice_vest.png",
         "description":"Reflect on everything you've done to reach this level of success in your very own grey vest. This unique grey vest is unlike any other grey vest out there. Don't ask why. Just trust us.",
         "price":10023
     },
@@ -79,7 +79,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/mens/plaid_on_plaid.png",
+        "imageURL":"/images/products/mens/plaid_on_plaid.png",
         "description":"Ignore anyone who says too much plaid is bad. As long as you style it with our plain blue suit then you'll stand out in any crowd.",
         "price":1000
     },
@@ -93,7 +93,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/mens/suit_with_oyster_buttons.png",
+        "imageURL":"/images/products/mens/suit_with_oyster_buttons.png",
         "description":"Ignore anyone who says too much plaid is bad. As long as you style it with our plain blue suit then you'll stand out in any crowd.",
         "price":2399
     },
@@ -107,7 +107,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/mens/liberace_anniversary.png",
+        "imageURL":"/images/products/mens/liberace_anniversary.png",
         "description":"Ignore anyone who says too much plaid is bad. As long as you style it with our plain blue suit then you'll stand out in any crowd.",
         "price":1000
     }

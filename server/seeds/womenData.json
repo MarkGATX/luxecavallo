@@ -9,7 +9,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/womens/20s_are_back.png",
+        "imageURL":"/images/products/womens/20s_are_back.png",
         "description":"Welcome back to the golden age of Downton Abbey, which we think is in the 1920's or Season 3, maybe 4. We just know Lady Mary got a bob haircut. Regardless, you can channel your Lady Mary in this dress inspired by the TV show that was inspired by history.",
         "price":2600
     },
@@ -23,7 +23,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/womens/blue.png",
+        "imageURL":"/images/products/womens/blue.png",
         "description":"It's got pockets. That's all you need to know.",
         "price":2600
     },
@@ -37,7 +37,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/womens/boho1.png",
+        "imageURL":"/images/products/womens/boho1.png",
         "description":"Boho chic is back in luxury style with this amazingly comfortable mini-dress. Made from linen or maybe burlap. Purse and necklace accessories coming soon.",
         "price":7600
     },
@@ -51,7 +51,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/womens/boho2.png",
+        "imageURL":"/images/products/womens/boho2.png",
         "description":"Inspired by our own Boho Mini Dress, we made another version using 100% cotton with a slightly cleaner silhouette. Plus our Lead Designer resigned so we got to use the same pattern as the Boho Dress. Imitation is flattery or something like that. (No Francis, we're not paying you back pay for the design.)",
         "price":1290
     },
@@ -65,7 +65,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/womens/dark_silk_gold.png",
+        "imageURL":"/images/products/womens/dark_silk_gold.png",
         "description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
         "price":16800
     },
@@ -79,7 +79,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/womens/dark_silk_gold.png",
+        "imageURL":"/images/products/womens/dark_silk_gold.png",
         "description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
         "price":16800
     },
@@ -93,7 +93,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/womens/dark_silk_gold.png",
+        "imageURL":"/images/products/womens/dark_silk_gold.png",
         "description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
         "price":16800
     },
@@ -107,7 +107,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/womens/dark_silk_gold.png",
+        "imageURL":"/images/products/womens/dark_silk_gold.png",
         "description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
         "price":16800
     },
@@ -121,7 +121,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/womens/dark_silk_gold.png",
+        "imageURL":"/images/products/womens/dark_silk_gold.png",
         "description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
         "price":16800
     },
@@ -135,7 +135,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/womens/dark_silk_gold.png",
+        "imageURL":"/images/products/womens/dark_silk_gold.png",
         "description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
         "price":16800
     },
@@ -149,7 +149,7 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"../../client/src/images/products/womens/dark_silk_gold.png",
+        "imageURL":"/images/products/womens/dark_silk_gold.png",
         "description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
         "price":16800
     }

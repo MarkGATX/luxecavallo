@@ -72,7 +72,7 @@ export default function Header( {handlePageChange}) {
                     <MenuIcon ref={burger} className='menuIcon' onClick={() => slideDrawer()} sx={{ color: 'headerBack.contrastText' }} />
                     <img src={cavaleLogo} ref={sideContrastHorse} alt='Gold Luxe Cavale Logo' className='cavaleLogoGold'></img>
                 </Box>
-                <Typography ref={sideContrastText} variant='h2' component='h1' sx={{ color: 'headerBack.contrastText', writingMode: 'vertical-lr', letterSpacing: '-.6em', textOrientation: 'upright', position: 'relative', left: '155px' }}>LUXE CAVALLO</Typography>
+                <Typography className='headerTitle' ref={sideContrastText} variant='h2' component='h1' sx={{ color: 'headerBack.contrastText', writingMode: 'vertical-lr', letterSpacing: '-.6em', textOrientation: 'upright', position: 'relative', left: '155px' }}>LUXE CAVALLO</Typography>
             </Box>
             <Box sx={{ position: 'absolute', minHeight: '100vh', left: sideWidth,  overflow: 'hidden' }}>
                 <Drawer 
@@ -135,7 +135,7 @@ export default function Header( {handlePageChange}) {
                 <Box sx={{ width: sideWidth, paddingTop: '1em' }}>
                     <img src={cavaleLogo} ref={mainContrastHorse} alt='Dark Luxe Cavale Logo' className='cavaleLogo'></img>
                 </Box>
-                <Typography ref={mainContrastText} variant='h2' component='h1' sx={{ color: 'text.main', writingMode: 'vertical-lr', letterSpacing: '-.6em', textOrientation: 'upright', position: 'relative', left: '-45px', fontWeight: '900' }}>LUXE CAVALLO</Typography>
+                <Typography className='headerTitle' ref={mainContrastText} variant='h2' component='h1' sx={{ color: 'text.main', writingMode: 'vertical-lr', letterSpacing: '-.6em', textOrientation: 'upright', position: 'relative', left: '-45px', fontWeight: '900' }}>LUXE CAVALLO</Typography>
             </Box>
         </>
     )

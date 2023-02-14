@@ -15,5 +15,8 @@
     "license": "ISC",
     "devDependencies": {
         "concurrently": "^5.3.0"
+    },
+    "dependencies": {
+        "mui-image": "^1.0.7"
     }
 }

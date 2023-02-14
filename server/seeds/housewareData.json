@@ -4,55 +4,55 @@
         "price":10,
         "description":"thing",
         "stock":10,
-        "imageURL":"../../client/src/images/products/mens/liberace_anniversary.png"
+        "imageURL":"/images/products/mens/liberace_anniversary.png"
     },
     {
         "name":"Fancy houseware8",
         "price":10,
         "description":"thing",
         "stock":10,
-        "imageURL":"../../client/src/images/products/mens/liberace_anniversary.png"
+        "imageURL":"/images/products/mens/liberace_anniversary.png"
     },
     {
         "name":"Fancy houseware7",
         "price":10,
         "description":"thing",
         "stock":10,
-        "imageURL":"../../client/src/images/products/mens/liberace_anniversary.png"
+        "imageURL":"/images/products/mens/liberace_anniversary.png"
     },
     {
         "name":"Fancy houseware6",
         "price":10,
         "description":"thing",
         "stock":10,
-        "imageURL":"../../client/src/images/products/mens/liberace_anniversary.png"
+        "imageURL":"/images/products/mens/liberace_anniversary.png"
     },
     {
         "name":"Fancy houseware5",
         "price":10,
         "description":"thing",
         "stock":10,
-        "imageURL":"../../client/src/images/products/mens/liberace_anniversary.png"
+        "imageURL":"/images/products/mens/liberace_anniversary.png"
     },
     {
         "name":"Fancy houseware4",
         "price":10,
         "description":"thing",
         "stock":10,
-        "imageURL":"../../client/src/images/products/mens/liberace_anniversary.png"
+        "imageURL":"/images/products/mens/liberace_anniversary.png"
     },
     {
         "name":"Fancy houseware3",
         "price":10,
         "description":"thing",
         "stock":10,
-        "imageURL":"../../client/src/images/products/mens/liberace_anniversary.png"
+        "imageURL":"/images/products/mens/liberace_anniversary.png"
     },
     {
         "name":"Fancy houseware2",
         "price":10,
         "description":"thing",
         "stock":10,
-        "imageURL":"../../client/src/images/products/mens/liberace_anniversary.png"
+        "imageURL":"/images/products/mens/liberace_anniversary.png"
     }
 ]

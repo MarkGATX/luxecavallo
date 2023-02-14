@@ -55,22 +55,28 @@ let cavalloLightTheme = createTheme({
     fontWeight: 400,
     fontStyle: 'normal',
     h1: {
-      fontFamily: 'aviano-flare'
+      fontFamily: 'aviano-flare',
+      fontSize:'2em'
     },
     h2: {
-      fontFamily: 'aviano-flare'
+      fontFamily: 'aviano-flare',
+      fontSize:'1.5em'
     },
     h3: {
-      fontFamily: 'aviano-flare'
+      fontFamily: 'aviano-flare',
+      fontSize:'1.33em'
     },
     h4: {
-      fontFamily: 'aviano-flare'
+      fontFamily: 'aviano-flare',
+      fontSize:'1.17em'
     },
     h5: {
-      fontFamily: 'aviano-flare'
+      fontFamily: 'aviano-flare',
+      fontSize:'.83em'
     },
     h6: {
-      fontFamily: 'aviano-flare'
+      fontFamily: 'aviano-flare',
+      fontSize:'2em'
     }
   },
 })
