@@ -31,7 +31,7 @@ type Size {
   }
 
 type Accessory {
-  _id: ID
+    _id: ID
     name:String!
     price:Float!
     description:String!
@@ -40,7 +40,7 @@ type Accessory {
 }
 
 type Houseware {
-  _id: ID
+    _id: ID
     name:String!
     price:Float!
     description:String!
@@ -52,7 +52,7 @@ type Houseware {
   
 type Query {
     mens: [Mens!]!
-    womens: [Womens]
+    womens: [Womens!]!
     accessories: [Accessory]
     housewares: [Houseware]
   }

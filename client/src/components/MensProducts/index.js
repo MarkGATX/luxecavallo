@@ -17,18 +17,18 @@ export default function MensProducts() {
     // console.log(data)
 
     return (
-        <Grid2 container component="main"  sx={{width:`calc(100% - 400px)`}}>
-          <Grid2 xs={12} sx={{height:'300px', paddingLeft:'50px'}}>
+        <Box  component="main"  sx={{width:`calc(100% - 400px)`}}>
+          <Box xs={12} sx={{height:'300px', paddingLeft:'50px'}}>
             <Typography variant='h1' sx={{marginBottom:'50px', paddingTop:'50px' }}>Menswear
             </Typography>
             <Typography>Shop our selection of Menswear</Typography>
-            </Grid2>
+            </Box>
               {/* If the data is still loading, render a loading message  */}
                {loading ? (
                 <div xs={12}>Loading...</div>
               ) : (
                 <ProductList products={data.mens} />
               )}
-        </Grid2>
+        </Box>
       );
     };
