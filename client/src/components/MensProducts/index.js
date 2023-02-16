@@ -17,7 +17,7 @@ export default function MensProducts() {
     // console.log(data)
 
     return (
-        <Box  component="main"  sx={{width:`calc(100% - 400px)`}}>
+        <Box component="main"  sx={{width:`calc(100% - 400px)`}}>
           <Box xs={12} sx={{height:'300px', paddingLeft:'50px'}}>
             <Typography variant='h1' sx={{marginBottom:'50px', paddingTop:'50px' }}>Menswear
             </Typography>

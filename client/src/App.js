@@ -16,6 +16,7 @@ import {
 } from "@apollo/client";
 import './App.css';
 
+
 const client = new ApolloClient({
   uri: 'http://localhost:3001/graphql',
   cache: new InMemoryCache(),
@@ -156,7 +157,9 @@ export default function App() {
       <CssBaseline/>
       <ApolloProvider client={client}>
         <Header handlePageChange={handlePageChange} />
+
         {renderMainSection()}
+
         </ApolloProvider>
    </ThemeProvider>
   );
