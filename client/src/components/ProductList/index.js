@@ -9,6 +9,7 @@ import { useRef } from "react";
 import { useLayoutEffect } from "react";
 import gsap from "gsap";
 
+
 export default function ProductList({ products}, {in:inProp} ) {
   const app = useRef();
  
@@ -46,7 +47,7 @@ export default function ProductList({ products}, {in:inProp} ) {
               }}
             >
               <Card
-                
+                className='prodCards'
                 sx={{
                   ":hover": {
                     boxShadow: 4,
@@ -70,6 +71,7 @@ export default function ProductList({ products}, {in:inProp} ) {
                       shift="right"
                       distance="100px"
                       className="productImage"
+                      showLoading 
                     />
                   </Box>
                   <Typography
