@@ -1,4 +1,4 @@
-import { Paper, Typography, Box } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import Image from "mui-image";
 import "./ProductList.css";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
@@ -56,7 +56,7 @@ export default function ProductList({ products}, {in:inProp} ) {
                   },
                 }}
               >
-                <CardHeader title={product.name}></CardHeader>
+                <CardHeader title={product.name} titleTypographyProps={{style:{fontSize:'1.17em'}}}></CardHeader>
                 <CardContent
                   sx={{
                     display: "flex",

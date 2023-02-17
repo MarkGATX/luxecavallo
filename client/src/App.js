@@ -5,6 +5,8 @@ import MensProducts from './components/MensProducts';
 import WomensProducts from './components/WomensProducts';
 import AccessoryProducts from './components/AccessoryProducts';
 import HousewareProducts from './components/HousewareProducts';
+import About from './components/About';
+import Contact from './components/Contact';
 import { createTheme } from '@mui/material';
 import {ThemeProvider} from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -15,6 +17,7 @@ import {
   ApolloProvider,
 } from "@apollo/client";
 import './App.css';
+import { responsiveFontSizes } from '@mui/material';
 
 
 const client = new ApolloClient({
@@ -126,6 +129,8 @@ cavalloLightTheme = createTheme(cavalloLightTheme, {
   },
 });
 
+cavalloLightTheme = responsiveFontSizes(cavalloLightTheme)
+
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -145,6 +150,12 @@ export default function App() {
     }
     if (currentPage === 'Household') {
       return <HousewareProducts />;
+    }
+    if (currentPage === 'About Us') {
+      return <About />;
+    }
+    if (currentPage === 'Contact Us') {
+      return <Contact />;
     }
     // return <Main />;
   };
