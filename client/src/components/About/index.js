@@ -32,56 +32,56 @@ export default function About() {
                 <Typography variant='h4' sx={{marginBottom:'1em'}}>Tech Stack</Typography>
                 <Grid2 container spacing={2} sx={{ justifyContent:'center', flexWrap:'wrap' }}>
                     <Grid2 xs={2} sx={{ textAlign: 'center', display: 'flex',flexWrap:'wrap', justifyContent: 'center', alignItems: 'center'}}> 
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width='70%' height="auto" sx={{display:'block'}} />
-                        <Typography variant='body1'>React</Typography>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width='50%' height="auto"  />
+                        <Typography xs={12} sx={{width:'100%'}} variant='body1'>React</Typography>
                     </Grid2>
                     <Grid2 xs={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap:'wrap', alignItems: 'center'}}> 
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" width='70%' height="auto"  />
-                        <Typography variant='body1'>GraphQL</Typography>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" width='50%' height="auto"  />
+                        <Typography variant='body1' sx={{width:'100%'}}>GraphQL</Typography>
                     </Grid2>
                     <Grid2 xs={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap:'wrap', alignItems: 'center'}}> 
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width='70%' height="auto"  />
-                        <Typography variant='body1'>CSS3</Typography>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width='50%' height="auto"  />
+                        <Typography variant='body1' sx={{width:'100%'}}>CSS3</Typography>
                     </Grid2>
                     <Grid2 xs={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap:'wrap', alignItems: 'center'}}> 
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width='70%' height="auto"  />
-                        <Typography variant='body1'>Express</Typography>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width='50%' height="auto"  />
+                        <Typography variant='body1' sx={{width:'100%'}}>Express</Typography>
                     </Grid2>
                     <Grid2 xs={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap:'wrap', alignItems: 'center'}}> 
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width='70%' height="auto"  />
-                        <Typography variant='body1'>GitHub</Typography>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width='50%' height="auto"  />
+                        <Typography variant='body1' sx={{width:'100%'}}>GitHub</Typography>
                     </Grid2>
                     <Grid2 xs={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap:'wrap', alignItems: 'center'}}> 
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" width='70%' height="auto"  />
-                        <Typography variant='body1'>Heroku</Typography>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" width='50%' height="auto"  />
+                        <Typography variant='body1' sx={{width:'100%'}}>Heroku</Typography>
                     </Grid2>
                     <Grid2 xs={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap:'wrap', alignItems: 'center'}}> 
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width='60%' height="auto"  />
-                        <Typography variant='body1'>HTML5</Typography>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width='50%' height="auto"  />
+                        <Typography variant='body1' sx={{width:'100%'}}>HTML5</Typography>
                     </Grid2>
                     <Grid2 xs={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap:'wrap', alignItems: 'center'}}> 
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"  width='70%' height="auto"  />
-                        <Typography variant='body1'>JavaScript</Typography>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"  width='50%' height="auto"  />
+                        <Typography variant='body1' sx={{width:'100%'}}>JavaScript</Typography>
                     </Grid2>
                     <Grid2 xs={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap:'wrap', alignItems: 'center'}}> 
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"  width='70%' height="auto"  />
-                        <Typography variant='body1'>MaterialUI</Typography>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"  width='50%' height="auto"  />
+                        <Typography variant='body1' sx={{width:'100%'}}>MaterialUI</Typography>
                     </Grid2>
                     <Grid2 xs={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap:'wrap', alignItems: 'center'}}> 
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"  width='70%' height="auto"  />
-                        <Typography variant='body1'>MongoDB</Typography>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"  width='50%' height="auto"  />
+                        <Typography variant='body1' sx={{width:'100%'}}>MongoDB</Typography>
                     </Grid2>
                     <Grid2 xs={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap:'wrap', alignItems: 'center'}}> 
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"  width='70%' height="auto"  />
-                        <Typography variant='body1'>npm</Typography>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"  width='50%' height="auto"  />
+                        <Typography variant='body1' sx={{width:'100%'}}>npm</Typography>
                     </Grid2>
                     <Grid2 xs={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap:'wrap', alignItems: 'center'}}> 
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"  width='70%' height="auto"  />
-                        <Typography variant='body1'>Photoshop</Typography>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"  width='50%' height="auto"  />
+                        <Typography variant='body1' sx={{width:'100%'}}>Photoshop</Typography>
                     </Grid2>
                     <Grid2 xs={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap:'wrap', alignItems: 'center'}}> 
-                        <Image src={gsapLogo}  width='70%' height="auto"  />
-                        <Typography variant='body1'>Greensock</Typography>
+                        <Image src={gsapLogo}  width='50%' height="auto"  />
+                        <Typography variant='body1' sx={{width:'100%'}}>Greensock</Typography>
                     </Grid2>
                 </Grid2>
                 <br/>
