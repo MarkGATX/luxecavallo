@@ -1,72 +1,46 @@
 [
     {
-        "name": "Gold and Black Handbag2",
-        "price": 20,
-        "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.2",
+        "name": "Black Clutch",
+        "price": 420,
+        "description": "Black leather clutch with Zwarovski crystal details ensure you carry your things and yourself with confidence.",
         "stock": 10,
-        "imageURL": "/images/products/accessory/dark_bag.png"
+        "imageURL": "/images/products/accessory/black_clutch",
+        "attribution":"Photo by Adrienne Andersen"
     },
     {
-        "name": "Gold and Black Handbag3",
-        "price": 20,
-        "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
-        "stock": 10,
-        "imageURL": "/images/products/accessory/dark_bag.png"
+        "name": "Floral Bag",
+        "price": 450,
+        "description": "White leather with deep hand-printed blue flowers make this stand out in a crowd.",
+        "stock": 13,
+        "imageURL": "/images/products/accessory/floral_bag"
     },
     {
-        "name": "Gold and Black Handbag4",
-        "price": 20,
-        "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
-        "stock": 10,
-        "imageURL": "/images/products/accessory/dark_bag.png"
+        "name": "Bag and Boot set",
+        "price": 620,
+        "description": "Color coordinated boot and bag set keeps you ready to meet your friends out and about.",
+        "stock": 2,
+        "imageURL": "/images/products/accessory/red_combo",
+        "attribution":"Photo by Malcolm Garret"
     },
     {
-        "name": "Gold and Black Handbag5",
-        "price": 20,
-        "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
+        "name": "Red Gem Collection",
+        "price": 1220,
+        "description": "Red gems accentuate this sterling silver set of jewelry.",
         "stock": 10,
-        "imageURL": "/images/products/accessory/dark_bag.png"
+        "imageURL": "/images/products/accessory/red_gem"
     },
     {
-        "name": "Gold and Black Handbag6",
-        "price": 20,
-        "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
-        "stock": 10,
-        "imageURL": "/images/products/accessory/dark_bag.png"
+        "name": "Silver Collection",
+        "price": 1020,
+        "description": "This collection of sterling silver jewelry gives you a full collection of accessories appropriate for any and every occassion.",
+        "stock": 3,
+        "imageURL": "/images/products/accessory/silver_collection"
     },
     {
-        "name": "Gold and Black Handbag7",
-        "price": 20,
-        "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
+        "name": "Titanium Watch",
+        "price": 2320,
+        "description": "Never worry about a broken watch again with this titanium made watch. Safe up to 40 feet underwatch and impact resistant, this watch is stylish and sturdy.",
         "stock": 10,
-        "imageURL": "/images/products/accessory/dark_bag.png"
-    },
-    {
-        "name": "Gold and Black Handbag8",
-        "price": 20,
-        "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
-        "stock": 10,
-        "imageURL": "/images/products/accessory/dark_bag.png"
-    },
-    {
-        "name": "Gold and Black Handbag9",
-        "price": 20,
-        "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
-        "stock": 10,
-        "imageURL": "/images/products/accessory/dark_bag.png"
-    },
-    {
-        "name": "Gold and Black Handbag0",
-        "price": 20,
-        "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
-        "stock": 10,
-        "imageURL": "/images/products/accessory/dark_bag.png"
-    },
-    {
-        "name": "Gold and Black Handbag11",
-        "price": 20,
-        "description": "We use the highest quality leather-like plastic to create this stylish handbag with asymetrical gold piping. Perfect for a date out when you need to carry a lot with you.",
-        "stock": 10,
-        "imageURL": "/images/products/accessory/dark_bag.png"
+        "imageURL": "/images/products/accessory/watch"
     }
 ]

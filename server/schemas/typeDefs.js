@@ -10,6 +10,7 @@ const typeDefs = gql`
     imageURL: String!
     description: String!
     price: Int!
+    attribution: String
   }
   
   type Womens {
@@ -20,6 +21,7 @@ const typeDefs = gql`
     imageURL: String!
     description: String!
     price: Int!
+    attribution: String
   }
 
 type Size {
@@ -37,6 +39,7 @@ type Accessory {
     description:String!
     stock:Int!
     imageURL:String!
+    attribution: String
 }
 
 type Houseware {
@@ -46,6 +49,7 @@ type Houseware {
     description:String!
     stock:Int!
     imageURL:String!
+    attribution: String
 }
   
 

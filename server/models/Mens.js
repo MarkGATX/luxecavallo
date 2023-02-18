@@ -28,6 +28,9 @@ const mensSchema = new Schema(
         price: {
             type: Number,
             required: true
+        },
+        attribution: {
+            type:String,
         }
     }
 );

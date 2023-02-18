@@ -16,6 +16,7 @@ export const QUERY_MENS = gql`
         imageURL
         description
         price
+        attribution
     }
   },
 `;
@@ -36,6 +37,7 @@ export const QUERY_WOMENS = gql`
         imageURL
         description
         price
+        attribution
     }
   },
 `;
@@ -49,6 +51,7 @@ export const QUERY_HOUSE = gql`
         description
         stock
         imageURL
+        attribution
     }
   },
 `;
@@ -61,6 +64,7 @@ export const QUERY_ACCESSORY = gql`
         description
         stock
         imageURL
+        attribution
     }
   },
 `;

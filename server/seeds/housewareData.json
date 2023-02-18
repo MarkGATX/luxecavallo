@@ -1,58 +1,34 @@
 [
     {
-        "name":"Fancy houseware",
-        "price":10,
-        "description":"thing",
+        "name":"Vintage Drip Coffee",
+        "price":2300,
+        "description":"Make coffee the best way by making coffee the old way. This brass coffee maker will make you the best cup of coffee you've every tasted.",
         "stock":10,
-        "imageURL":"/images/products/mens/liberace_anniversary.png"
+        "imageURL":"/images/products/houseware/coffee",
+        "attribution":"Photo by Jonathan Borba"
     },
     {
-        "name":"Fancy houseware8",
-        "price":10,
-        "description":"thing",
+        "name":"Matcha Tea Set",
+        "price":200,
+        "description":"Enjoy the best matcha with less buzz in this hand-crafted stoneare matcha tea set. Nothing beats fresh matcha and now you can make your own at home.",
         "stock":10,
-        "imageURL":"/images/products/mens/liberace_anniversary.png"
+        "imageURL":"/images/products/houseware/matcha_set",
+        "attribution":"Photo by Charlotte May"
     },
     {
-        "name":"Fancy houseware7",
-        "price":10,
-        "description":"thing",
-        "stock":10,
-        "imageURL":"/images/products/mens/liberace_anniversary.png"
+        "name":"Stoneware Set",
+        "price":2500,
+        "description":"This set of stoneware dishes is sturdy, stylish and dishwasher safe. Nothing beats eating in on your own hand-made dishware. A great compliment to our matcha tea set.",
+        "stock":2,
+        "imageURL":"/images/products/houseware/stoneware_set",
+        "attribution":"Photo by cottonbro studio"
     },
     {
-        "name":"Fancy houseware6",
-        "price":10,
-        "description":"thing",
-        "stock":10,
-        "imageURL":"/images/products/mens/liberace_anniversary.png"
-    },
-    {
-        "name":"Fancy houseware5",
-        "price":10,
-        "description":"thing",
-        "stock":10,
-        "imageURL":"/images/products/mens/liberace_anniversary.png"
-    },
-    {
-        "name":"Fancy houseware4",
-        "price":10,
-        "description":"thing",
-        "stock":10,
-        "imageURL":"/images/products/mens/liberace_anniversary.png"
-    },
-    {
-        "name":"Fancy houseware3",
-        "price":10,
-        "description":"thing",
-        "stock":10,
-        "imageURL":"/images/products/mens/liberace_anniversary.png"
-    },
-    {
-        "name":"Fancy houseware2",
-        "price":10,
-        "description":"thing",
-        "stock":10,
-        "imageURL":"/images/products/mens/liberace_anniversary.png"
+        "name":"Toaster",
+        "price":230,
+        "description":"Never settle for anything less than the pefect piece of toast. Our retro-styled toaster hides high-tech mechanism that perfectly controls the temperature and time of your toasting to make sure you never get burned toast again. ",
+        "stock":3,
+        "imageURL":"/images/products/houseware/toaster",
+        "attribution":"Photo by Nicola Barts"
     }
 ]

@@ -40,7 +40,7 @@ export default function ProductList({ products}, {in:inProp} ) {
               sx={{
                 display: "flex",
                 flexWrap: "wrap",
-                minHeight: "400px",
+                minHeight: "500px",
                 justifyContent: "space-between",
                 paddingBottom: "50px",
                 
@@ -66,12 +66,13 @@ export default function ProductList({ products}, {in:inProp} ) {
                 >
                   <Box sx={{ width: { s: "100%", md: "40%" } }}>
                     <Image
-                      src={product.imageURL}
+                      src={`${product.imageURL}@0.25x.jpg`}
                       maxHeight="200px"
                       shift="right"
                       distance="100px"
                       className="productImage"
                       showLoading 
+                      alt={`${product.name} with ${product.attribution}`}
                     />
                   </Box>
                   <Typography

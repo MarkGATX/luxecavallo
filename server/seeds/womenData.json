@@ -1,62 +1,66 @@
 [
     {
-        "name":"Elegant 20's Dress",
+        "name":"Black Dress",
         "gender":"Women",
         "size": {
-            "xs": 2,
+            "xs": 12,
             "s": 3,
-            "m": 5,
-            "l": 6,
-            "xl": 7
+            "m": 3,
+            "l": 26,
+            "xl": 37
             },
-        "imageURL":"/images/products/womens/20s_are_back.png",
-        "description":"Welcome back to the golden age of Downton Abbey, which we think is in the 1920's or Season 3, maybe 4. We just know Lady Mary got a bob haircut. Regardless, you can channel your Lady Mary in this dress inspired by the TV show that was inspired by history.",
-        "price":2600
+        "imageURL":"/images/products/womens/black_dress",
+        "description":"Every closet needs a simple black dress and this one is perfect for any occassion. Soft spun silk with flattering cuts for any occassion makes this a must have item. ",
+        "price":2600,
+        "attribution":"Photo by Andrea Piacquadio"
     },
     {
-        "name":"Blue",
+        "name":"Blue Flowers",
         "gender":"Women",
         "size": {
             "xs": 2,
-            "s": 3,
+            "s": 33,
             "m": 5,
-            "l": 6,
-            "xl": 7
+            "l": 0,
+            "xl":27
             },
-        "imageURL":"/images/products/womens/blue.png",
-        "description":"It's got pockets. That's all you need to know.",
-        "price":2600
+        "imageURL":"/images/products/womens/blue_flowers",
+        "description":"Playful flowers adorn this take on Boho Chic with a 100% cotton dress fit for any occassion.  ",
+        "price":3400,
+        "attribution":"Photo by Henry de Guzman"
     },
     {
-        "name":"Boho Mini-dress",
+        "name":"Casual Linen",
         "gender":"Women",
         "size": {
             "xs": 2,
-            "s": 3,
-            "m": 5,
-            "l": 6,
-            "xl": 7
+            "s": 0,
+            "m": 1,
+            "l": 36,
+            "xl": 27
             },
-        "imageURL":"/images/products/womens/boho1.png",
-        "description":"Boho chic is back in luxury style with this amazingly comfortable mini-dress. Made from linen or maybe burlap. Purse and necklace accessories coming soon.",
-        "price":7600
+        "imageURL":"/images/products/womens/casual",
+        "description":"Casual and comfortable linen makes this outfit one to live for. The loose fit and easy wear makes this a neccessary part of any wardrobe.",
+        "price":2350,
+        "attribution":"Photo by Piril Şahin"
     },
     {
-        "name":"Pseudo Boho Mini-dress",
+        "name":"Copper Sequin",
         "gender":"Women",
         "size": {
-            "xs": 2,
-            "s": 3,
-            "m": 5,
-            "l": 6,
-            "xl": 7
+            "xs": 0,
+            "s": 0,
+            "m": 45,
+            "l": 26,
+            "xl": 0
             },
-        "imageURL":"/images/products/womens/boho2.png",
-        "description":"Inspired by our own Boho Mini Dress, we made another version using 100% cotton with a slightly cleaner silhouette. Plus our Lead Designer resigned so we got to use the same pattern as the Boho Dress. Imitation is flattery or something like that. (No Francis, we're not paying you back pay for the design.)",
-        "price":1290
+        "imageURL":"/images/products/womens/copper_sequin",
+        "description":"Your night on the town will be unforgetable with this in your closet. This dress will catch the lights and the attention whether it's on the dance floor or at dinner.",
+        "price":5670,
+        "attribution":"Photo by Andrea Piacquadio"
     },
     {
-        "name":"Luxe Cavallo Dress3",
+        "name":"Gold Dress",
         "gender":"Women",
         "size": {
             "xs": 2,
@@ -65,93 +69,84 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"/images/products/womens/dark_silk_gold.png",
-        "description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
-        "price":16800
+        "imageURL":"/images/products/womens/gold_dress",
+        "description":"Elegance and Haute Couture meet in this spectacular piece of wearable art. 100% breathable cotton is the base of this statement piece that will leave those around you breathless.",
+        "price":16800,
+        "attribution":"Photo by CENGIZ AKTURK"
     },
     {
-        "name":"Luxe Cavallo Dress4",
+        "name":"Lemon Yellow Dress",
         "gender":"Women",
         "size": {
             "xs": 2,
             "s": 3,
             "m": 5,
-            "l": 6,
-            "xl": 7
+            "l": 26,
+            "xl": 1
             },
-        "imageURL":"/images/products/womens/dark_silk_gold.png",
-        "description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
-        "price":16800
+        "imageURL":"/images/products/womens/lemon_yellow",
+        "description":"Take the sundress to the next level with this bright lemon yellow dress that looks just as spectacular on the beach as it does on the town.",
+        "price":2580,
+        "attribution":"Photo by CENGIZ AKTURK"
     },
     {
-        "name":"Luxe Cavallo Dress5",
+        "name":"Print Dress",
         "gender":"Women",
         "size": {
-            "xs": 2,
-            "s": 3,
-            "m": 5,
+            "xs": 22,
+            "s": 13,
+            "m": 55,
             "l": 6,
             "xl": 7
             },
-        "imageURL":"/images/products/womens/dark_silk_gold.png",
-        "description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
-        "price":16800
+        "imageURL":"/images/products/womens/print",
+        "description":"This stylish print takes this simple dress from good to fantastic. 100% cotton is easy to wear and care for while still turning heads.",
+        "price":4560,
+        "attribution":"Photo by Jame_9bkk"
     },
     {
-        "name":"Luxe Cavallo Dress6",
+        "name":"Silver Sequin",
         "gender":"Women",
         "size": {
-            "xs": 2,
+            "xs": 23,
             "s": 3,
-            "m": 5,
+            "m": 35,
             "l": 6,
             "xl": 7
             },
-        "imageURL":"/images/products/womens/dark_silk_gold.png",
-        "description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
-        "price":16800
+        "imageURL":"/images/products/womens/sequin_with_fur",
+        "description":"Silver sequins are classy, elegant, and exciting in this dress made for nights on the town ",
+        "price":4500,
+        "attribution":"Photo by Olcay Ertem"
     },
     {
-        "name":"Luxe Cavallo Dress7",
+        "name":"Silver Dress",
         "gender":"Women",
         "size": {
-            "xs": 2,
-            "s": 3,
+            "xs": 22,
+            "s": 31,
             "m": 5,
             "l": 6,
             "xl": 7
             },
-        "imageURL":"/images/products/womens/dark_silk_gold.png",
-        "description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
-        "price":16800
+        "imageURL":"/images/products/womens/silver_dress",
+        "description":"Silve lamme has never looked better in this amazing new addition to our lineup. Expertly crafted and guaranteed to fit to perfection.",
+        "price":15300,
+        "attribution":"Photo by CENGIZ AKTURK"
     },
     {
-        "name":"Luxe Cavallo Dress8",
+        "name":"White Dress",
         "gender":"Women",
         "size": {
             "xs": 2,
             "s": 3,
             "m": 5,
             "l": 6,
-            "xl": 7
+            "xl": 1
             },
-        "imageURL":"/images/products/womens/dark_silk_gold.png",
-        "description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
-        "price":16800
-    },
-    {
-        "name":"Luxe Cavallo Dress9",
-        "gender":"Women",
-        "size": {
-            "xs": 2,
-            "s": 3,
-            "m": 5,
-            "l": 6,
-            "xl": 7
-            },
-        "imageURL":"/images/products/womens/dark_silk_gold.png",
-        "description":"Made from the finest silk we could find, this elegant mini-dress exudes style and confidence. Inspired by our own branc. Classy. Elegant. Cavallo.",
-        "price":16800
+        "imageURL":"/images/products/womens/white_dress",
+        "description":"Elegance meets otherworldly fashion in this fabulous white dress. Made of 100% cotton, this dress will never fail to impress.",
+        "price":23300,
+        "attribution":"Photo by Tuấn Kiệt Jr."
     }
-
 ]

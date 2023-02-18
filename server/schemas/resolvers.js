@@ -8,13 +8,13 @@ const resolvers = {
         return await Mens.find();
       },
       womens: async() => {
-        return await Womens.find({});
+        return await Womens.find();
       },
       accessories: async() => {
-        return await Accessory.find({});
+        return await Accessory.find();
       },
       housewares: async() => {
-        return await Houseware.find({});
+        return await Houseware.find();
       }
    
   }

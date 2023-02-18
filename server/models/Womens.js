@@ -29,6 +29,9 @@ const womensSchema = new Schema(
         price: {
             type: Number,
             required: true
+        },
+        attribution: {
+            type:String,
         }
     }
 );

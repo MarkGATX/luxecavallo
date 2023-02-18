@@ -23,7 +23,10 @@ const housewareSchema = new Schema(
         imageURL: {
             type:String,
             required:true
-        }    
+        } ,
+        attribution: {
+            type:String,
+        }   
     }
 );
 

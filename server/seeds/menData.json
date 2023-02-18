@@ -1,6 +1,6 @@
 [
     {
-        "name":"Liberace Anniversary Celebration",
+        "name":"Black Peacoat",
         "gender":"Men",
         "size": {
             "xs": 2,
@@ -9,106 +9,114 @@
             "l": 6,
             "xl": 7
             },
-        "imageURL":"/images/products/mens/liberace_anniversary.png",
-        "description":"Celebrate the legend that is Liberace. Don't worry, we don't know who he is either, but our Grandparents think he was just wonderful.",
-        "price":1000
+        "imageURL":"/images/products/mens/black_peacoat",
+        "description":"A classic coat with modern tailoring to update the look while still protecting you from the elements. Made of 100% Merino wool",
+        "price":1000,
+        "attribution":"Photo by Ismael Abdal Naby studio"
     },
     {
-        "name":"Button Front Shirt",
+        "name":"Blue Suit",
         "gender":"Men",
         "size": {
             "xs": 2,
             "s": 3,
-            "m": 5,
+            "m": 15,
             "l": 6,
-            "xl": 7
+            "xl": 37
             },
-        "imageURL":"/images/products/mens/mens_button_front.png",
-        "description":"Live comfortably knowing that our oversized buttons will keep our tight satin shirt pinned impossibly shut. Don't worry if the buttons aren't all the same size or shape. They still work and we had extras in the warehouse.",
-        "price":300
+        "imageURL":"/images/products/mens/blue_suit",
+        "description":"A classic color for a classic man. Expertly crafted and custom tailored to order, this classic color stands out with it's wool blend and silk lining.",
+        "price":2340,
+        "attribution":"Photo by Kaysha"
     },
     {
-        "name":"Grey Fitted Jacket",
+        "name":"Brown Pinstripe",
         "gender":"Men",
         "size": {
-            "xs": 2,
+            "xs": 12,
             "s": 3,
-            "m": 5,
+            "m": 1,
             "l": 6,
-            "xl": 7
+            "xl": 27
             },
-        "imageURL":"/images/products/mens/mens_jacket.png",
-        "description":"This fitted jacket is perfect for an after-work gathering of friends. Simply make sure you breathe in deep before buttoning the button because as soon as you relax this jacket will pop open. The price of luxury. Pocket 'square' sold separately.",
-        "price":5000
+        "imageURL":"/images/products/mens/brown_pinstripe",
+        "description":"The classic look of a pinstripe suit has never looked more modern in this new style. Custom tailoring and a matching vest will make you stand out in any crowd.",
+        "price":5000,
+        "attribution":"Photo by Tima Miroshnichenko"
     },
     {
-        "name":"Official Harry Styles Collection",
+        "name":"Brown Crop Suit",
         "gender":"Men",
         "size": {
-            "xs": 2,
-            "s": 3,
-            "m": 5,
-            "l": 6,
+            "xs": 32,
+            "s": 33,
+            "m": 55,
+            "l": 16,
             "xl": 7
             },
-        "imageURL":"/images/products/mens/met_gala_look.png",
-        "description":"You don't need a grammy when you wear our Harry Styles inspired outfit. Perfect for a night at your local sushi restaurant or your next important business meeting.",
-        "price":5300
+        "imageURL":"/images/products/mens/brown_suit",
+        "description":"This crop jacket reveals a modern look with classic luxury. With roomy shoulders and a shorter length in the jacket, this profile will turn heads while providing you with luxury comfort with our wool construction and silk lining.",
+        "price":3600,
+        "attribution":"Photo by Bolarinwa Olasunkanmi"
     },
     {
-        "name":"Survivor Vest",
+        "name":"Burgundy Suit",
         "gender":"Men",
         "size": {
-            "xs": 2,
-            "s": 3,
-            "m": 5,
-            "l": 6,
-            "xl": 7
+            "xs": 1,
+            "s": 1,
+            "m": 25,
+            "l": 1,
+            "xl": 47
             },
-        "imageURL":"/images/products/mens/nice_vest.png",
-        "description":"Reflect on everything you've done to reach this level of success in your very own grey vest. This unique grey vest is unlike any other grey vest out there. Don't ask why. Just trust us.",
-        "price":10023
+        "imageURL":"/images/products/mens/burgundy_suit",
+        "description":"Traditional meets modern in this rejection of Beau Brummell colors while embracing sleek styling with a comfortable cut. This slim fit is staight enough in the leg for added comfort while keeping a stylish silhouette. ",
+        "price":10023,
+        "attribution":"Photo by The Lazy Artist Gallery"
     },
     {
-        "name":"More Patterns Suit set",
+        "name":"Grey Two-Tone",
         "gender":"Men",
         "size": {
-            "xs": 2,
+            "xs": 22,
             "s": 3,
-            "m": 5,
-            "l": 6,
-            "xl": 7
+            "m": 15,
+            "l": 26,
+            "xl": 2
             },
-        "imageURL":"/images/products/mens/plaid_on_plaid.png",
-        "description":"Ignore anyone who says too much plaid is bad. As long as you style it with our plain blue suit then you'll stand out in any crowd.",
-        "price":1000
+        "imageURL":"/images/products/mens/grey_two-tone",
+        "description":"For a true mashup of modern and classic styling, this tweed jacket stands out in the crowd with polyester sleeves and a wool vest. It's a combination that shouldn't work, but somehow it does. Custom tailored.",
+        "price":12000,
+        "attribution":"Photo by Marina Abrosimova"
     },
     {
-        "name":"Oyster Button Suit",
+        "name":"Hex Button Suit",
         "gender":"Men",
         "size": {
-            "xs": 2,
-            "s": 3,
-            "m": 5,
-            "l": 6,
-            "xl": 7
+            "xs": 32,
+            "s": 13,
+            "m": 6,
+            "l": 3,
+            "xl": 1
             },
-        "imageURL":"/images/products/mens/suit_with_oyster_buttons.png",
-        "description":"Ignore anyone who says too much plaid is bad. As long as you style it with our plain blue suit then you'll stand out in any crowd.",
-        "price":2399
+        "imageURL":"/images/products/mens/hex_buttons",
+        "description":"This classic black suit pulls in a second look with these uniquely styled buttons and accessories. Sometimes the best way to stand out in a crowd is by blending in.",
+        "price":2399,
+        "attribution":"Photo by emre keshavarz"
     },
     {
-        "name":"More Patterns Suit set2",
+        "name":"White Suit",
         "gender":"Men",
         "size": {
-            "xs": 2,
-            "s": 3,
-            "m": 5,
-            "l": 6,
-            "xl": 7
+            "xs": 1,
+            "s": 23,
+            "m": 53,
+            "l": 12,
+            "xl": 27
             },
-        "imageURL":"/images/products/mens/liberace_anniversary.png",
-        "description":"Ignore anyone who says too much plaid is bad. As long as you style it with our plain blue suit then you'll stand out in any crowd.",
-        "price":1000
+        "imageURL":"/images/products/mens/white_suit",
+        "description":"Cool comfort with luxuorious style. This white suit is breathable and spill proof while being stylish and comfortable. Pair it with some dock shoes and your days on the Riviera couldn't be more perfect.",
+        "price":1760,
+        "attribution":"Photo by Yasin Gündogdu"
     }
 ]
