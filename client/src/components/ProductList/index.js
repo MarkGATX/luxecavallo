@@ -8,6 +8,8 @@ import CardContent from "@mui/material/CardContent";
 import { useRef } from "react";
 import { useLayoutEffect } from "react";
 import gsap from "gsap";
+import Alert from "@mui/material/Alert";
+
 
 
 export default function ProductList({ products}, {in:inProp} ) {
@@ -82,12 +84,21 @@ export default function ProductList({ products}, {in:inProp} ) {
                     {product.description}
                   </Typography>
                   {product.size ? (
-                    <ul className="sizeList">
+                    <ul className="sizeList" >
+                      { (product.size.xs <= 3) || (product.size.s <= 3) || (product.size.m <= 3) || (product.size.l <= 3) || (product.size.xl <= 3) ? (<li><Alert severity="error">Low stock: 
+                        {product.size.xs <= 3 ? <Typography variant='body1' sx={{display:'inline'}}> XS, </Typography> : <></>}
+                        {product.size.s <= 3 ? <Typography variant='body1' sx={{display:'inline'}}> S, </Typography> : <></>}
+                        {product.size.m <= 3 ? <Typography variant='body1' sx={{display:'inline'}}> M, </Typography> : <></>}
+                        {product.size.l <= 3 ? <Typography variant='body1' sx={{display:'inline'}}> L, </Typography> : <></>}
+                        {product.size.xl <= 3 ? <Typography variant='body1' sx={{display:'inline'}}> XL. </Typography> : <></>}
+                        </Alert>
+                      </li>) : (<li></li>)}
+                      {/* {product.size.xs <= 3 ? (<li><Typography>Almost out of XS</Typography></li>) : (console.log('false'))}
                       <li>XS: {product.size.xs}</li>
                       <li>S: {product.size.s}</li>
                       <li>M: {product.size.m}</li>
                       <li>L: {product.size.l}</li>
-                      <li>XL: {product.size.xl}</li>
+                      <li>XL: {product.size.xl}</li> */}
                     </ul>
                   ) : (
                     <Box></Box>

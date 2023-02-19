@@ -16,7 +16,7 @@ export default function AccessoryProducts() {
     // console.log(data)
 
     return (
-        <Grid2 component="main" sx={{ width: `calc(100% - 400px)` }}>
+        <Grid2 container component="main" sx={{ width: `calc(100% - 400px)` }}>
             <Grid2 xs={6} sx={{ height: '300px', paddingLeft: '50px' }}>
                 <Typography variant='h1' sx={{ marginBottom: '50px', paddingTop: '50px' }}>Accessories
                 </Typography>

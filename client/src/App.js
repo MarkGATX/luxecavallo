@@ -51,6 +51,7 @@ let cavalloLightTheme = createTheme({
     text : {
       main:"#1d1b16",
     },
+    
     contrastThreshold: 4.5,
     tonalOffset: .2,
   },
