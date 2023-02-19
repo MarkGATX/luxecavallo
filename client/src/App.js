@@ -41,8 +41,10 @@ let cavalloLightTheme = createTheme({
       contrastText: '#ffffff'
     },
     tertiary: {
-      main:'#4d616c',
-      contrastText:'#ffffff',
+      // main:'#4d616c',
+      // contrastText:'#ffffff',
+      main:'#efe2bc',
+      contrastText:'#211b04',
     },
     headerBack: {
       main:'#1d1b16',

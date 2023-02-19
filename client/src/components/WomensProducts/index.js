@@ -21,7 +21,7 @@ export default function WomensProducts() {
           </Typography>
           <Typography>Shop our selection of Womenswear</Typography>
         </Grid2>
-        <Grid2 xs={3} sx={{ marginBottom: '30px' }}>
+        <Grid2 xs={4} sx={{ marginBottom: '30px' }}>
           <Image height="300px" src={womensHeader} sx={{
             webkitMaskImage: 'linear-gradient(-90deg, rgba(0, 0, 0, 1), transparent)',
             maskImage: 'linear-gradient(-90deg, rgba(0, 0, 0, 1), transparent)'
