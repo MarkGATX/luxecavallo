@@ -29,7 +29,7 @@ export default function ProductList({ products }, { in: inProp }) {
       ref={app}
       container
       spacing={4}
-      sx={{ justifyContent: "space-around", padding: "0 50px" }}
+      sx={{ justifyContent: "space-around", margin: "0 50px" }}
     >
       {products.map((product) => (
         <Grid2
