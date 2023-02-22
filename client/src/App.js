@@ -8,7 +8,7 @@ import HousewareProducts from './components/HousewareProducts';
 import About from './components/About';
 import Contact from './components/Contact';
 import { createTheme } from '@mui/material';
-import {ThemeProvider} from '@mui/material';
+import { ThemeProvider } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useState } from 'react';
 import {
@@ -18,6 +18,7 @@ import {
 } from "@apollo/client";
 import './App.css';
 import { responsiveFontSizes } from '@mui/material';
+import { MenuProvider } from './utils/menuDrawerContext';
 
 
 const client = new ApolloClient({
@@ -27,11 +28,11 @@ const client = new ApolloClient({
 
 let cavalloLightTheme = createTheme({
   palette: {
-    mode:'light',
+    mode: 'light',
     background: {
       default: '#fffbff'
     },
-    
+
     primary: {
       main: '#ffe170',
       contrastText: '#221b00'
@@ -43,47 +44,47 @@ let cavalloLightTheme = createTheme({
     tertiary: {
       // main:'#4d616c',
       // contrastText:'#ffffff',
-      main:'#efe2bc',
-      contrastText:'#211b04',
+      main: '#efe2bc',
+      contrastText: '#211b04',
     },
     headerBack: {
-      main:'#1d1b16',
-      contrastText:"#ffe170",
+      main: '#1d1b16',
+      contrastText: "#ffe170",
     },
-    text : {
-      main:"#1d1b16",
+    text: {
+      main: "#1d1b16",
     },
-    
+
     contrastThreshold: 4.5,
     tonalOffset: .2,
   },
   typography: {
-    fontFamily: "ainslie-sans", 
+    fontFamily: "ainslie-sans",
     fontWeight: 400,
     fontStyle: 'normal',
     h1: {
       fontFamily: 'aviano-flare',
-      fontSize:'2em'
+      fontSize: '2em'
     },
     h2: {
       fontFamily: 'aviano-flare',
-      fontSize:'1.5em'
+      fontSize: '1.5em'
     },
     h3: {
       fontFamily: 'aviano-flare',
-      fontSize:'1.33em'
+      fontSize: '1.33em'
     },
     h4: {
       fontFamily: 'aviano-flare',
-      fontSize:'1.17em'
+      fontSize: '1.17em'
     },
     h5: {
       fontFamily: 'aviano-flare',
-      fontSize:'.83em'
+      fontSize: '.83em'
     },
     h6: {
       fontFamily: 'aviano-flare',
-      fontSize:'2em'
+      fontSize: '2em'
     }
   },
 })
@@ -98,15 +99,15 @@ cavalloLightTheme = createTheme(cavalloLightTheme, {
           // Some CSS
           backgroundColor: cavalloLightTheme.palette.secondary.main,
           color: cavalloLightTheme.palette.secondary.contrastText,
-          
+
           '&:hover, &.Mui-focusVisible': {
             backgroundColor: cavalloLightTheme.palette.headerBack.main,
             color: cavalloLightTheme.palette.headerBack.contrastText,
-            scale:'105%',
+            scale: '105%',
             '& svg:first-of-type': {
               color: cavalloLightTheme.palette.headerBack.contrastText,
             },
-           
+
           },
           '&:active': {
             boxShadow: 'inset 0 2px 4px -1px rgba(0, 0, 0, .2), inset 0 4px 5px 0px rgba(0, 0, 0, .14), inset 0 1px 10px 0px rgba(0, 0, 0, .12)',
@@ -120,12 +121,12 @@ cavalloLightTheme = createTheme(cavalloLightTheme, {
         root: {
           // Some CSS
           color: cavalloLightTheme.palette.secondary.contrastText,
-          
+
           // '&:hover, &.Mui-focusVisible': {
           //   color: cavalloLightTheme.palette.headerBack.contrastText,
-           
+
           // },
-     
+
         },
       },
     },
@@ -163,18 +164,19 @@ export default function App() {
     // return <Main />;
   };
 
-  const handlePageChange = (page) => {document.documentElement.scrollTop = 0;setCurrentPage(page);}
+  const handlePageChange = (page) => { document.documentElement.scrollTop = 0; setCurrentPage(page); }
   console.log(currentPage)
 
   return (
     <ThemeProvider theme={cavalloLightTheme}>
-      <CssBaseline/>
+      <CssBaseline />
       <ApolloProvider client={client}>
-        <Header handlePageChange={handlePageChange} />
+        <MenuProvider>
+          <Header handlePageChange={handlePageChange} />
 
-        {renderMainSection()}
-
-        </ApolloProvider>
-   </ThemeProvider>
+          {renderMainSection()}
+        </MenuProvider>
+      </ApolloProvider>
+    </ThemeProvider>
   );
 }

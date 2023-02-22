@@ -21,17 +21,17 @@ import InfoIcon from '@mui/icons-material/Info';
 import CallIcon from '@mui/icons-material/Call';
 import MaleIcon from '@mui/icons-material/Male';
 import FemaleIcon from '@mui/icons-material/Female';
+import { useMenuContext } from "../../utils/menuDrawerContext";
 
 const sideWidth = 200;
 let drawerWidth = 200;
 const menuItems = [{ 'Men': MaleIcon }, {'Women': FemaleIcon}, { 'Accessories': DiamondIcon }, { 'Household': BlenderIcon }]
 const contactItems = [{ 'About Us': InfoIcon }, { 'Contact Us': CallIcon }]
 
-
-
-
+    
 export default function Header( {handlePageChange}) {
-    const [currentDrawer, setCurrentDrawer] = useState(false);
+    // const [currentDrawer, setCurrentDrawer] = useState(false);
+    const { isMenuOpen, toggleMenu } = useMenuContext();
     const sideContrastText = useRef();
     const mainContrastText = useRef();
     const sideContrastHorse = useRef();
@@ -40,12 +40,11 @@ export default function Header( {handlePageChange}) {
 
 
     function slideDrawer() {
-        setCurrentDrawer(!currentDrawer);
+        // setCurrentDrawer(!currentDrawer);
+        toggleMenu();
         const menuDrawer = document.querySelector('.MuiDrawer-paper')
-        console.log(menuDrawer)
-        console.log(currentDrawer)
         // true = drawer open, so if false, open drawer
-        if (!currentDrawer) {
+        if (!isMenuOpen) {
             gsap.to(sideContrastText.current, { duration: 1, x: -100 })
             gsap.to(sideContrastHorse.current, { duration: 1, x: -100 })
             gsap.to(mainContrastText.current, { duration: 1, x: -100 })
