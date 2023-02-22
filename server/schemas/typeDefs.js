@@ -1,28 +1,30 @@
 const { gql } = require('apollo-server-express');
 
+
 const typeDefs = gql`
   # Define which fields are accessible from the model
   type Mens {
     _id: ID
     name: String!
-    gender: String
+    category: String
     size: Size
     imageURL: String!
     description: String!
     price: Int!
     attribution: String
   }
-  
+ 
   type Womens {
     _id: ID
     name: String!
-    gender: String
+    category: String
     size: Size
     imageURL: String!
     description: String!
     price: Int!
     attribution: String
   }
+
 
 type Size {
     xs: Int
@@ -32,6 +34,7 @@ type Size {
     xl: Int
   }
 
+
 type Accessory {
     _id: ID
     name:String!
@@ -40,7 +43,9 @@ type Accessory {
     stock:Int!
     imageURL:String!
     attribution: String
+    category: String
 }
+
 
 type Houseware {
     _id: ID
@@ -50,17 +55,20 @@ type Houseware {
     stock:Int!
     imageURL:String!
     attribution: String
+    category: String
 }
-  
-
-  
+ 
 type Query {
     mens: [Mens!]!
+    menSingleProd(_id: ID!): Mens
     womens: [Womens!]!
+    womenSingleProd(_id: ID!): Womens
     accessories: [Accessory]
+    accessorySingleProd(_id: ID!): Accessory
     housewares: [Houseware]
+    housewareSingleProd(_id: ID!): Houseware
   }
-  
+ 
 `;
 
 module.exports = typeDefs;
