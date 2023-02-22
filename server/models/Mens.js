@@ -7,7 +7,7 @@ const mensSchema = new Schema(
             required: true,
             trim: true
         },
-        gender: {
+        category: {
             type: String,
         },
         size: {

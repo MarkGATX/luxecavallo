@@ -5,14 +5,16 @@
         "description": "Black leather clutch with Zwarovski crystal details ensure you carry your things and yourself with confidence.",
         "stock": 10,
         "imageURL": "/images/products/accessory/black_clutch",
-        "attribution":"Photo by Adrienne Andersen"
+        "attribution":"Photo by Adrienne Andersen",
+        "category":"Accessory"
     },
     {
         "name": "Floral Bag",
         "price": 450,
         "description": "White leather with deep hand-printed blue flowers make this stand out in a crowd.",
         "stock": 13,
-        "imageURL": "/images/products/accessory/floral_bag"
+        "imageURL": "/images/products/accessory/floral_bag",
+        "category":"Accessory"
     },
     {
         "name": "Bag and Boot set",
@@ -20,27 +22,31 @@
         "description": "Color coordinated boot and bag set keeps you ready to meet your friends out and about.",
         "stock": 2,
         "imageURL": "/images/products/accessory/red_combo",
-        "attribution":"Photo by Malcolm Garret"
+        "attribution":"Photo by Malcolm Garret",
+        "category":"Accessory"
     },
     {
         "name": "Red Gem Collection",
         "price": 1220,
         "description": "Red gems accentuate this sterling silver set of jewelry.",
         "stock": 10,
-        "imageURL": "/images/products/accessory/red_gem"
+        "imageURL": "/images/products/accessory/red_gem",
+        "category":"Accessory"
     },
     {
         "name": "Silver Collection",
         "price": 1020,
         "description": "This collection of sterling silver jewelry gives you a full collection of accessories appropriate for any and every occassion.",
         "stock": 3,
-        "imageURL": "/images/products/accessory/silver_collection"
+        "imageURL": "/images/products/accessory/silver_collection",
+        "category":"Accessory"
     },
     {
         "name": "Titanium Watch",
         "price": 2320,
         "description": "Never worry about a broken watch again with this titanium made watch. Safe up to 40 feet underwatch and impact resistant, this watch is stylish and sturdy.",
         "stock": 10,
-        "imageURL": "/images/products/accessory/watch"
+        "imageURL": "/images/products/accessory/watch",
+        "category":"Accessory"
     }
 ]

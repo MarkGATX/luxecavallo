@@ -5,7 +5,7 @@ const typeDefs = gql`
   type Mens {
     _id: ID
     name: String!
-    gender: String
+    category: String
     size: Size
     imageURL: String!
     description: String!
@@ -16,7 +16,7 @@ const typeDefs = gql`
   type Womens {
     _id: ID
     name: String!
-    gender: String
+    category: String
     size: Size
     imageURL: String!
     description: String!
@@ -40,6 +40,7 @@ type Accessory {
     stock:Int!
     imageURL:String!
     attribution: String
+    category: String
 }
 
 type Houseware {
@@ -50,15 +51,20 @@ type Houseware {
     stock:Int!
     imageURL:String!
     attribution: String
+    category: String
 }
   
 
   
 type Query {
     mens: [Mens!]!
+    menSingleProd(_id: ID!): Mens
     womens: [Womens!]!
+    womenSingleProd(_id: ID!): Womens
     accessories: [Accessory]
+    accessorySingleProd(_id: ID!): Accessory
     housewares: [Houseware]
+    housewareSingleProd(_id: ID!): Houseware
   }
   
 `;

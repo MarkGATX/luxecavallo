@@ -6,8 +6,13 @@ import ProductList from "../ProductList";
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 import mensHeader from '../../images/menswear_header.jpg'
 import Image from 'mui-image';
+import { useState } from 'react';
 
 export default function MensProducts() {
+  const [singleProduct, setSingleProduct] = useState(false);
+  console.log(singleProduct + "the single prod")
+  
+  
   // Execute the query on component load
   const { loading, data } = useQuery(QUERY_MENS);
   // Use optional chaining to check if data exists and if it has a Name property. If not, return an empty array to use.
@@ -30,7 +35,7 @@ export default function MensProducts() {
       {loading ? (
         <div xs={12}>Loading...</div>
       ) : (
-        <ProductList products={data.mens} />
+        <ProductList products={data.mens} singleProduct={singleProduct} setSingleProduct={setSingleProduct}/>
       )}
     </Grid2>
   );
