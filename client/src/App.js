@@ -19,6 +19,8 @@ import {
 import './App.css';
 import { responsiveFontSizes } from '@mui/material';
 import { MenuProvider } from './utils/menuDrawerContext';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 
 const client = new ApolloClient({
@@ -137,46 +139,58 @@ cavalloLightTheme = responsiveFontSizes(cavalloLightTheme)
 
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState('Home');
+  // const [currentPage, setCurrentPage] = useState('Home');
 
-  const renderMainSection = () => {
-    if (currentPage === 'Home') {
-      return <Home />;
-    }
-    if (currentPage === 'Men') {
-      return <MensProducts />;
-    }
-    if (currentPage === 'Women') {
-      return <WomensProducts />;
-    }
-    if (currentPage === 'Accessories') {
-      return <AccessoryProducts />;
-    }
-    if (currentPage === 'Household') {
-      return <HousewareProducts />;
-    }
-    if (currentPage === 'About Us') {
-      return <About />;
-    }
-    if (currentPage === 'Contact Us') {
-      return <Contact />;
-    }
+  // const renderMainSection = () => {
+  //   if (currentPage === 'Home') {
+  //     return <Home />;
+  //   }
+  //   if (currentPage === 'Men') {
+  //     return <MensProducts />;
+  //   }
+  //   if (currentPage === 'Women') {
+  //     return <WomensProducts />;
+  //   }
+  //   if (currentPage === 'Accessories') {
+  //     return <AccessoryProducts />;
+  //   }
+  //   if (currentPage === 'Household') {
+  //     return <HousewareProducts />;
+  //   }
+  //   if (currentPage === 'About Us') {
+  //     return <About />;
+  //   }
+  //   if (currentPage === 'Contact Us') {
+  //     return <Contact />;
+  //   }
     // return <Main />;
-  };
+  // };
 
-  const handlePageChange = (page) => { document.documentElement.scrollTop = 0; setCurrentPage(page); }
-  console.log(currentPage)
+  // const handlePageChange = (page) => { document.documentElement.scrollTop = 0; setCurrentPage(page); }
+  // console.log(currentPage)
 
   return (
     <ThemeProvider theme={cavalloLightTheme}>
       <CssBaseline />
+      <Router>
       <ApolloProvider client={client}>
         <MenuProvider>
-          <Header handlePageChange={handlePageChange} />
+          {/* <Header handlePageChange={handlePageChange} /> */}
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/Men' element={<MensProducts />} />
+            <Route path='/women' element={<WomensProducts />} />
+            <Route path='/Household' element={<HousewareProducts />} />
+            <Route path='/Accessories' element={<AccessoryProducts />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact/>} />
 
-          {renderMainSection()}
+          </Routes>
+          {/* {renderMainSection()} */}
         </MenuProvider>
       </ApolloProvider>
+      </Router>
     </ThemeProvider>
   );
 }

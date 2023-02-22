@@ -22,11 +22,12 @@ import CallIcon from '@mui/icons-material/Call';
 import MaleIcon from '@mui/icons-material/Male';
 import FemaleIcon from '@mui/icons-material/Female';
 import { useMenuContext } from "../../utils/menuDrawerContext";
+import { Link } from "react-router-dom";
 
 const sideWidth = 200;
 let drawerWidth = 200;
 const menuItems = [{ 'Men': MaleIcon }, {'Women': FemaleIcon}, { 'Accessories': DiamondIcon }, { 'Household': BlenderIcon }]
-const contactItems = [{ 'About Us': InfoIcon }, { 'Contact Us': CallIcon }]
+const contactItems = [{ 'About': InfoIcon }, { 'Contact': CallIcon }]
 
     
 export default function Header( {handlePageChange}) {
@@ -101,14 +102,17 @@ export default function Header( {handlePageChange}) {
                             const Icon = Object.values(item)[0];
                             console.log(Icon)
                             return (
+                                <Link to={`/${text}`}>
                                 <ListItem key={index} disablePadding>
-                                    <ListItemButton onClick={() => handlePageChange(text)}>
+                                    {/* <ListItemButton onClick={() => handlePageChange(text)}> */}
+                                    <ListItemButton> 
                                         <ListItemIcon>
                                             <Icon />
                                         </ListItemIcon>
                                         <ListItemText primary={text} />
                                     </ListItemButton>
                                 </ListItem>
+                                </Link>
                             );
                         })}
                     </List>
@@ -119,6 +123,7 @@ export default function Header( {handlePageChange}) {
                             const Icon = Object.values(item)[0];
                             console.log(Icon)
                             return (
+                                <Link to={`/${text}`}>
                                 <ListItem key={index} disablePadding>
                                     <ListItemButton onClick={() => handlePageChange(text)}>
                                         <ListItemIcon>
@@ -127,6 +132,7 @@ export default function Header( {handlePageChange}) {
                                         <ListItemText primary={text} />
                                     </ListItemButton>
                                 </ListItem>
+                                </Link>
                             );
                         })}
                     </List>
