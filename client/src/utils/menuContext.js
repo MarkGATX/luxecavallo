@@ -9,7 +9,7 @@ export const useMenuContext = () => useContext(MenuContext);
 
 // MenuProvider component that holds initial state, returns provider component
 export const MenuProvider = ({ children }) => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(true);
 
     const toggleMenu = () => {
         setIsMenuOpen(prevState => !prevState);

@@ -1,7 +1,7 @@
 [
     {
         "name":"Black Peacoat",
-        "gender":"Men",
+        "category":"Men",
         "size": {
             "xs": 2,
             "s": 3,
@@ -16,7 +16,7 @@
     },
     {
         "name":"Blue Suit",
-        "gender":"Men",
+        "category":"Men",
         "size": {
             "xs": 2,
             "s": 3,
@@ -31,7 +31,7 @@
     },
     {
         "name":"Brown Pinstripe",
-        "gender":"Men",
+        "category":"Men",
         "size": {
             "xs": 12,
             "s": 3,
@@ -46,7 +46,7 @@
     },
     {
         "name":"Brown Crop Suit",
-        "gender":"Men",
+        "category":"Men",
         "size": {
             "xs": 32,
             "s": 33,
@@ -61,7 +61,7 @@
     },
     {
         "name":"Burgundy Suit",
-        "gender":"Men",
+        "category":"Men",
         "size": {
             "xs": 1,
             "s": 1,
@@ -76,7 +76,7 @@
     },
     {
         "name":"Grey Two-Tone",
-        "gender":"Men",
+        "category":"Men",
         "size": {
             "xs": 22,
             "s": 3,
@@ -91,7 +91,7 @@
     },
     {
         "name":"Hex Button Suit",
-        "gender":"Men",
+        "category":"Men",
         "size": {
             "xs": 32,
             "s": 13,
@@ -106,7 +106,7 @@
     },
     {
         "name":"White Suit",
-        "gender":"Men",
+        "category":"Men",
         "size": {
             "xs": 1,
             "s": 23,

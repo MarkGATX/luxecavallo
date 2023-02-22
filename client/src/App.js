@@ -18,8 +18,12 @@ import {
 } from "@apollo/client";
 import './App.css';
 import { responsiveFontSizes } from '@mui/material';
-import { MenuProvider } from './utils/menuDrawerContext';
+import { MenuProvider } from './utils/menuContext';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MensProduct from './components/MensProduct';
+import WomensProduct from './components/WomensProduct';
+import AccessoryProduct from './components/AccessoryProduct';
+import HousewareProduct from './components/HousewareProduct';
 
 
 
@@ -139,57 +143,30 @@ cavalloLightTheme = responsiveFontSizes(cavalloLightTheme)
 
 
 export default function App() {
-  // const [currentPage, setCurrentPage] = useState('Home');
-
-  // const renderMainSection = () => {
-  //   if (currentPage === 'Home') {
-  //     return <Home />;
-  //   }
-  //   if (currentPage === 'Men') {
-  //     return <MensProducts />;
-  //   }
-  //   if (currentPage === 'Women') {
-  //     return <WomensProducts />;
-  //   }
-  //   if (currentPage === 'Accessories') {
-  //     return <AccessoryProducts />;
-  //   }
-  //   if (currentPage === 'Household') {
-  //     return <HousewareProducts />;
-  //   }
-  //   if (currentPage === 'About Us') {
-  //     return <About />;
-  //   }
-  //   if (currentPage === 'Contact Us') {
-  //     return <Contact />;
-  //   }
-    // return <Main />;
-  // };
-
-  // const handlePageChange = (page) => { document.documentElement.scrollTop = 0; setCurrentPage(page); }
-  // console.log(currentPage)
 
   return (
     <ThemeProvider theme={cavalloLightTheme}>
       <CssBaseline />
       <Router>
-      <ApolloProvider client={client}>
-        <MenuProvider>
-          {/* <Header handlePageChange={handlePageChange} /> */}
-          <Header />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/Men' element={<MensProducts />} />
-            <Route path='/women' element={<WomensProducts />} />
-            <Route path='/Household' element={<HousewareProducts />} />
-            <Route path='/Accessories' element={<AccessoryProducts />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/contact' element={<Contact/>} />
+        <ApolloProvider client={client}>
+          <MenuProvider>
+            <Header  />
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/men' element={<MensProducts />} />
+              <Route path='/men/:id' element={<MensProduct />} />
+              <Route path='/women' element={<WomensProducts />} />
+              <Route path='/Women/:id' element={<WomensProduct />} />
+              <Route path='/Houseware' element={<HousewareProducts />} />
+              <Route path='/Houseware/:id' element={<HousewareProduct />} />
+              <Route path='/Accessories' element={<AccessoryProducts />} />
+              <Route path='/Accessories/:id' element={<AccessoryProduct />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/contact' element={<Contact />} />
 
-          </Routes>
-          {/* {renderMainSection()} */}
-        </MenuProvider>
-      </ApolloProvider>
+            </Routes>
+          </MenuProvider>
+        </ApolloProvider>
       </Router>
     </ThemeProvider>
   );
