@@ -21,7 +21,7 @@ export default function MensProduct() {
     // console.log(data.menSingleProd.name)
 
     return (
-        <Grid2 container component="main" sx={{ width: `calc(100% - 400px)`, alignContent:'flex-start' }}>
+        <Grid2 container component="main" sx={{ width: `calc(100% - 400px)`, alignContent: 'flex-start' }}>
             <Grid2 xs={7} sx={{ height: '300px', paddingLeft: '50px' }}>
                 <Typography variant='h1' sx={{ marginBottom: '50px', paddingTop: '50px' }}>Menswear
                 </Typography>
@@ -39,13 +39,13 @@ export default function MensProduct() {
                 <Grid2
                     container
                     xs={12}
-                    
+
                     sx={{ justifyContent: "space-around", margin: "0 50px" }}
                 >
 
                     <Grid2
                         xs={12}
-                        
+
                         sx={{
                             display: "flex",
                             flexWrap: "wrap",
@@ -54,15 +54,7 @@ export default function MensProduct() {
                             paddingBottom: "50px",
                         }}
                     >
-                        <Card className='prodCards'
-                            sx={{
-                                ":hover": {
-                                    boxShadow: 4,
-                                    scale: "102%",
-                                    transition: 'all .5s'
-                                },
-                            }}
-                        >
+                        <Card className='prodCards'>
                             <CardHeader title={data.menSingleProd.name} titleTypographyProps={{ style: { fontSize: '1.17em' } }}></CardHeader>
                             <CardContent
                                 sx={{
@@ -71,7 +63,7 @@ export default function MensProduct() {
                                     justifyContent: "space-between",
                                 }}
                             >
-                                <Box sx={{ width: { s: "100%", md: "40%" } }}>
+                                <Box sx={{ width: { s: "100%", md: "60%" } }}>
                                     <Image
                                         src={`${data.menSingleProd.imageURL}@0.25x.jpg`}
                                         maxHeight="200px"
@@ -82,26 +74,38 @@ export default function MensProduct() {
                                         alt={`${data.menSingleProd.name} with ${data.menSingleProd.attribution}`}
                                     />
                                 </Box>
-                                <Typography
-                                    variant="body2"
-                                    sx={{ width: { s: "100%", md: "45%" } }}
-                                >
-                                    {data.menSingleProd.description}
-                                </Typography>
-                                {data.menSingleProd.size ? (
+                                <Box sx={{ width: { s: "100%", md: "37%" } }}>
+                                    <Typography
+                                        variant="body2"
+
+                                    >
+                                        <Typography variant='body1'>{data.menSingleProd.description}</Typography>
+                                        <Typography variant='body1' className='price'>{`$ ${data.menSingleProd.price}`}</Typography>
+                                    </Typography>
                                     <ul className="sizeList" >
-                                        {(data.menSingleProd.size.xs <= 3) || (data.menSingleProd.size.s <= 3) || (data.menSingleProd.size.m <= 3) || (data.menSingleProd.size.l <= 3) || (data.menSingleProd.size.xl <= 3) ? (<li><Alert severity="error">Low stock:
-                                            {data.menSingleProd.size.xs <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> XS, </Typography> : <></>}
-                                            {data.menSingleProd.size.s <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> S, </Typography> : <></>}
-                                            {data.menSingleProd.size.m <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> M, </Typography> : <></>}
-                                            {data.menSingleProd.size.l <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> L, </Typography> : <></>}
-                                            {data.menSingleProd.size.xl <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> XL. </Typography> : <></>}
-                                        </Alert>
-                                        </li>) : (<li></li>)}
+                                        <li>{data.menSingleProd.size.xs}</li>
+                                        <li>{data.menSingleProd.size.s}</li>
+                                        <li>{data.menSingleProd.size.m}</li>
+                                        <li>{data.menSingleProd.size.l}</li>
+                                        <li>{data.menSingleProd.size.xl}</li>
                                     </ul>
-                                ) : (
-                                    <Box></Box>
-                                )}
+                                    {data.menSingleProd.size ? (
+                                        <ul className="sizeList" >
+                                            {(data.menSingleProd.size.xs <= 3) || (data.menSingleProd.size.s <= 3) || (data.menSingleProd.size.m <= 3) || (data.menSingleProd.size.l <= 3) || (data.menSingleProd.size.xl <= 3) ? (<li><Alert severity="error">Low stock:
+                                                {data.menSingleProd.size.xs <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> XS, </Typography> : <></>}
+                                                {data.menSingleProd.size.s <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> S, </Typography> : <></>}
+                                                {data.menSingleProd.size.m <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> M, </Typography> : <></>}
+                                                {data.menSingleProd.size.l <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> L, </Typography> : <></>}
+                                                {data.menSingleProd.size.xl <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> XL. </Typography> : <></>}
+                                            </Alert>
+                                            </li>) : (<li></li>)}
+
+                                        </ul>
+                                    ) : (
+                                        <Box></Box>)}
+                                </Box>
+                                
+                              
                             </CardContent>
                         </Card>
                     </Grid2>
