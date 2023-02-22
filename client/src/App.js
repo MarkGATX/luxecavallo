@@ -156,11 +156,11 @@ export default function App() {
               <Route path='/men' element={<MensProducts />} />
               <Route path='/men/:id' element={<MensProduct />} />
               <Route path='/women' element={<WomensProducts />} />
-              <Route path='/Women/:id' element={<WomensProduct />} />
-              <Route path='/Houseware' element={<HousewareProducts />} />
-              <Route path='/Houseware/:id' element={<HousewareProduct />} />
-              <Route path='/Accessories' element={<AccessoryProducts />} />
-              <Route path='/Accessories/:id' element={<AccessoryProduct />} />
+              <Route path='/women/:id' element={<WomensProduct />} />
+              <Route path='/houseware' element={<HousewareProducts />} />
+              <Route path='/houseware/:id' element={<HousewareProduct />} />
+              <Route path='/accessories' element={<AccessoryProducts />} />
+              <Route path='/accessories/:id' element={<AccessoryProduct />} />
               <Route path='/about' element={<About />} />
               <Route path='/contact' element={<Contact />} />
 

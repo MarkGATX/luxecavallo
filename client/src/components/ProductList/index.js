@@ -9,7 +9,7 @@ import { useRef } from "react";
 import { useLayoutEffect } from "react";
 import gsap from "gsap";
 import Alert from "@mui/material/Alert";
-import Link from "@mui/material/Link";
+import { Link } from "react-router-dom";
 
 
 
@@ -46,7 +46,7 @@ export default function ProductList({ products }, { in: inProp }) {
             paddingBottom: "50px",
           }}
         >
-          <Link href={`/${product.category}/${product._id}`} underline='none' sx={{cursor:'pointer'}} >
+          <Link to={`/${product.category}/${product._id}`} underline='none' sx={{cursor:'pointer'}} >
           <Card className='prodCards'
             sx={{
               ":hover": {

@@ -6,7 +6,7 @@
         "stock":10,
         "imageURL":"/images/products/houseware/coffee",
         "attribution":"Photo by Jonathan Borba",
-        "category":"Houseware"
+        "category":"houseware"
     },
     {
         "name":"Matcha Tea Set",
@@ -15,7 +15,7 @@
         "stock":10,
         "imageURL":"/images/products/houseware/matcha_set",
         "attribution":"Photo by Charlotte May",
-        "category":"Houseware"
+        "category":"houseware"
     },
     {
         "name":"Stoneware Set",
@@ -24,7 +24,7 @@
         "stock":2,
         "imageURL":"/images/products/houseware/stoneware_set",
         "attribution":"Photo by cottonbro studio",
-        "category":"Houseware"
+        "category":"houseware"
     },
     {
         "name":"Toaster",
@@ -33,6 +33,6 @@
         "stock":3,
         "imageURL":"/images/products/houseware/toaster",
         "attribution":"Photo by Nicola Barts",
-        "category":"Houseware"
+        "category":"houseware"
     }
 ]

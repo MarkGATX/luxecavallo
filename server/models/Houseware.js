@@ -26,7 +26,10 @@ const housewareSchema = new Schema(
         } ,
         attribution: {
             type:String,
-        }   
+        } ,
+        category: {
+            type: String,
+        }  
     }
 );
 

@@ -23,6 +23,7 @@ import MaleIcon from '@mui/icons-material/Male';
 import FemaleIcon from '@mui/icons-material/Female';
 import { useMenuContext } from "../../utils/menuContext";
 import { Link } from "react-router-dom";
+import { memo } from "react";
 
 const sideWidth = 200;
 let drawerWidth = 200;
@@ -30,7 +31,7 @@ const menuItems = [{ 'Men': MaleIcon }, { 'Women': FemaleIcon }, { 'Accessories'
 const contactItems = [{ 'About': InfoIcon }, { 'Contact': CallIcon }]
 
 
-export default function Header({ handlePageChange }) {
+const Header=() =>{
     // const [currentDrawer, setCurrentDrawer] = useState(false);
     const { isMenuOpen, toggleMenu } = useMenuContext();
     const sideContrastText = useRef();
@@ -45,7 +46,7 @@ export default function Header({ handlePageChange }) {
         console.log(isMenuOpen)
         const menuDrawer = document.querySelector('.MuiDrawer-paper')
         // true = drawer open, so if false, open drawer
-        if (isMenuOpen) {
+        if (!isMenuOpen) {
             gsap.to(sideContrastText.current, { duration: 1, x: -100 })
             gsap.to(sideContrastHorse.current, { duration: 1, x: -100 })
             gsap.to(mainContrastText.current, { duration: 1, x: -100 })
@@ -123,9 +124,9 @@ export default function Header({ handlePageChange }) {
                             const Icon = Object.values(item)[0];
                             console.log(Icon)
                             return (
-                                <Link key={index} to={`/${text}`}>
+                                <Link key={index} href={`/${text}`}>
                                     <ListItem disablePadding>
-                                        <ListItemButton onClick={() => handlePageChange(text)}>
+                                        <ListItemButton>
                                             <ListItemIcon>
                                                 <Icon />
                                             </ListItemIcon>
@@ -145,3 +146,5 @@ export default function Header({ handlePageChange }) {
         </>
     )
 }
+
+export default memo(Header);

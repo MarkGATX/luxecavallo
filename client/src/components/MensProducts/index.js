@@ -12,7 +12,7 @@ export default function MensProducts() {
   const { loading, data } = useQuery(QUERY_MENS);
   // Use optional chaining to check if data exists and if it has a Name property. If not, return an empty array to use.
   const products = data?.Name || [];
-
+  
   return (
     <Grid2 container component="main" sx={{ width: `calc(100% - 400px)` }}>
       <Grid2 xs={7} sx={{ height: '300px', paddingLeft: '50px' }}>
