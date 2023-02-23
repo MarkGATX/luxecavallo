@@ -89,7 +89,7 @@ query womenSingleProd($id: ID!) {
   `;
 
 
-export const QUERY_HOUSE = gql`
+export const QUERY_HOUSEWARE = gql`
   query getAllHousewares {
     housewares {
         _id
@@ -105,7 +105,7 @@ export const QUERY_HOUSE = gql`
 `;
 
 
-export const QUERY_HOUSE_PRODUCT = gql`
+export const QUERY_HOUSEWARE_PRODUCT = gql`
 query housewareSingleProd($id: ID!) {
   housewareSingleProd(_id: $id) {
     _id

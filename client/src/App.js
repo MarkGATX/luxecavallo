@@ -8,7 +8,7 @@ import HousewareProducts from './components/HousewareProducts';
 import About from './components/About';
 import Contact from './components/Contact';
 import { createTheme } from '@mui/material';
-import {ThemeProvider} from '@mui/material';
+import { ThemeProvider } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useState } from 'react';
 import {
@@ -18,6 +18,13 @@ import {
 } from "@apollo/client";
 import './App.css';
 import { responsiveFontSizes } from '@mui/material';
+import { MenuProvider } from './utils/menuContext';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MensProduct from './components/MensProduct';
+import WomensProduct from './components/WomensProduct';
+import AccessoryProduct from './components/AccessoryProduct';
+import HousewareProduct from './components/HousewareProduct';
+
 
 
 const client = new ApolloClient({
@@ -27,11 +34,11 @@ const client = new ApolloClient({
 
 let cavalloLightTheme = createTheme({
   palette: {
-    mode:'light',
+    mode: 'light',
     background: {
       default: '#fffbff'
     },
-    
+
     primary: {
       main: '#ffe170',
       contrastText: '#221b00'
@@ -43,47 +50,47 @@ let cavalloLightTheme = createTheme({
     tertiary: {
       // main:'#4d616c',
       // contrastText:'#ffffff',
-      main:'#efe2bc',
-      contrastText:'#211b04',
+      main: '#efe2bc',
+      contrastText: '#211b04',
     },
     headerBack: {
-      main:'#1d1b16',
-      contrastText:"#ffe170",
+      main: '#1d1b16',
+      contrastText: "#ffe170",
     },
-    text : {
-      main:"#1d1b16",
+    text: {
+      main: "#1d1b16",
     },
-    
+
     contrastThreshold: 4.5,
     tonalOffset: .2,
   },
   typography: {
-    fontFamily: "ainslie-sans", 
+    fontFamily: "ainslie-sans",
     fontWeight: 400,
     fontStyle: 'normal',
     h1: {
       fontFamily: 'aviano-flare',
-      fontSize:'2em'
+      fontSize: '2em'
     },
     h2: {
       fontFamily: 'aviano-flare',
-      fontSize:'1.5em'
+      fontSize: '1.5em'
     },
     h3: {
       fontFamily: 'aviano-flare',
-      fontSize:'1.33em'
+      fontSize: '1.33em'
     },
     h4: {
       fontFamily: 'aviano-flare',
-      fontSize:'1.17em'
+      fontSize: '1.17em'
     },
     h5: {
       fontFamily: 'aviano-flare',
-      fontSize:'.83em'
+      fontSize: '.83em'
     },
     h6: {
       fontFamily: 'aviano-flare',
-      fontSize:'2em'
+      fontSize: '2em'
     }
   },
 })
@@ -98,15 +105,15 @@ cavalloLightTheme = createTheme(cavalloLightTheme, {
           // Some CSS
           backgroundColor: cavalloLightTheme.palette.secondary.main,
           color: cavalloLightTheme.palette.secondary.contrastText,
-          
+
           '&:hover, &.Mui-focusVisible': {
             backgroundColor: cavalloLightTheme.palette.headerBack.main,
             color: cavalloLightTheme.palette.headerBack.contrastText,
-            scale:'105%',
+            scale: '105%',
             '& svg:first-of-type': {
               color: cavalloLightTheme.palette.headerBack.contrastText,
             },
-           
+
           },
           '&:active': {
             boxShadow: 'inset 0 2px 4px -1px rgba(0, 0, 0, .2), inset 0 4px 5px 0px rgba(0, 0, 0, .14), inset 0 1px 10px 0px rgba(0, 0, 0, .12)',
@@ -120,12 +127,12 @@ cavalloLightTheme = createTheme(cavalloLightTheme, {
         root: {
           // Some CSS
           color: cavalloLightTheme.palette.secondary.contrastText,
-          
+
           // '&:hover, &.Mui-focusVisible': {
           //   color: cavalloLightTheme.palette.headerBack.contrastText,
-           
+
           // },
-     
+
         },
       },
     },
@@ -136,45 +143,31 @@ cavalloLightTheme = responsiveFontSizes(cavalloLightTheme)
 
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState('Home');
-
-  const renderMainSection = () => {
-    if (currentPage === 'Home') {
-      return <Home />;
-    }
-    if (currentPage === 'Men') {
-      return <MensProducts />;
-    }
-    if (currentPage === 'Women') {
-      return <WomensProducts />;
-    }
-    if (currentPage === 'Accessories') {
-      return <AccessoryProducts />;
-    }
-    if (currentPage === 'Household') {
-      return <HousewareProducts />;
-    }
-    if (currentPage === 'About Us') {
-      return <About />;
-    }
-    if (currentPage === 'Contact Us') {
-      return <Contact />;
-    }
-    // return <Main />;
-  };
-
-  const handlePageChange = (page) => {document.documentElement.scrollTop = 0;setCurrentPage(page);}
-  console.log(currentPage)
 
   return (
     <ThemeProvider theme={cavalloLightTheme}>
-      <CssBaseline/>
-      <ApolloProvider client={client}>
-        <Header handlePageChange={handlePageChange} />
+      <CssBaseline />
+      <Router>
+        <ApolloProvider client={client}>
+          <MenuProvider>
+            <Header  />
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/men' element={<MensProducts />} />
+              <Route path='/men/:id' element={<MensProduct />} />
+              <Route path='/women' element={<WomensProducts />} />
+              <Route path='/women/:id' element={<WomensProduct />} />
+              <Route path='/houseware' element={<HousewareProducts />} />
+              <Route path='/houseware/:id' element={<HousewareProduct />} />
+              <Route path='/accessories' element={<AccessoryProducts />} />
+              <Route path='/accessories/:id' element={<AccessoryProduct />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/contact' element={<Contact />} />
 
-        {renderMainSection()}
-
+            </Routes>
+          </MenuProvider>
         </ApolloProvider>
-   </ThemeProvider>
+      </Router>
+    </ThemeProvider>
   );
 }

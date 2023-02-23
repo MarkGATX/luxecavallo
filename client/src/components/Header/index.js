@@ -21,17 +21,19 @@ import InfoIcon from '@mui/icons-material/Info';
 import CallIcon from '@mui/icons-material/Call';
 import MaleIcon from '@mui/icons-material/Male';
 import FemaleIcon from '@mui/icons-material/Female';
+import { useMenuContext } from "../../utils/menuContext";
+import { Link } from "react-router-dom";
+import { memo } from "react";
 
 const sideWidth = 200;
 let drawerWidth = 200;
-const menuItems = [{ 'Men': MaleIcon }, {'Women': FemaleIcon}, { 'Accessories': DiamondIcon }, { 'Household': BlenderIcon }]
-const contactItems = [{ 'About Us': InfoIcon }, { 'Contact Us': CallIcon }]
+const menuItems = [{ 'Men': MaleIcon }, { 'Women': FemaleIcon }, { 'Accessories': DiamondIcon }, { 'Houseware': BlenderIcon }]
+const contactItems = [{ 'About': InfoIcon }, { 'Contact': CallIcon }]
 
 
-
-
-export default function Header( {handlePageChange}) {
-    const [currentDrawer, setCurrentDrawer] = useState(false);
+const Header=() =>{
+    // const [currentDrawer, setCurrentDrawer] = useState(false);
+    const { isMenuOpen, toggleMenu } = useMenuContext();
     const sideContrastText = useRef();
     const mainContrastText = useRef();
     const sideContrastHorse = useRef();
@@ -40,26 +42,25 @@ export default function Header( {handlePageChange}) {
 
 
     function slideDrawer() {
-        setCurrentDrawer(!currentDrawer);
+        toggleMenu();
+        console.log(isMenuOpen)
         const menuDrawer = document.querySelector('.MuiDrawer-paper')
-        console.log(menuDrawer)
-        console.log(currentDrawer)
         // true = drawer open, so if false, open drawer
-        if (!currentDrawer) {
+        if (!isMenuOpen) {
             gsap.to(sideContrastText.current, { duration: 1, x: -100 })
             gsap.to(sideContrastHorse.current, { duration: 1, x: -100 })
             gsap.to(mainContrastText.current, { duration: 1, x: -100 })
             gsap.to(mainContrastHorse.current, { duration: 1, x: -100 })
-            gsap.to(burger.current, {duration:1, x:90})
-            gsap.to(menuDrawer, { duration: 1, ease: 'power1.out', x: 200, zIndex:1200 })
+            gsap.to(burger.current, { duration: 1, x: 90 })
+            gsap.to(menuDrawer, { duration: 1, ease: 'power1.out', x: 200, zIndex: 1200 })
         } else {
-            gsap.to(menuDrawer, { duration: 1, ease: 'none', x: -200, zIndex:-1 })
+            gsap.to(menuDrawer, { duration: 1, ease: 'none', x: -200, zIndex: -1 })
             gsap.to(sideContrastText.current, { duration: 1, x: 0 })
             gsap.to(sideContrastHorse.current, { duration: 1, x: 0 })
             gsap.to(mainContrastText.current, { duration: 1, x: 0 })
             gsap.to(mainContrastHorse.current, { duration: 1, x: 0 })
-            gsap.to(burger.current, {duration:1, x:0})
-            
+            gsap.to(burger.current, { duration: 1, x: 0 })
+
         }
     }
 
@@ -74,22 +75,22 @@ export default function Header( {handlePageChange}) {
                 </Box>
                 <Typography className='headerTitle' ref={sideContrastText} variant='h2' component='h1' sx={{ color: 'headerBack.contrastText', writingMode: 'vertical-lr', letterSpacing: '-.6em', textOrientation: 'upright', position: 'relative', left: '155px' }}>LUXE CAVALLO</Typography>
             </Box>
-            <Box sx={{ position: 'absolute', minHeight: '100vh', left: sideWidth,  overflow: 'hidden' }}>
-                <Drawer 
+            <Box sx={{ position: 'absolute', minHeight: '100vh', left: sideWidth, overflow: 'hidden' }}>
+                <Drawer
                     sx={{
                         width: drawerWidth,
-                        
+
                         flexShrink: 0,
                         '& .MuiDrawer-paper': {
-                            backgroundColor:'secondary.main',
+                            backgroundColor: 'secondary.main',
                             width: drawerWidth,
                             boxSizing: 'border-box',
                             zIndex: '-1',
-                            left:'-200px',
-                            position:'absolute',
-                            overflow:'hidden', 
+                            left: '-200px',
+                            position: 'absolute',
+                            overflow: 'hidden',
                             justifyContent: 'space-between',
-                            padding: '1rem 0 1rem 0' ,                          
+                            padding: '1rem 0 1rem 0',
                         },
                     }}
                     variant="permanent"
@@ -102,14 +103,17 @@ export default function Header( {handlePageChange}) {
                             const Icon = Object.values(item)[0];
                             console.log(Icon)
                             return (
-                                <ListItem key={index} disablePadding>
-                                    <ListItemButton onClick={() => handlePageChange(text)}>
-                                        <ListItemIcon>
-                                            <Icon />
-                                        </ListItemIcon>
-                                        <ListItemText primary={text} />
-                                    </ListItemButton>
-                                </ListItem>
+                                <Link key={index} to={`/${text}`}>
+                                    <ListItem disablePadding>
+                                        {/* <ListItemButton onClick={() => handlePageChange(text)}> */}
+                                        <ListItemButton>
+                                            <ListItemIcon>
+                                                <Icon />
+                                            </ListItemIcon>
+                                            <ListItemText primary={text} />
+                                        </ListItemButton>
+                                    </ListItem>
+                                </Link>
                             );
                         })}
                     </List>
@@ -120,14 +124,16 @@ export default function Header( {handlePageChange}) {
                             const Icon = Object.values(item)[0];
                             console.log(Icon)
                             return (
-                                <ListItem key={index} disablePadding>
-                                    <ListItemButton onClick={() => handlePageChange(text)}>
-                                        <ListItemIcon>
-                                            <Icon />
-                                        </ListItemIcon>
-                                        <ListItemText primary={text} />
-                                    </ListItemButton>
-                                </ListItem>
+                                <Link key={index} href={`/${text}`}>
+                                    <ListItem disablePadding>
+                                        <ListItemButton>
+                                            <ListItemIcon>
+                                                <Icon />
+                                            </ListItemIcon>
+                                            <ListItemText primary={text} />
+                                        </ListItemButton>
+                                    </ListItem>
+                                </Link>
                             );
                         })}
                     </List>
@@ -140,3 +146,5 @@ export default function Header( {handlePageChange}) {
         </>
     )
 }
+
+export default memo(Header);

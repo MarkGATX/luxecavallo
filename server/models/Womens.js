@@ -8,7 +8,7 @@ const womensSchema = new Schema(
             unique: true,
             trim: true
         },
-        gender: {
+        category: {
             type: String,
         },
         size: {

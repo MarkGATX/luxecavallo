@@ -25,7 +25,10 @@ const accessorySchema = new Schema(
         },
         attribution: {
             type:String,
-        }    
+        },
+        category: {
+            type: String,
+        }
     }
 );
 
