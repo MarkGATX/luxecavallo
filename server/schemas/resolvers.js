@@ -15,19 +15,19 @@ const resolvers = {
         return await Womens.find();
       },
       womenSingleProd: async (parent, {_id}) => {
-        return await Mens.findById(_id);      
+        return await Womens.findById(_id);      
       },
       accessories: async() => {
         return await Accessory.find();
       },
       accessorySingleProd: async (parent, {_id}) => {
-        return await Mens.findById(_id);      
+        return await Accessory.findById(_id);      
       },
       housewares: async() => {
         return await Houseware.find();
       },
       housewareSingleProd: async (parent, {_id}) => {
-        return await Mens.findById(_id);      
+        return await Houseware.findById(_id);      
       }
    
   }

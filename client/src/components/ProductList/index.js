@@ -10,6 +10,7 @@ import { useLayoutEffect } from "react";
 import gsap from "gsap";
 import Alert from "@mui/material/Alert";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 
 
@@ -28,13 +29,14 @@ export default function ProductList({ products }, { in: inProp }) {
 
   return (
     <Grid2
-      ref={app}
+    ref={app}
       container
       spacing={4}
       sx={{ justifyContent: "space-around", margin: "0 50px" }}
     >
       {products.map((product) => (
         <Grid2
+        
           key={product._id}
           md={12}
           lg={6}
@@ -52,7 +54,7 @@ export default function ProductList({ products }, { in: inProp }) {
               ":hover": {
                 boxShadow: 4,
                 scale: "102%",
-                transition: 'all .5s'
+                transition: 'scale .5s'
               },
             }}
           >

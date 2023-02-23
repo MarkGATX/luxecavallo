@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { Typography } from '@mui/material';
-import { QUERY_HOUSE } from '../../utils/queries';
+import { QUERY_HOUSEWARE } from '../../utils/queries';
 import ProductList from "../ProductList";
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 import houseHeader from '../../images/houseware_header.jpg'
@@ -9,7 +9,7 @@ import Image from 'mui-image';
 
 export default function HousewareProducts() {
      // Execute the query on component load
-    const { loading, data } = useQuery(QUERY_HOUSE);
+    const { loading, data } = useQuery(QUERY_HOUSEWARE);
     console.log(data)
     // Use optional chaining to check if data exists and if it has a Name property. If not, return an empty array to use.
     // const products = data?.Name || [];
