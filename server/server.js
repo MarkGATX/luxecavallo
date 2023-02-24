@@ -1,7 +1,9 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
-
+import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+dotenv.config()
+console.log(process.env +' environment')
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');

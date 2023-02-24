@@ -19,6 +19,8 @@
     },
     "dependencies": {
         "@emailjs/browser": "^3.10.0",
+        "dotenv": "^16.0.3",
+        "gh-pages": "^5.0.0",
         "mui-image": "^1.0.7",
         "react-transition-group": "^4.4.5"
     }
