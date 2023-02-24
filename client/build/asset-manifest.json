@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0563566c.css",
+    "main.js": "/static/js/main.56184cb3.js",
+    "static/js/787.1854ea56.chunk.js": "/static/js/787.1854ea56.chunk.js",
+    "static/media/cavallo_bg_vid5.mp4": "/static/media/cavallo_bg_vid5.174cbf720137cd08ed42.mp4",
+    "static/media/accessory_header.jpg": "/static/media/accessory_header.c8a4790fbc9f3e73ac78.jpg",
+    "static/media/houseware_header.jpg": "/static/media/houseware_header.8d1ed78ae527e441ba4a.jpg",
+    "static/media/womenswear_header.jpg": "/static/media/womenswear_header.24168331900f1ded13ce.jpg",
+    "static/media/contactHeader.jpg": "/static/media/contactHeader.260fa05ea555c84adf28.jpg",
+    "static/media/live_cavallo.jpg": "/static/media/live_cavallo.9bb295713e48de3bfa70.jpg",
+    "static/media/sizing_header.jpg": "/static/media/sizing_header.12703827585a53d706ca.jpg",
+    "static/media/step_repeat_LA.jpg": "/static/media/step_repeat_LA.2af0b4e74720ff34a1d6.jpg",
+    "static/media/menswear_header.jpg": "/static/media/menswear_header.f0ea97c312c2ef3ae02a.jpg",
+    "static/media/gsap-greensock.svg": "/static/media/gsap-greensock.dff87e2debbe5d37479732018b2a575a.svg",
+    "static/media/cavale_logo.svg": "/static/media/cavale_logo.bbee40bdbb7cd5f8fe3fb1bd58c03ed3.svg",
+    "index.html": "/index.html",
+    "main.0563566c.css.map": "/static/css/main.0563566c.css.map",
+    "main.56184cb3.js.map": "/static/js/main.56184cb3.js.map",
+    "787.1854ea56.chunk.js.map": "/static/js/787.1854ea56.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0563566c.css",
+    "static/js/main.56184cb3.js"
+  ]
+}
