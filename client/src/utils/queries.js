@@ -39,6 +39,7 @@ query menSingleProd($id: ID!) {
     description
     price
     attribution
+    care
   }
 }
   `;
@@ -84,6 +85,7 @@ query womenSingleProd($id: ID!) {
     description
     price
     attribution
+    care
   }
 }
   `;

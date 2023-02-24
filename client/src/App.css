@@ -20,3 +20,24 @@ a {
   font-weight: 900;
   font-style: normal;
 }  */
+
+/* Classes */
+
+
+
+.sizeButton {
+  width:45%;
+  text-align: center;
+  margin-bottom:1em;
+}
+
+.sizeList {
+  width:100%;
+  list-style:none;
+  display:flex;
+  flex-direction: row;
+  justify-content:space-around;
+  padding:0;
+  font-size:.8rem;
+  flex-wrap:wrap;
+}

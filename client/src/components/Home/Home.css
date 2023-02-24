@@ -1,0 +1,7 @@
+#splashVid {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    top:-50px;
+    min-height: 110%;
+}

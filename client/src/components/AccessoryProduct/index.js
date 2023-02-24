@@ -9,7 +9,7 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import Box from '@mui/material/Box';
-import Alert from '@mui/material/Alert';
+import Button from '@mui/material/Button';
 
 
 export default function AccessoryProduct() {
@@ -52,7 +52,7 @@ export default function AccessoryProduct() {
                             paddingBottom: "50px",
                         }}
                     >
-                        <Card className='prodCards' sx={{width:'100%'}}>
+                        <Card sx={{ width: '100%' }}>
                             <CardHeader title={data.accessorySingleProd.name} titleTypographyProps={{ style: { fontSize: '1.17em' } }}></CardHeader>
                             <CardContent
                                 sx={{
@@ -63,7 +63,7 @@ export default function AccessoryProduct() {
                             >
                                 <Box sx={{ width: { s: "100%", md: "60%" } }}>
                                     <Image
-                                        src={`${data.accessorySingleProd.imageURL}@0.25x.jpg`}
+                                        src={`${data.accessorySingleProd.imageURL}.jpg`}
                                         maxHeight="200px"
                                         shift="right"
                                         distance="100px"
@@ -73,13 +73,13 @@ export default function AccessoryProduct() {
                                     />
                                 </Box>
                                 <Box sx={{ width: { s: "100%", md: "37%" } }}>
-                                    <Typography
-                                        variant="body2"
 
-                                    >
-                                        <Typography variant='body1'>{data.accessorySingleProd.description}</Typography>
-                                        <Typography variant='body1' className='price'>{`$ ${data.accessorySingleProd.price}`}</Typography>
-                                    </Typography>
+                                    <Typography variant='body1'>{data.accessorySingleProd.description}</Typography>
+                                    <Typography variant='h4' className='price' sx={{ marginTop: '1em' }}>{`$ ${data.accessorySingleProd.price}`}</Typography>
+                                    <Box sx={{ margin: '2em', textAlign: 'center' }}>
+                                        <Button variant='contained' sx={{ width: '80%' }}>Add to Bag</Button>
+                                    </Box>
+
 
 
 

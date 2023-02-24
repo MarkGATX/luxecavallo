@@ -12,6 +12,7 @@ const typeDefs = gql`
     description: String!
     price: Int!
     attribution: String
+    care:String
   }
  
   type Womens {
@@ -23,6 +24,7 @@ const typeDefs = gql`
     description: String!
     price: Int!
     attribution: String
+    care: String
   }
 
 

@@ -20,7 +20,7 @@ export default function HousewareProducts() {
           <Grid2 xs={6} sx={{height:'300px', paddingLeft:'50px'}}>
             <Typography variant='h1' sx={{marginBottom:'50px', paddingTop:'50px' }}>Houseware
             </Typography>
-            <Typography>Goods for your home</Typography>
+            <Typography>Shop our selection of Fine Houseware</Typography>
             </Grid2>
             <Grid2 xs={6} sx={{marginBottom:'30px'}}>
         <Image height="300px" src={houseHeader} sx={{

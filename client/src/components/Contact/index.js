@@ -82,54 +82,55 @@ export default function Contact() {
         <Typography variant='body1'>If you're trying to reach Luxe Cavallo, don't, because it's a fictional company.</Typography>
         <br />
         <Typography variant='body1'>But you can reach the developer, Mark Gardner, who created this site as a project as a full MERN stack for his portfolio. You can find Mark at his <a href='https://github.com/MarkGATX'>GitHub</a> or on <a href="https://www.linkedin.com/in/mark-gardner-atx/">LinkedIn</a>.</Typography>
-        <br/>
+        <br />
         <Typography variant='body1' sx={{ marginBottom: '50px' }}>You can also email him at at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#104;&#101;&#109;&#97;&#114;&#107;&#103;&#97;&#114;&#100;&#110;&#101;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#116;&#104;&#101;&#109;&#97;&#114;&#107;&#103;&#97;&#114;&#100;&#110;&#101;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a> or with this form.</Typography>
       </Grid2>
       <Grid2 xs={10} sx={{ paddingLeft: '50px' }} >
+        
+            <Card component="form" ref={form} sx={{ padding: '50px', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', backgroundColor: 'tertiary.main', alignSelf: 'center' }} onSubmit={HandleFormSubmit}>
+              <TextField
+                required
+                id="outlined-required-email"
+                label="E-mail"
 
-        <Card component="form" ref={form} sx={{ padding: '50px', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', backgroundColor: 'tertiary.main' }} onSubmit={HandleFormSubmit}>
-          <TextField
-            required
-            id="outlined-required-email"
-            label="E-mail"
-            
-            value={email}
-            onChange={handleInputChange}
-            type='email'
-            name='user_email'
-            sx={{ width: '80%', margin: '20px', backgroundColor: 'background.default' }}
-          />
-          <TextField
-            required
-            id="outlined-required-name"
-            label="Name"
-            value={name}
-            onChange={handleInputChange}
-            type='text'
-            name='user_name'
-            sx={{ width: '80%', margin: '20px', backgroundColor: 'background.default' }}
-          />
-          <TextField
-            required
-            id="outlined-required-message"
-            label="Message"
-            value={message}
-            onChange={handleInputChange}
-            name="message"
-            sx={{ width: '80%', margin: '20px', backgroundColor: 'background.default' }}
-          />{errorMessage && (
-            <Box xs={12}>
-              <Typography variant='body2' sx={{ width: '100%', display: 'block' }} className="error-text">{errorMessage}</Typography>
-            </Box>
-          )}
-          <Button variant='contained' type="submit" className="button" sx={{ width: '80%',marginBottom:'20px', '&:hover': { color: 'secondary.contrastText', fontWeight: 'bold' } }}>Submit</Button>
-          {show && (
-            <Box xs={12}>
-              <Typography variant='h4' sx={{ width: '100%', display: 'block', textAlign:'center' }} >Thanks for reaching out!<br/> We'll be in touch soon!</Typography>
-            </Box>
-          )}
+                value={email}
+                onChange={handleInputChange}
+                type='email'
+                name='user_email'
+                sx={{ width: '80%', margin: '20px', backgroundColor: 'background.default' }}
+              />
+              <TextField
+                required
+                id="outlined-required-name"
+                label="Name"
+                value={name}
+                onChange={handleInputChange}
+                type='text'
+                name='user_name'
+                sx={{ width: '80%', margin: '20px', backgroundColor: 'background.default' }}
+              />
+              <TextField
+                required
+                id="outlined-required-message"
+                label="Message"
+                value={message}
+                onChange={handleInputChange}
+                name="message"
+                sx={{ width: '80%', margin: '20px', backgroundColor: 'background.default' }}
+              />{errorMessage && (
+                <Box xs={12}>
+                  <Typography variant='body2' sx={{ width: '100%', display: 'block' }} className="error-text">{errorMessage}</Typography>
+                </Box>
+              )}
+              <Button variant='contained' type="submit" className="button" sx={{ width: '80%', marginBottom: '20px', '&:hover': { color: 'secondary.contrastText', fontWeight: 'bold' } }}>Submit</Button>
+              {show && (
+                <Box xs={12}>
+                  <Typography variant='h4' sx={{ width: '100%', display: 'block', textAlign: 'center' }} >Thanks for reaching out!<br /> We'll be in touch soon!</Typography>
+                </Box>
+              )}
 
-        </Card>
+            </Card>
+         
 
       </Grid2>
 

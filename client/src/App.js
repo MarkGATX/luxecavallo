@@ -24,6 +24,7 @@ import MensProduct from './components/MensProduct';
 import WomensProduct from './components/WomensProduct';
 import AccessoryProduct from './components/AccessoryProduct';
 import HousewareProduct from './components/HousewareProduct';
+import Sizing from './components/Sizing';
 
 
 
@@ -163,6 +164,7 @@ export default function App() {
               <Route path='/accessories/:id' element={<AccessoryProduct />} />
               <Route path='/about' element={<About />} />
               <Route path='/contact' element={<Contact />} />
+              <Route path='/sizing' element={<Sizing />} />
 
             </Routes>
           </MenuProvider>

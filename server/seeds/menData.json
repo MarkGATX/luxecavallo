@@ -3,16 +3,17 @@
         "name":"Black Peacoat",
         "category":"men",
         "size": {
-            "xs": 2,
-            "s": 3,
-            "m": 5,
+            "xs": 0,
+            "s": 0,
+            "m": 0,
             "l": 6,
             "xl": 7
             },
         "imageURL":"/images/products/mens/black_peacoat",
         "description":"A classic coat with modern tailoring to update the look while still protecting you from the elements. Made of 100% Merino wool",
         "price":1000,
-        "attribution":"Photo by Ismael Abdal Naby studio"
+        "attribution":"Photo by Ismael Abdal Naby studio",
+        "care":"For best results, dry clean only. "
     },
     {
         "name":"Blue Suit",
@@ -27,22 +28,24 @@
         "imageURL":"/images/products/mens/blue_suit",
         "description":"A classic color for a classic man. Expertly crafted and custom tailored to order, this classic color stands out with it's wool blend and silk lining.",
         "price":2340,
-        "attribution":"Photo by Kaysha"
+        "attribution":"Photo by Kaysha",
+        "care":"For best results, dry clean only. "
     },
     {
         "name":"Brown Pinstripe",
         "category":"men",
         "size": {
             "xs": 12,
-            "s": 3,
-            "m": 1,
+            "s": 7,
+            "m": 5,
             "l": 6,
             "xl": 27
             },
         "imageURL":"/images/products/mens/brown_pinstripe",
         "description":"The classic look of a pinstripe suit has never looked more modern in this new style. Custom tailoring and a matching vest will make you stand out in any crowd.",
         "price":5000,
-        "attribution":"Photo by Tima Miroshnichenko"
+        "attribution":"Photo by Tima Miroshnichenko",
+        "care":"For best results, dry clean only. "
     },
     {
         "name":"Brown Crop Suit",
@@ -57,7 +60,8 @@
         "imageURL":"/images/products/mens/brown_suit",
         "description":"This crop jacket reveals a modern look with classic luxury. With roomy shoulders and a shorter length in the jacket, this profile will turn heads while providing you with luxury comfort with our wool construction and silk lining.",
         "price":3600,
-        "attribution":"Photo by Bolarinwa Olasunkanmi"
+        "attribution":"Photo by Bolarinwa Olasunkanmi",
+        "care":"For best results, dry clean only."
     },
     {
         "name":"Burgundy Suit",
@@ -72,7 +76,8 @@
         "imageURL":"/images/products/mens/burgundy_suit",
         "description":"Traditional meets modern in this rejection of Beau Brummell colors while embracing sleek styling with a comfortable cut. This slim fit is staight enough in the leg for added comfort while keeping a stylish silhouette. ",
         "price":10023,
-        "attribution":"Photo by The Lazy Artist Gallery"
+        "attribution":"Photo by The Lazy Artist Gallery",
+        "care":"For best results, dry clean only. "
     },
     {
         "name":"Grey Two-Tone",
@@ -87,7 +92,8 @@
         "imageURL":"/images/products/mens/grey_two-tone",
         "description":"For a true mashup of modern and classic styling, this tweed jacket stands out in the crowd with polyester sleeves and a wool vest. It's a combination that shouldn't work, but somehow it does. Custom tailored.",
         "price":12000,
-        "attribution":"Photo by Marina Abrosimova"
+        "attribution":"Photo by Marina Abrosimova",
+        "care":"For best results, dry clean only."
     },
     {
         "name":"Hex Button Suit",
@@ -96,19 +102,20 @@
             "xs": 32,
             "s": 13,
             "m": 6,
-            "l": 3,
-            "xl": 1
+            "l": 0,
+            "xl": 0
             },
         "imageURL":"/images/products/mens/hex_buttons",
         "description":"This classic black suit pulls in a second look with these uniquely styled buttons and accessories. Sometimes the best way to stand out in a crowd is by blending in.",
         "price":2399,
-        "attribution":"Photo by emre keshavarz"
+        "attribution":"Photo by emre keshavarz",
+        "care":"For best results, dry clean only. Machine washable on cold. Do not tumble dry. Hang or lay flat to dry."
     },
     {
         "name":"White Suit",
         "category":"men",
         "size": {
-            "xs": 1,
+            "xs": 0,
             "s": 23,
             "m": 53,
             "l": 12,
@@ -117,6 +124,7 @@
         "imageURL":"/images/products/mens/white_suit",
         "description":"Cool comfort with luxuorious style. This white suit is breathable and spill proof while being stylish and comfortable. Pair it with some dock shoes and your days on the Riviera couldn't be more perfect.",
         "price":1760,
-        "attribution":"Photo by Yasin Gündogdu"
+        "attribution":"Photo by Yasin Gündogdu",
+        "care":"For best results, dry clean only. "
     }
 ]

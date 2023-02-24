@@ -32,6 +32,9 @@ const womensSchema = new Schema(
         },
         attribution: {
             type:String,
+        },
+        care: {
+            type:String,
         }
     }
 );

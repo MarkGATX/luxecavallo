@@ -1,12 +1,4 @@
-.sizeList {
-    width:100%;
-    list-style:none;
-    display:flex;
-    flex-direction: row;
-    justify-content:space-around;
-    padding:0;
-    font-size:.8rem;
-}
+
 
 /* .prodCards {
     opacity:1;

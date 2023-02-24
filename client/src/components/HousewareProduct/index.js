@@ -9,7 +9,7 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import Box from '@mui/material/Box';
-import Alert from '@mui/material/Alert';
+import Button from '@mui/material/Button';
 
 
 export default function HousewareProduct() {
@@ -23,9 +23,9 @@ export default function HousewareProduct() {
     return (
         <Grid2 container component="main" sx={{ width: `calc(100% - 400px)`, alignContent: 'flex-start' }}>
             <Grid2 xs={7} sx={{ height: '300px', paddingLeft: '50px' }}>
-                <Typography variant='h1' sx={{ marginBottom: '50px', paddingTop: '50px' }}>Menswear
+                <Typography variant='h1' sx={{ marginBottom: '50px', paddingTop: '50px' }}>Houseware
                 </Typography>
-                <Typography>Shop our selection of Menswear</Typography>
+                <Typography>Shop our selection of Fine Housewares</Typography>
             </Grid2>
             <Grid2 xs={4} sx={{ marginBottom: '30px' }}>
                 <Image height="300px" src={mensHeader} sx={{
@@ -54,7 +54,7 @@ export default function HousewareProduct() {
                             paddingBottom: "50px",
                         }}
                     >
-                        <Card className='prodCards'>
+                        <Card sx={{ width: '100%' }}>
                             <CardHeader title={data.housewareSingleProd.name} titleTypographyProps={{ style: { fontSize: '1.17em' } }}></CardHeader>
                             <CardContent
                                 sx={{
@@ -65,7 +65,7 @@ export default function HousewareProduct() {
                             >
                                 <Box sx={{ width: { s: "100%", md: "60%" } }}>
                                     <Image
-                                        src={`${data.housewareSingleProd.imageURL}@0.25x.jpg`}
+                                        src={`${data.housewareSingleProd.imageURL}.jpg`}
                                         maxHeight="200px"
                                         shift="right"
                                         distance="100px"
@@ -75,17 +75,16 @@ export default function HousewareProduct() {
                                     />
                                 </Box>
                                 <Box sx={{ width: { s: "100%", md: "37%" } }}>
-                                    <Typography
-                                        variant="body2"
 
-                                    >
-                                        <Typography variant='body1'>{data.housewareSingleProd.description}</Typography>
-                                        <Typography variant='body1' className='price'>{`$ ${data.housewareSingleProd.price}`}</Typography>
-                                    </Typography>
-                                    
+                                    <Typography variant='body1'>{data.housewareSingleProd.description}</Typography>
+                                    <Typography variant='h4' className='price' sx={{ marginTop: '1em' }}>{`$ ${data.housewareSingleProd.price}`}</Typography>
+
+                                    <Box sx={{ margin: '2em', textAlign: 'center' }}>
+                                        <Button variant='contained' sx={{ width: '80%' }}>Add to Bag</Button>
+                                    </Box>
                                 </Box>
-                                
-                              
+
+
                             </CardContent>
                         </Card>
                     </Grid2>

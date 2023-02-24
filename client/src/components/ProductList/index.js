@@ -64,6 +64,7 @@ export default function ProductList({ products }, { in: inProp }) {
                 display: "flex",
                 flexWrap: "wrap",
                 justifyContent: "space-between",
+                minHeight:'450px'
               }}
             >
               <Box sx={{ width: { s: "100%", md: "40%" } }}>
