@@ -9,9 +9,6 @@ import { useEffect } from "react";
 import { useContext } from "react";
 import { MenuContext } from "../../utils/menuContext";
 
-
-
-
 export default function Home() {
     const elegant = useRef();
     const exquisite = useRef();
@@ -21,12 +18,13 @@ export default function Home() {
     const more = useRef();
     const curated = useRef();
     const menuValue = useContext(MenuContext);
-    console.log(menuValue.isMenuOpen + " contenxt in home")
-    
+   
 
     // useEffect(() => {
         // const video = document.querySelector('video');
         // const tl = gsap.timeline();
+        // tl.from(luxe.current, { opacity: 0, y: -20, duration: 1 }, '+=1');
+        // tl.from(curated.current, { opacity: 0, duration: 1 });
 
         // tl.fromTo(elegant.current, { opacity: 0 }, { opacity: .7, duration: 1 }, '+=1.2');
         // tl.to(elegant.current, { opacity: 0, duration: 1 }, '+=5.5');
@@ -46,9 +44,6 @@ export default function Home() {
 
         
     // },[])
-
-
-
 
     return (
         <>
