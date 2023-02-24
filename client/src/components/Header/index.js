@@ -72,7 +72,7 @@ const Header = () => {
     return (
         <>
 
-            <Box sx={{ width: sideWidth, minHeight: '100vh', backgroundColor: 'headerBack.main', position: 'absolute', overflow: 'hidden' }}>
+            <Box className='headerContainer' sx={{ width: sideWidth, minHeight: '100vh', backgroundColor: 'headerBack.main', position: 'absolute', overflow: 'hidden', }}>
 
                 <Box sx={{ width: '200px', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', paddingTop: '1em' }}>
                     <Box ref={burger} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
@@ -81,7 +81,7 @@ const Header = () => {
                     </Box>
                     <img src={cavaleLogo} ref={sideContrastHorse} alt='Gold Luxe Cavale Logo' className='cavaleLogoGold'></img>
                 </Box>
-                <Typography className='headerTitle' ref={sideContrastText} variant='h2' component='h1' sx={{ color: 'headerBack.contrastText', writingMode: 'vertical-lr', letterSpacing: '-.6em', textOrientation: 'upright', position: 'relative', left: '155px' }}>LUXE CAVALLO</Typography>
+                <Typography className='headerTitleLight' ref={sideContrastText} variant='h2' component='h1' sx={{ color: 'headerBack.contrastText', writingMode: 'vertical-lr', letterSpacing: '-.6em', textOrientation: 'upright', position: 'relative', left: '155px' }}>LUXE CAVALLO</Typography>
             </Box>
             <Box sx={{ position: 'absolute', minHeight: '100vh', left: sideWidth, overflow: 'hidden' }}>
                 <Drawer
@@ -112,16 +112,16 @@ const Header = () => {
                             console.log(Icon)
                             return (
                                 text === 'Home' ? (<Link key={index} to={`/`}>
-                                <ListItem disablePadding>
+                                    <ListItem disablePadding>
 
-                                    <ListItemButton>
-                                        <ListItemIcon>
-                                            <Icon />
-                                        </ListItemIcon>
-                                        <ListItemText primary={text} />
-                                    </ListItemButton>
-                                </ListItem>
-                                </Link> ) : (
+                                        <ListItemButton>
+                                            <ListItemIcon>
+                                                <Icon />
+                                            </ListItemIcon>
+                                            <ListItemText primary={text} />
+                                        </ListItemButton>
+                                    </ListItem>
+                                </Link>) : (
                                     <Link key={index} to={`/${text}`}>
                                         <ListItem disablePadding>
 
@@ -133,7 +133,7 @@ const Header = () => {
                                             </ListItemButton>
                                         </ListItem>
                                     </Link>)
-                            
+
                             );
                         })}
                     </List>
@@ -161,7 +161,7 @@ const Header = () => {
                 <Box sx={{ width: sideWidth, paddingTop: '1em' }}>
                     <Link to={`/`}><img src={cavaleLogo} ref={mainContrastHorse} alt='Dark Luxe Cavale Logo' className='cavaleLogo'></img></Link>
                 </Box>
-                <Typography className='headerTitle' ref={mainContrastText} variant='h2' component='h1' sx={{ color: 'text.main', writingMode: 'vertical-lr', letterSpacing: '-.6em', textOrientation: 'upright', position: 'relative', left: '-45px', fontWeight: '900' }}>LUXE CAVALLO</Typography>
+                <Typography className='headerTitleDark' ref={mainContrastText} variant='h2' component='h1' sx={{ color: 'text.main', writingMode: 'vertical-lr', letterSpacing: '-.6em', textOrientation: 'upright', position: 'relative', left: '-45px', fontWeight: '900' }}>LUXE CAVALLO</Typography>
             </Box>
         </>
     )

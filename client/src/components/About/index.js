@@ -80,6 +80,10 @@ export default function About() {
                         <Typography variant='body1' sx={{width:'100%'}}>Photoshop</Typography>
                     </Grid2>
                     <Grid2 xs={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap:'wrap', alignItems: 'center'}}> 
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-plain.svg"  width='50%' height="auto"  />
+                        <Typography variant='body1' sx={{width:'100%'}}>Premiere</Typography>
+                    </Grid2>
+                    <Grid2 xs={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap:'wrap', alignItems: 'center'}}> 
                         <Image src={gsapLogo}  width='50%' height="auto"  />
                         <Typography variant='body1' sx={{width:'100%'}}>Greensock</Typography>
                     </Grid2>
