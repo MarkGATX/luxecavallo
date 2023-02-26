@@ -1,6 +1,6 @@
 {
     "name": "mern-luxecavallo",
-    "homepage": "https://luxecavallo.herokuapp.com",
+    
     "version": "1.0.0",
     "description": "A fictional luxury brand as a MERN stack project",
     "main": "server/server.js",
