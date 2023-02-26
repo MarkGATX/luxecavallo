@@ -29,7 +29,7 @@ import Sizing from './components/Sizing';
 
 
 const client = new ApolloClient({
-  uri: 'http://localhost:3001/graphql',
+  uri: process.env.MONGODB_URI || 'http://localhost:3001/graphql',
   cache: new InMemoryCache(),
 });
 
