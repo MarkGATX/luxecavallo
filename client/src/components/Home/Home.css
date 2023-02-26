@@ -10,3 +10,22 @@
 .videoText{
     transition:left 1s;
 }
+
+.homeSubtitle {
+    font-size: 2.5vw !important;
+}
+
+.homeTitle {
+    font-size: 5.5vw !important;
+}
+
+@media screen and ( max-height: 650px ) 
+{
+    .homeSubtitle {
+        font-size:1.8vw !important;
+    }
+    .homeTitle {
+        font-size:4.2vw !important;
+    }
+   
+}

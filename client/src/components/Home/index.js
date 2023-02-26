@@ -58,9 +58,9 @@ export default function Home() {
                     <Typography variant='h1' className="videoText" sx={{ fontSize: '3vw !important', position: 'absolute', top: '470px', right: '150px', color: 'primary.main', fontWeight: '500', WebkitTextStroke: `2px`, WebkitTextStrokeColor: (theme) => theme.palette.headerBack.main }}>Exquisite</Typography>
                 </Box> */}
                 {!menuValue.isMenuOpen ? <Box ref={luxe} className="videoText" sx={{ width: `calc(100% - 400px)`, left:'200px', position: 'absolute', top: '55%', opacity:'.7',  }}>
-                    <Typography variant='h1'  sx={{ fontSize: '5.5vw !important', textAlign: 'center', fontWeight: '500', color: 'primary.main' }}>Luxe Cavallo</Typography>
+                    <Typography variant='h1' className="homeTitle" sx={{  textAlign: 'center', fontWeight: '500', color: 'primary.main' }}>Luxe Cavallo</Typography>
                 </Box> : <Box ref={luxe} className="videoText" sx={{ width: `calc(100% - 400px)`, left:'300px', position: 'absolute', top: '55%', opacity:'.7' }}>
-                    <Typography variant='h1'  sx={{ fontSize: '5.5vw !important', textAlign: 'center', fontWeight: '500', color: 'primary.main' }}>Luxe Cavallo</Typography>
+                    <Typography variant='h1' className="homeTitle" sx={{  textAlign: 'center', fontWeight: '500', color: 'primary.main' }}>Luxe Cavallo</Typography>
                 </Box>}
                 {/* <Box ref={fashion} sx={{ width: '100%', position: 'absolute', top: '70%', }}>
                     <Typography variant='h1' className="videoText" sx={{ fontSize: '3vw !important', textAlign: 'center', color: 'primary.main', WebkitTextStroke: `2px`, WebkitTextStrokeColor: (theme) => theme.palette.headerBack.main }}>Fine fashion,</Typography>
@@ -71,10 +71,10 @@ export default function Home() {
                 <Box ref={more} sx={{ width: '100%', position: 'absolute', top: '70%', }}>
                     <Typography variant='h1' className="videoText" sx={{ fontSize: '3vw !important', textAlign: 'center', color: 'primary.main', WebkitTextStroke: `2px`, WebkitTextStrokeColor: (theme) => theme.palette.headerBack.main }}>and more.</Typography>
                 </Box> */}
-                {!menuValue.isMenuOpen ? <Box className="videoText" ref={curated} sx={{ width: `calc(100% - 400px)`, left:'200px', position: 'absolute', top: '70.5%', }}>
-                    <Typography variant='h1'  sx={{ fontSize: '2.5vw !important', textAlign: 'center', color: 'primary.main'}}>Curated collections for discerning clients.</Typography>
-                </Box> : <Box ref={curated} className="videoText" sx={{ width: `calc(100% - 400px)`, left:'300px', position: 'absolute', top: '70.5%', }}>
-                    <Typography variant='h1'  sx={{ fontSize: '2.5vw !important', textAlign: 'center', color: 'primary.main'}}>Curated collections for discerning clients.</Typography>
+                {!menuValue.isMenuOpen ? <Box className="videoText" ref={curated} sx={{ width: `calc(100% - 400px)`, left:'200px', position: 'absolute', bottom: '10%', }}>
+                    <Typography variant='h1' className="homeSubtitle" sx={{ textAlign: 'center', color: 'primary.main'}}>Curated collections for discerning clients.</Typography>
+                </Box> : <Box ref={curated} className="videoText" sx={{ width: `calc(100% - 400px)`, left:'300px', position: 'absolute', bottom: '10%' }}>
+                    <Typography variant='h1' className='homeSubtitle'  sx={{  textAlign: 'center', color: 'primary.main'}}>Curated collections for discerning clients.</Typography>
                 </Box>}
 
             </Box>
