@@ -30,6 +30,7 @@ import Sizing from './components/Sizing';
 
 const client = new ApolloClient({
   uri: process.env.MONGODB_URI || 'http://localhost:3001/graphql',
+  // uri: process.env.MONGODB_URI,
   cache: new InMemoryCache(),
 });
 
@@ -148,10 +149,11 @@ export default function App() {
   return (
     <ThemeProvider theme={cavalloLightTheme}>
       <CssBaseline />
-      <Router>
-        <ApolloProvider client={client}>
+      <ApolloProvider client={client}>
+        <Router>
+
           <MenuProvider>
-            <Header  />
+            <Header />
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/men' element={<MensProducts />} />
@@ -168,8 +170,9 @@ export default function App() {
 
             </Routes>
           </MenuProvider>
-        </ApolloProvider>
-      </Router>
+
+        </Router>
+      </ApolloProvider>
     </ThemeProvider>
   );
 }
