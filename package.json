@@ -19,6 +19,7 @@
     },
     "dependencies": {
         "@emailjs/browser": "^3.10.0",
+        "cors": "^2.8.5",
         "mongodb": "^5.1.0",
         "mui-image": "^1.0.7",
         "react-transition-group": "^4.4.5"
