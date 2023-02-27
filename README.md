@@ -23,13 +23,15 @@ When you first get, you'll see a full-page video with the header/menu on the lef
 
 When the menu is open, you'll see links to all the different item categories.
 
-![Portfolio menus screenshot](./readme%20img/menus.jpg)
+![Luxe Cavallo menus screenshot](./readme%20img/menus.jpg)
 
 When you click on a department, you'll be show a grid of products in each category with a short description and an alert is sizes are running low of stock. If you want to see more about an item or put it in your cart, click on one of the cards.
 
 ![Mens category products](./readme%20img/category_page.jpg)
 
-Once you click on a product you'll be taken to the details page. Here you'll find more details 
+Once you click on a product you'll be taken to the details page. Here you'll find more information on available sizes, costs, sizing, and care instructions. 
+
+![product details page](./readme%20img/product_detail.jpg)
 
 When you hover over a project, the project will switch to full color and a box will open at the bottom right. That shows different technologies that were used to create that project. If you're not sure what an icon represents, you can hover over it with your mouse and the name will pop up as a tool-tip.
 
