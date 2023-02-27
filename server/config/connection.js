@@ -7,7 +7,9 @@ mongoose.connect(
     useUnifiedTopology: true,
     dbName: 'mern-luxecavallo'
   }
-);
+)
+.then(() => console.log('MongoDB connected'))
+.catch((err) => console.log(`MongoDB connection error: ${err.message}`));;
 
 
 module.exports = mongoose.connection;
