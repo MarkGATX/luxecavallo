@@ -29,8 +29,12 @@ import { HashRouter } from 'react-router-dom';
 
 
 
+
+
 const client = new ApolloClient({
-  uri: process.env.MONGODB_URI || 'http://localhost:3001/graphql',
+  uri: 'https://luxecavallo.herokuapp.com/graphql' || 'http://localhost:3001/graphql',
+  // uri: "mongodb+srv://themarkgardner:<password>@luxecavallo.8oswhiw.mongodb.net/?retryWrites=true&w=majority",
+  // uri: process.env.MONGODB_URI || 'http://localhost:3001/graphql',
   // uri: process.env.MONGODB_URI,
   cache: new InMemoryCache(),
 });

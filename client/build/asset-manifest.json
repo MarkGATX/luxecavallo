@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f54aadaf.css",
-    "main.js": "/static/js/main.61395bd1.js",
+    "main.js": "/static/js/main.b754d1bb.js",
     "static/js/787.1854ea56.chunk.js": "/static/js/787.1854ea56.chunk.js",
     "static/media/cavallo_bg_vid5.mp4": "/static/media/cavallo_bg_vid5.b3e5afdcb5c0aa2ad76c.mp4",
     "static/media/accessory_header.jpg": "/static/media/accessory_header.c8a4790fbc9f3e73ac78.jpg",
@@ -16,11 +16,11 @@
     "static/media/cavale_logo.svg": "/static/media/cavale_logo.bbee40bdbb7cd5f8fe3fb1bd58c03ed3.svg",
     "index.html": "/index.html",
     "main.f54aadaf.css.map": "/static/css/main.f54aadaf.css.map",
-    "main.61395bd1.js.map": "/static/js/main.61395bd1.js.map",
+    "main.b754d1bb.js.map": "/static/js/main.b754d1bb.js.map",
     "787.1854ea56.chunk.js.map": "/static/js/787.1854ea56.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f54aadaf.css",
-    "static/js/main.61395bd1.js"
+    "static/js/main.b754d1bb.js"
   ]
 }
