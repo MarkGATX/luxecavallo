@@ -172,7 +172,7 @@ export default function App() {
             </Routes>
           </MenuProvider>
 
-        </Router>
+        </HashRouter>
       </ApolloProvider>
     </ThemeProvider>
   );
