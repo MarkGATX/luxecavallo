@@ -2,20 +2,20 @@ import React from "react";
 import { Typography } from "@mui/material"
 import splashVid from '../../images/cavallo_bg_vid5.mp4'
 import './Home.css'
-import gsap from "gsap";
+// import gsap from "gsap";
 import Box from "@mui/material/Box";
 import { useRef } from "react";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { useContext } from "react";
 import { MenuContext } from "../../utils/menuContext";
 
 export default function Home() {
-    const elegant = useRef();
-    const exquisite = useRef();
+    // const elegant = useRef();
+    // const exquisite = useRef();
     const luxe = useRef();
-    const fashion = useRef();
-    const accessory = useRef();
-    const more = useRef();
+    // const fashion = useRef();
+    // const accessory = useRef();
+    // const more = useRef();
     const curated = useRef();
     const menuValue = useContext(MenuContext);
    

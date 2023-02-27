@@ -50,7 +50,7 @@ const Header = () => {
         console.log(isMenuOpen)
         const menuDrawer = document.querySelector('.MuiDrawer-paper')
         // true = drawer open, so if false, open drawer
-        { isMenuOpen ? setMenuAction('Open') : setMenuAction('Close') }
+        isMenuOpen ? setMenuAction('Open') : setMenuAction('Close') 
         if (!isMenuOpen) {
             gsap.to(sideContrastText.current, { duration: 1, x: -120 })
             gsap.to(sideContrastHorse.current, { duration: 1, x: -120 })
