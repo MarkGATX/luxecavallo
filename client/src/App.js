@@ -19,7 +19,7 @@ import {
 import './App.css';
 import { responsiveFontSizes } from '@mui/material';
 import { MenuProvider } from './utils/menuContext';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import MensProduct from './components/MensProduct';
 import WomensProduct from './components/WomensProduct';
 import AccessoryProduct from './components/AccessoryProduct';
