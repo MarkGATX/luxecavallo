@@ -12,6 +12,9 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  persistedQueries: {
+    cache: 'bounded', // Add this line to set cache to "bounded"
+  },
 });
 
 app.use(express.urlencoded({ extended: false }));
@@ -27,7 +30,7 @@ app.get('/', (req, res) => {
 
 
 // Create a new instance of an Apollo server with the GraphQL schema
-const startApolloServer = async (typeDefs, resolvers) => {
+const startApolloServer = async (typeDefs, resolvers, ) => {
   await server.start();
   server.applyMiddleware({ app });
   
