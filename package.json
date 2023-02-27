@@ -1,6 +1,5 @@
 {
     "name": "mern-luxecavallo",
-    
     "version": "1.0.0",
     "description": "A fictional luxury brand as a MERN stack project",
     "main": "server/server.js",
@@ -20,7 +19,6 @@
     },
     "dependencies": {
         "@emailjs/browser": "^3.10.0",
-        "gh-pages": "^5.0.0",
         "mui-image": "^1.0.7",
         "react-transition-group": "^4.4.5"
     }

@@ -25,6 +25,7 @@ import WomensProduct from './components/WomensProduct';
 import AccessoryProduct from './components/AccessoryProduct';
 import HousewareProduct from './components/HousewareProduct';
 import Sizing from './components/Sizing';
+import { HashRouter } from 'react-router-dom';
 
 
 
@@ -150,7 +151,7 @@ export default function App() {
     <ThemeProvider theme={cavalloLightTheme}>
       <CssBaseline />
       <ApolloProvider client={client}>
-        <Router>
+        <HashRouter>
 
           <MenuProvider>
             <Header />
