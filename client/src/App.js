@@ -26,6 +26,8 @@ import AccessoryProduct from './components/AccessoryProduct';
 import HousewareProduct from './components/HousewareProduct';
 import Sizing from './components/Sizing';
 import { HashRouter } from 'react-router-dom';
+import HeaderMobile from './components/HeaderMobile';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 
@@ -150,7 +152,7 @@ cavalloLightTheme = responsiveFontSizes(cavalloLightTheme)
 
 
 export default function App() {
-
+  const isDesktop = useMediaQuery('(min-width:1024px)')
   return (
     <ThemeProvider theme={cavalloLightTheme}>
       <CssBaseline />
@@ -158,7 +160,8 @@ export default function App() {
         <HashRouter>
 
           <MenuProvider>
-            <Header />
+            {isDesktop ? <Header /> : <HeaderMobile /> }
+            
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/men' element={<MensProducts />} />
