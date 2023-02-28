@@ -1,17 +1,27 @@
-# Luxe Cavallo - Ficional Luxury Brand 
+# Luxe Cavallo - Fictional Luxury Brand 
 
-## A full MERN-stack project to work on some UI/UX skills
+## A full MERN-stack portfolio project
 
 
 ___
 
 
-I started this project to reinforce my skills in React and a full MERN stack while looking for work. I've spent so much time focusing on front-end design that I wanted to really work on databases and backend skills as well. 
+I started this project to reinforce my skills in React and a full MERN stack while looking for a new job. I've spent so much time focusing on front-end design that I wanted to really work on databases and backend skills as well. 
 
-My original idea came purely from a concept of a vertical header/menu that would only really work on desktop. So the project started off as mainly focusing on that challenge while maintaining backend code as well.
+My original idea came purely from a concept of a vertical header/menu that would only really work on desktop. So the project started off as mainly focusing on that challenge while maintaining backend code as well. Then it expanded into a full application.
 
 [You can see it live here to take a look. ](https://luxecavallo.herokuapp.com/)
 
+___
+
+  ## Table of Contents
+- [How to Use](#How-to-Use)
+- [Technologies](#Technologies)
+- [Challenges Encounted](#Challenges)
+- [Future Development](#Future-Development)
+- [Credits](#Credits)
+- [License](#License)
+  <br>
 
 ___
 
@@ -29,51 +39,45 @@ When you click on a department, you'll be show a grid of products in each catego
 
 ![Mens category products](./readme%20img/category_page.jpg)
 
-Once you click on a product you'll be taken to the details page. Here you'll find more information on available sizes, costs, sizing, and care instructions. 
+Once you click on a product you'll be taken to the details page. Here you'll find more information on available sizes, costs, sizing, and care instructions. You cn click on the Size Guide to get a modal dialog with measurements for each size. Eventually you will be able to click on the appropriate sizes to add them to your bag.
 
 ![product details page](./readme%20img/product_detail.jpg)
 
-When you hover over a project, the project will switch to full color and a box will open at the bottom right. That shows different technologies that were used to create that project. If you're not sure what an icon represents, you can hover over it with your mouse and the name will pop up as a tool-tip.
+## Technologies
 
-![Portfolio detail of techs used on project](./readme_images/portfolio_techs.jpg)
+<div id='tools' style="background-color: rgb(112, 93, 0); padding:10px; text-align:center;">
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" width="40" height="40" alt="Material UI"/>        
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40" alt="react"/>    
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="40" height="40" alt='mongoDB'/>
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" width="40" height="40" alt='Heroku' />         
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" height="40" alt='CSS' />
+   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" height="40" alt='HTML' />    
+   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" height="40" alt='Javascript' />  
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" height="40" alt='GitHub' />  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="40" height="40" alt='Express' />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" height="40" alt='NodeJS' />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"  width="40" height="40" alt='npm' />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" width="40" height="40" alt='Photoshop' />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-plain.svg" width="40" height="40" alt='Premiere Pro' />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"  width="40" height="40" alt='VS Code'>
+</div>
 
-Once you click on the project, a modal dialog with open asking if you want to visit the live site or check under the hood with the GitHub code. Take your pick and be spirited away. NOTE: for projects I've included that don't have any connection to GitHub, clicking on the project will take you directly to the YouTube page where those projects are housed.
+## Challenges
 
-![Detail on choosing Live or GitHub](./readme_images/live_or_git.jpg)
+Responsiveness. My initial inspiration for this project was purely to make a vertical nav bar using Material UI. The rest of the site evolved from that. I didn't realize just how difficult it would be to make the site work on several different screen sizes. 
 
-In the navigation bar at the top you have other options to look at. 
+I knew going in that this wasn't going to be a mobile-first site, but I failed to see just how many different screen heights there were that had to be taken into account along with screen width. The vertical header made that more challenging that expected and there's still work to be done.
 
-- **Contact Me**: This opens up a contact page with links to my GitHub, LinkedIn, and a Contact Form. Fill out the form with valid information and a message will be sent. 
+It's also been a while since I've deployed an active database to a server, so deploying to Heroku was challenging. The error logs in Heroku were sometimes helpful and other times not so helpful.  I eventually found some of my configurations weren't correct so the site was broken for a while. Between documentation, Stack Overflow, ChatGPT, and a little trial and error, I finally found the problems. Turns out the correct configuration wasn't exactly like some of the documentation said it should be. Fortunately my Bootcamp had some blog posts with the one line that kept breaking my queries. 
 
-![contact form detail](./readme_images/contact_me_detail.jpg)
-
-- **About Me**: The brief for this assignment calls for a separate About Me page, so I added more about me. When you click here you'll find some more thoughts from me as well as a small image gallery to give you an idea of who I am and what I like to do.
-
-![about me page screenshot](./readme_images/about_me_screen.jpg)
-
-- **Resume**: Click here and you'll be taken to an online version of my resume for you to look over. If you'd like your own copy, there's a link at the top of the page for a PDF version of my resume you can then download.
-    
-![resume screenshot](./readme_images/resume_screen.jpg)
+___
+## Future Developments
+- Mobile responsiveness
+- Functional shopping bag
+- User logins
 
 ___
 
-
-## Changes Made and Lessons Learned
-
-- Version 2 of my portfolio was already a fairly large construction. Reformatting it for React was daunting. That was almost enought to make me start from scratch. But at the end of the day I decided to simply break it down into smaller pieces until it made sense. Once I broke down the page into separate components, it became clear where I needed to go. Deconstructing Version 2 became easy at that point. The challenge was still making it work in React.
-
-- Formatting everything to take advantage of React was a lesson in patience. Apart from the pain of replacing every `class` declaration with `className`, there were a lot of tiny details that tripped me up. At the end of the day I got the page back working as intended and even added some more bells and whistles. However, some things are still not working as intended.
-
-- My original coffee animation is not working. I've hammered at it for quite some time and have gone to multiple online and in-person resources for help and so far no one has been able to get it to work as intended. I'll have to keep trying new things until I finally find what's not working. Fortunately, while I like the animation and I feel it ties the site theme together, it's not necessary for full function.
-
- ___
-
-## Possible Future Changes
-
-- Fix DOM and canvas animations
-- Learn and use SASS to add my colors to Bootstrap variables.
-- Deconstruct Bootstrap to only use a serve elements I'm using on the site
-___
 
 
 
