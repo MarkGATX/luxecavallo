@@ -1,5 +1,6 @@
 import React, { createContext, useContext } from 'react';
-import { useState, useEffect } from 'react';
+import { useMediaQuery } from '@mui/material';
+
 
 
 // Initialize new context for menu
@@ -10,21 +11,14 @@ export const useSizeContext = () => useContext(SizeContext);
 
 // MenuProvider component that holds initial state, returns provider component
 export const SizeProvider = ({ children }) => {
-    const [screenSize, setScreenSize] = useState(false);
-
-    
-
-      useEffect(() => {
-        // Update the localStorage count variable using the setItem method
-        console.log('%cisMenuOpen', 'color:green')
-        console.log(isMenuOpen +'context for menu')
-      },[isMenuOpen]);
+  const isDesktop = useMediaQuery('(min-width:1024px)');
+  console.log(isDesktop)
 
   // Provider components expect a value prop to be passed
   return (
-    <MenuContext.Provider value={{isMenuOpen, toggleMenu}}>
+    <SizeContext.Provider value={{isDesktop}}>
       {/* Render children passed from props */}
       {children}
-    </MenuContext.Provider>
+    </SizeContext.Provider>
   );
 };

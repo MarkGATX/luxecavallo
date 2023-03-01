@@ -72,7 +72,12 @@ const Header = () => {
     return (
         <>
 
-            <Box className='headerContainer' sx={{ width: sideWidth, minHeight: '100vh', backgroundColor: 'headerBack.main', position: 'absolute', overflow: 'hidden', }}>
+            <Box className='headerContainer' sx={{ 
+                width: sideWidth, 
+                minHeight: '100vh', 
+                backgroundColor: 'headerBack.main', 
+                position: 'absolute', 
+                overflow: 'hidden', }}>
 
                 <Box sx={{ width: '200px', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', paddingTop: '1em' }}>
                     <Box ref={burger} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>

@@ -26,12 +26,24 @@
 .mobileMenuList {
     display:flex;
     justify-content:center;
-padding:0 !important;
+    padding:0 !important;
     
+}
+
+.mobileHeaderIcons {
+    width:.8em;
+    padding-right:.2em;
+
 }
 
 .mobileContactText span{
     font-size: .7em !important;
+    padding-right:1.2em;
+}
+
+.mobileProductText span{
+    font-size: .7em !important;
+    padding-right:1.2em;
 }
 
 

@@ -5,16 +5,40 @@ import aboutHeader from '../../images/live_cavallo.jpg'
 import Image from 'mui-image';
 import markPic from '../../images/step_repeat_LA.jpg'
 import gsapLogo from '../../images/gsap-greensock.svg'
+import { SizeContext } from "../../utils/sizeContext";
+import { useContext } from 'react';
+import { MenuContext } from '../../utils/menuContext';
+
 
 
 export default function About() {
+    const menuValue = useContext(MenuContext);
+    const desktopView = useContext(SizeContext)
+    
+    const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
+    let drawerHeight =''
+    if (menuDrawers.length === 1) {
+        drawerHeight = menuDrawers[0].clientHeight;
+        console.log(`The height of the drawer is ${drawerHeight}px.`);
+    } else {
+        console.log(`There are ${menuDrawers.length} matching elements.`);
+    }
 
     return (
-        <Grid2 container component="main" sx={{ width: `calc(100% - 400px)`, alignContent: 'flex-start' }}>
-            <Grid2 xs={5} sx={{ height: '300px', paddingLeft: '50px' }}>
+        <Grid2 container component="main" sx={{ 
+            transition:'top .7s ease-in-out',
+            width: desktopView.isDesktop ? `calc(100% - 400px)` : `100%`, 
+            left: desktopView.isDesktop ? '400px' : 0,  
+            overflow: 'hidden', 
+            top: desktopView.isDesktop ? `0` : !menuValue.isMenuOpen ? `80px` : `calc(80px + ${drawerHeight}px)`,
+            height: desktopView.isDesktop ? '' : '100%',
+            maxHeight: desktopView.isDesktop ? "100vh" : '',
+            overflowY:'auto',
+            alignContent:'flex-start'
+            }}>
+            <Grid2 xs={4} sx={{ height: '300px', paddingLeft: '50px' }}>
                 <Typography variant='h1' sx={{ paddingTop: '50px', marginBottom: '50px' }}>About Us
                 </Typography>
-                <Typography>All About Luxe Cavallo</Typography>
             </Grid2>
             <Grid2 xs={7} sx={{ marginBottom: '30px' }}>
                 <Image height="300px" src={aboutHeader} sx={{
@@ -26,10 +50,13 @@ export default function About() {
             <Grid2 xs={12} sx={{ paddingLeft: '50px', marginBottom: '1em' }} >
                 <Typography variant="h3">History of Luxe Cavallo - It's fake.</Typography>
             </Grid2>
-            <Grid2 xs={7} sx={{ paddingLeft: '50px' }}>
+            <Grid2 xs={12} sx={{ padding: '0 50px' }}>
                 <Typography variant="body1">Luxe Cavallo is a fictional luxury boutique designed by Front End and Full Stack Developer, Mark Gardner. That's me, by the way. It was designed to be an exercise in continuing to develop my skills in React, Material UI, GraphQL, and GreenSock while continuing my job search.</Typography>
+                <Grid2 xs={4} sx={{ paddingRight: '50px' }}>
+                <Image src={markPic} alt="Mark Gardner interviewed at IAWTV event" width="100%" height="auto"></Image>
+            </Grid2>
                 <br />
-                <Typography variant='h4' sx={{marginBottom:'1em'}}>Tech Stack</Typography>
+                <Typography variant='h4'sx={{marginBottom:'1em'}}>Tech Stack</Typography>
                 <Grid2 container spacing={2} sx={{ justifyContent:'center', flexWrap:'wrap' }}>
                     <Grid2 xs={2} sx={{ textAlign: 'center', display: 'flex',flexWrap:'wrap', justifyContent: 'center', alignItems: 'center'}}> 
                         <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width='50%' height="auto"  />
@@ -96,9 +123,7 @@ export default function About() {
                 <br/>
                 <Typography variant='h4' sx={{marginBottom:'1em'}}>Attributions</Typography>
             </Grid2>
-            <Grid2 xs={4} sx={{ paddingRight: '50px' }}>
-                <Image src={markPic} alt="Mark Gardner interviewed at IAWTV event" width="100%" height="auto"></Image>
-            </Grid2>
+            
         </Grid2>
 
     )

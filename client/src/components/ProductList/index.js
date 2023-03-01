@@ -16,7 +16,6 @@ import { Link } from "react-router-dom";
 
 export default function ProductList({ products }, { in: inProp }) {
   const app = useRef();
-  console.log(products)
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -29,14 +28,14 @@ export default function ProductList({ products }, { in: inProp }) {
 
   return (
     <Grid2
-    ref={app}
+      ref={app}
       container
       spacing={4}
       sx={{ justifyContent: "space-around", margin: "0 50px" }}
     >
       {products.map((product) => (
         <Grid2
-        
+
           key={product._id}
           md={12}
           lg={6}
@@ -48,58 +47,58 @@ export default function ProductList({ products }, { in: inProp }) {
             paddingBottom: "50px",
           }}
         >
-          <Link to={`/${product.category}/${product._id}`} underline='none' sx={{cursor:'pointer'}} >
-          <Card className='prodCards'
-            sx={{
-              ":hover": {
-                boxShadow: 4,
-                scale: "102%",
-                transition: 'scale .5s'
-              },
-            }}
-          >
-            <CardHeader title={product.name} titleTypographyProps={{ style: { fontSize: '1.17em' } }}></CardHeader>
-            <CardContent
+          <Link to={`/${product.category}/${product._id}`} underline='none' >
+            <Card className='prodCards'
               sx={{
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "space-between",
-                minHeight:'450px'
+                ":hover": {
+                  boxShadow: 4,
+                  scale: "102%",
+                  transition: 'scale .5s'
+                },
               }}
             >
-              <Box sx={{ width: { s: "100%", md: "40%" } }}>
-                <Image
-                  src={`${product.imageURL}@0.25x.jpg`}
-                  maxHeight="200px"
-                  shift="right"
-                  distance="100px"
-                  className="productImage"
-                  showLoading
-                  alt={`${product.name} with ${product.attribution}`}
-                />
-              </Box>
-              <Typography
-                variant="body2"
-                sx={{ width: { s: "100%", md: "45%" } }}
+              <CardHeader title={product.name} titleTypographyProps={{ style: { fontSize: '1.17em' } }}></CardHeader>
+              <CardContent
+                sx={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "space-between",
+                  minHeight: '450px'
+                }}
               >
-                {product.description}
-              </Typography>
-              {product.size ? (
-                <ul className="sizeList" >
-                  {(product.size.xs <= 3) || (product.size.s <= 3) || (product.size.m <= 3) || (product.size.l <= 3) || (product.size.xl <= 3) ? (<li><Alert severity="error">Low stock:
-                    {product.size.xs <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> XS, </Typography> : <></>}
-                    {product.size.s <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> S, </Typography> : <></>}
-                    {product.size.m <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> M, </Typography> : <></>}
-                    {product.size.l <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> L, </Typography> : <></>}
-                    {product.size.xl <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> XL. </Typography> : <></>}
-                  </Alert>
-                  </li>) : (<li></li>)}
-                </ul>
-              ) : (
-                <Box></Box>
-              )}
-            </CardContent>
-          </Card>
+                <Box sx={{ width: { s: "100%", md: "40%" } }}>
+                  <Image
+                    src={`${product.imageURL}@0.25x.jpg`}
+                    maxHeight="200px"
+                    shift="right"
+                    distance="100px"
+                    className="productImage"
+                    showLoading
+                    alt={`${product.name} with ${product.attribution}`}
+                  />
+                </Box>
+                <Typography
+                  variant="body2"
+                  sx={{ width: { s: "100%", md: "45%" } }}
+                >
+                  {product.description}
+                </Typography>
+                {product.size ? (
+                  <ul className="sizeList" >
+                    {(product.size.xs <= 3) || (product.size.s <= 3) || (product.size.m <= 3) || (product.size.l <= 3) || (product.size.xl <= 3) ? (<li><Alert severity="error">Low stock:
+                      {product.size.xs <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> XS, </Typography> : <></>}
+                      {product.size.s <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> S, </Typography> : <></>}
+                      {product.size.m <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> M, </Typography> : <></>}
+                      {product.size.l <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> L, </Typography> : <></>}
+                      {product.size.xl <= 3 ? <Typography variant='body1' sx={{ display: 'inline' }}> XL. </Typography> : <></>}
+                    </Alert>
+                    </li>) : (<li></li>)}
+                  </ul>
+                ) : (
+                  <Box></Box>
+                )}
+              </CardContent>
+            </Card>
           </Link>
         </Grid2>
 

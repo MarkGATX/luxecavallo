@@ -6,15 +6,30 @@ import ProductList from "../ProductList";
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 import mensHeader from '../../images/menswear_header.jpg'
 import Image from 'mui-image';
+import { SizeContext } from "../../utils/sizeContext";
+import { useContext } from 'react';
+import { MenuContext } from '../../utils/menuContext';
 
 export default function MensProducts() {
   // Execute the query on component load
   const { loading, data } = useQuery(QUERY_MENS);
   // Use optional chaining to check if data exists and if it has a Name property. If not, return an empty array to use.
   // const products = data?.Name || [];
+
+  const menuValue = useContext(MenuContext);
+    const desktopView = useContext(SizeContext)
+    
+    const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
+    let drawerHeight =''
+    if (menuDrawers.length === 1) {
+        drawerHeight = menuDrawers[0].clientHeight;
+        console.log(`The height of the drawer is ${drawerHeight}px.`);
+    } else {
+        console.log(`There are ${menuDrawers.length} matching elements.`);
+    }
   
   return (
-    <Grid2 container component="main" sx={{ width: `calc(100% - 400px)` }}>
+    <Grid2 container component="main" sx={{ width: desktopView.isDesktop ? `calc(100% - 200px)` : `100%`, left: desktopView.isDesktop ? '400px' : 0,  overflow: 'hidden', top: desktopView.isDesktop ? `0` : !menuValue.isMenuOpen ? `80px` : `calc(80px + ${drawerHeight}px)`, alignContent: 'flex-start'}}>
       <Grid2 xs={7} sx={{ height: '300px', paddingLeft: '50px' }}>
         <Typography variant='h1' sx={{ marginBottom: '50px', paddingTop: '50px' }}>Menswear
         </Typography>
