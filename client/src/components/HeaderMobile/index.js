@@ -27,6 +27,7 @@ import { memo } from "react";
 import StraightenIcon from '@mui/icons-material/Straighten';
 import HomeIcon from '@mui/icons-material/Home';
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import Divider from "@mui/material/Divider";
 
 
 const sideHeight = 200;
@@ -72,10 +73,10 @@ const HeaderMobile = () => {
 
     return (
         <>
-            <Grid2 container className='headerContainer' sx={{ width: '100%', height: '120px', backgroundColor: 'headerBack.main', position: 'absolute', justifyContent: 'space-between', overflow: 'hidden', padding: '1em', flexWrap: 'nowrap', alignItems: 'center' }}>
+            <Grid2 container className='headerContainer' sx={{ width: '100%', height: '80px', backgroundColor: 'headerBack.main', position: 'absolute', justifyContent: 'space-between', overflow: 'hidden', padding: '1em', flexWrap: 'nowrap', alignItems: 'center' }}>
 
                 <Grid2 xs={8} sx={{ width: '100%', textAlign: 'center' }}>
-                    <Typography className='headerTitleLightMobile' ref={sideContrastText} variant='h1' component='h1' sx={{ color: 'headerBack.contrastText', position: 'relative', letterSpacing: '.5em', top:'60px' }}>LUXE CAVALLO</Typography>
+                    <Typography className='headerTitleLightMobile' ref={sideContrastText} variant='h1' component='h1' sx={{ color: 'headerBack.contrastText', position: 'relative', letterSpacing: '.5em', top:'40px' }}>LUXE CAVALLO</Typography>
                 </Grid2>
                 <Grid2 xs={2}>
                     <img src={cavaleLogo} ref={sideContrastHorse} alt='Gold Luxe Cavale Logo' className='cavaleLogoGoldMobile' height="70px" width="70px"></img>
@@ -88,7 +89,7 @@ const HeaderMobile = () => {
                 </Grid2>
             </Grid2>
 
-            <Grid2 container sx={{ position: 'absolute', minHeight: '200px', top: sideHeight, overflow: 'hidden' }}>
+            <Grid2 container sx={{ position: 'absolute', minHeight: '200px',  overflow: 'hidden', width:'100%' }}>
                 <Grid2>
                     <Drawer
                         sx={{
@@ -100,7 +101,7 @@ const HeaderMobile = () => {
                                 width: '100%',
                                 boxSizing: 'border-box',
                                 zIndex: '-1',
-                                top: '-200px',
+                                top: '-100px',
                                 position: 'absolute',
                                 overflow: 'hidden',
                                 justifyContent: 'space-between',
@@ -111,7 +112,7 @@ const HeaderMobile = () => {
                         anchor="top"
                     >
                         {/* <Toolbar /> */}
-                        <List>
+                        <List className='mobileMenuList'>
                             {menuItems.map((item, index) => {
                                 const text = Object.keys(item)[0];
                                 const Icon = Object.values(item)[0];
@@ -124,7 +125,7 @@ const HeaderMobile = () => {
                                                 <ListItemIcon>
                                                     <Icon />
                                                 </ListItemIcon>
-                                                <ListItemText primary={text} />
+                                                <ListItemText sx={{fontSize:'.8em'}}  primary={text} />
                                             </ListItemButton>
                                         </ListItem>
                                     </Link>) : (
@@ -135,7 +136,7 @@ const HeaderMobile = () => {
                                                     <ListItemIcon>
                                                         <Icon />
                                                     </ListItemIcon>
-                                                    <ListItemText primary={text} />
+                                                    <ListItemText sx={{fontSize:'.8em' }} primary={text} />
                                                 </ListItemButton>
                                             </ListItem>
                                         </Link>)
@@ -143,8 +144,8 @@ const HeaderMobile = () => {
                                 );
                             })}
                         </List>
-                        <Toolbar />
-                        <List>
+                        <Divider />
+                        <List className='mobileMenuList'>
                             {contactItems.map((item, index) => {
                                 const text = Object.keys(item)[0];
                                 const Icon = Object.values(item)[0];
@@ -156,7 +157,7 @@ const HeaderMobile = () => {
                                                 <ListItemIcon>
                                                     <Icon />
                                                 </ListItemIcon>
-                                                <ListItemText primary={text} />
+                                                <ListItemText sx={{fontSize:".6em"}} primary={text} />
                                             </ListItemButton>
                                         </ListItem>
                                     </Link>
@@ -166,18 +167,15 @@ const HeaderMobile = () => {
                     </Drawer>
                 </Grid2>
             </Grid2>
-            <Grid2 container sx={{ width: '100%', height: '120px', position: 'absolute', justifyContent: 'space-between',  padding: '1em', flexWrap: 'nowrap', alignItems: 'center' , top:'120px', overflow:'hidden'}} >
-                <Grid2 xs={8} sx={{ width: '100%', textAlign: 'center' }}>
-                    <Typography className='headerTitleDarkMobile' ref={sideContrastText} variant='h1' component='h1' sx={{ color: 'text.main', position: 'relative', letterSpacing: '.5em', top:'-60px' }}>LUXE CAVALLO</Typography>
+            <Grid2 container sx={{ width: '100%', height: '80px', position: 'absolute', justifyContent: 'space-between',  padding: '0 1em', flexWrap: 'nowrap', alignItems: 'center' , top:'80px', overflow:'hidden'}} >
+                <Grid2 xs={8} sx={{ width: '100%', textAlign: 'center', }}>
+                    <Typography className='headerTitleDarkMobile' ref={sideContrastText} variant='h1' component='h1' sx={{ color: 'text.main', position: 'relative', letterSpacing: '.49em', top:'-40px', fontWeight:700 }}>LUXE CAVALLO</Typography>
                 </Grid2>
                 <Grid2 xs={2}>
                     <img src={cavaleLogo} ref={sideContrastHorse} alt='Dark Luxe Cavale Logo' className='cavaleLogoMobile' height="70px" width="70px"></img>
                 </Grid2>
                 <Grid2 xs={1}>
-                    <Grid2 ref={burger} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                        <MenuIcon className='menuIcon' sx={{ color: 'headerBack.contrastText' }} />
-                        <Typography variant='subtitle2' sx={{ color: 'headerBack.contrastText' }}>{menuAction}</Typography>
-                    </Grid2>
+                    
                 </Grid2>
             </Grid2>
 

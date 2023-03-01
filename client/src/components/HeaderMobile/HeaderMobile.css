@@ -3,7 +3,7 @@
     display:block;
     width:50%;     
     filter: invert(90%) sepia(71%) saturate(1219%) hue-rotate(310deg) brightness(114%) contrast(106%);
-    top:60px;
+    top:40px;
     position:relative;
 
 }
@@ -11,16 +11,22 @@
     display:block;
     width:50%;
     filter: invert(3%) sepia(5%) saturate(5910%) hue-rotate(5deg) brightness(94%) contrast(84%);
-    top:-60px;
+    top:-40px;
     position:relative;
 
 }
 
-.headerTitleLight {
+.headerTitleLightMobile {
     /* font-size: 3.5em !important; */
 }
-.headerTitleDark {
+.headerTitleDarkMobile {
     /* font-size: 3.5em !important; */
+}
+
+.mobileMenuList {
+    display:flex;
+    justify-content:center;
+    
 }
 
 
