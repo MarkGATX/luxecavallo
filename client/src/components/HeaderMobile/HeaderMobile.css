@@ -26,7 +26,12 @@
 .mobileMenuList {
     display:flex;
     justify-content:center;
+padding:0 !important;
     
+}
+
+.mobileContactText span{
+    font-size: .7em !important;
 }
 
 

@@ -45,35 +45,36 @@ const HeaderMobile = () => {
     const sideContrastHorse = useRef();
     const mainContrastHorse = useRef();
     const burger = useRef();
+    console.log(sideContrastText)
 
 
-    // function slideDrawer() {
-    //     toggleMenu();
-    //     console.log(isMenuOpen)
-    //     const menuDrawer = document.querySelector('.MuiDrawer-paper')
-    //     // true = drawer open, so if false, open drawer
-    //     isMenuOpen ? setMenuAction('Open') : setMenuAction('Close')
-    //     if (!isMenuOpen) {
-    //         gsap.to(sideContrastText.current, { duration: 1, y: -120 })
-    //         gsap.to(sideContrastHorse.current, { duration: 1, y: -120 })
-    //         gsap.to(mainContrastText.current, { duration: 1, y: -120 })
-    //         gsap.to(mainContrastHorse.current, { duration: 1, y: -120 })
-    //         gsap.to(burger.current, { duration: 1, y: 90 })
-    //         gsap.to(menuDrawer, { duration: 1, ease: 'power1.out', y: 200, zIndex: 1200 })
-    //     } else {
-    //         gsap.to(menuDrawer, { duration: 1, ease: 'none', y: -200, zIndex: -1 })
-    //         gsap.to(sideContrastText.current, { duration: 1, y: 0 })
-    //         gsap.to(sideContrastHorse.current, { duration: 1, y: 0 })
-    //         gsap.to(mainContrastText.current, { duration: 1, y: 0 })
-    //         gsap.to(mainContrastHorse.current, { duration: 1, y: 0 })
-    //         gsap.to(burger.current, { duration: 1, y: 0 })
+    function slideDrawer() {
+        toggleMenu();
+        console.log(isMenuOpen)
+        const menuDrawer = document.querySelector('.MuiDrawer-paper')
+        // true = drawer open, so if false, open drawer
+        isMenuOpen ? setMenuAction('Open') : setMenuAction('Close')
+        if (!isMenuOpen) {
+            gsap.to(sideContrastText.current, { duration: 1, y: -35 })
+            gsap.to(sideContrastHorse.current, { duration: 1, y: -35 })
+            gsap.to(mainContrastText.current, { duration: 1, y: -35 })
+            gsap.to(mainContrastHorse.current, { duration: 1, y: -35 })
+            
+            gsap.to(menuDrawer, { duration: 1, ease: 'power1.out', y: 180 })
+        } else {
+            gsap.to(menuDrawer, { duration: 1, ease: 'none', y: -200 })
+            gsap.to(sideContrastText.current, { duration: 1, y: 0 })
+            gsap.to(sideContrastHorse.current, { duration: 1, y: 0 })
+            gsap.to(mainContrastText.current, { duration: 1, y: 0 })
+            gsap.to(mainContrastHorse.current, { duration: 1, y: 0 })
+           
 
-    //     }
-    // }
+        }
+    }
 
     return (
         <>
-            <Grid2 container className='headerContainer' sx={{ width: '100%', height: '80px', backgroundColor: 'headerBack.main', position: 'absolute', justifyContent: 'space-between', overflow: 'hidden', padding: '1em', flexWrap: 'nowrap', alignItems: 'center' }}>
+            <Grid2 container className='headerContainer' sx={{ width: '100%', height: '80px', backgroundColor: 'headerBack.main', position: 'absolute', justifyContent: 'space-between', overflow: 'hidden', padding: '1em', flexWrap: 'nowrap', alignItems: 'center', zIndex:2 }}>
 
                 <Grid2 xs={8} sx={{ width: '100%', textAlign: 'center' }}>
                     <Typography className='headerTitleLightMobile' ref={sideContrastText} variant='h1' component='h1' sx={{ color: 'headerBack.contrastText', position: 'relative', letterSpacing: '.5em', top:'40px' }}>LUXE CAVALLO</Typography>
@@ -82,8 +83,8 @@ const HeaderMobile = () => {
                     <img src={cavaleLogo} ref={sideContrastHorse} alt='Gold Luxe Cavale Logo' className='cavaleLogoGoldMobile' height="70px" width="70px"></img>
                 </Grid2>
                 <Grid2 xs={1}>
-                    <Grid2 ref={burger} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                        <MenuIcon className='menuIcon' sx={{ color: 'headerBack.contrastText' }} />
+                    <Grid2 ref={burger}  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                        <MenuIcon className='menuIcon' onClick={()=>slideDrawer()} sx={{ color: 'headerBack.contrastText', zIndex:10, }} />
                         <Typography variant='subtitle2' sx={{ color: 'headerBack.contrastText' }}>{menuAction}</Typography>
                     </Grid2>
                 </Grid2>
@@ -100,12 +101,12 @@ const HeaderMobile = () => {
                                 backgroundColor: 'secondary.main',
                                 width: '100%',
                                 boxSizing: 'border-box',
-                                zIndex: '-1',
+                                zIndex: '1',
                                 top: '-100px',
                                 position: 'absolute',
                                 overflow: 'hidden',
                                 justifyContent: 'space-between',
-                                padding: '1rem 0 1rem 0',
+                                padding: '.5rem 0 0 0',
                             },
                         }}
                         variant="permanent"
@@ -157,7 +158,7 @@ const HeaderMobile = () => {
                                                 <ListItemIcon>
                                                     <Icon />
                                                 </ListItemIcon>
-                                                <ListItemText sx={{fontSize:".6em"}} primary={text} />
+                                                <ListItemText className='mobileContactText'  primary={text} />
                                             </ListItemButton>
                                         </ListItem>
                                     </Link>
@@ -169,10 +170,10 @@ const HeaderMobile = () => {
             </Grid2>
             <Grid2 container sx={{ width: '100%', height: '80px', position: 'absolute', justifyContent: 'space-between',  padding: '0 1em', flexWrap: 'nowrap', alignItems: 'center' , top:'80px', overflow:'hidden'}} >
                 <Grid2 xs={8} sx={{ width: '100%', textAlign: 'center', }}>
-                    <Typography className='headerTitleDarkMobile' ref={sideContrastText} variant='h1' component='h1' sx={{ color: 'text.main', position: 'relative', letterSpacing: '.49em', top:'-40px', fontWeight:700 }}>LUXE CAVALLO</Typography>
+                    <Typography className='headerTitleDarkMobile' ref={mainContrastText} variant='h1' component='h1' sx={{ color: 'text.main', position: 'relative', letterSpacing: '.49em', top:'-40px', fontWeight:700 }}>LUXE CAVALLO</Typography>
                 </Grid2>
                 <Grid2 xs={2}>
-                    <img src={cavaleLogo} ref={sideContrastHorse} alt='Dark Luxe Cavale Logo' className='cavaleLogoMobile' height="70px" width="70px"></img>
+                    <img src={cavaleLogo} ref={mainContrastHorse} alt='Dark Luxe Cavale Logo' className='cavaleLogoMobile' height="70px" width="70px"></img>
                 </Grid2>
                 <Grid2 xs={1}>
                     
