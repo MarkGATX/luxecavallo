@@ -55,9 +55,9 @@ const HeaderMobile = () => {
             gsap.to(mainContrastText.current, { duration: 1, y: -40 })
             gsap.to(mainContrastHorse.current, { duration: 1, y: -40 })
 
-            gsap.to(menuDrawer, { duration: 1, ease: 'power1.out', y: 180 })
+            gsap.to(menuDrawer, { duration: .8, ease: 'ease-out-in', y: 160 })
         } else {
-            gsap.to(menuDrawer, { duration: 1, ease: 'none', y: -200 })
+            gsap.to(menuDrawer, { delay: .3, duration: .8, ease: 'ease-out-in', y: 60 })
             gsap.to(sideContrastText.current, { duration: 1, y: 0 })
             gsap.to(sideContrastHorse.current, { duration: 1, y: 0 })
             gsap.to(mainContrastText.current, { duration: 1, y: 0 })
@@ -98,7 +98,7 @@ const HeaderMobile = () => {
                                 width: '100%',
                                 boxSizing: 'border-box',
                                 zIndex: '1',
-                                top: '-100px',
+                                top: '-80px',
                                 position: 'absolute',
                                 overflow: 'hidden',
                                 justifyContent: 'space-between',
