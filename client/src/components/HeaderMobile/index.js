@@ -141,7 +141,7 @@ const HeaderMobile = () => {
                                 );
                             })}
                         </List>
-                        <Divider />
+                        <Divider sx={{borderColor:'headerBack.main'}}/>
                         <List className='mobileMenuList'>
                             {contactItems.map((item, index) => {
                                 const text = Object.keys(item)[0];
@@ -168,7 +168,7 @@ const HeaderMobile = () => {
                 <Grid2 xs={8} sx={{ width: '100%', textAlign: 'center', }}>
                     <Typography className='headerTitleDarkMobile' ref={mainContrastText} variant='h1' component='h1' sx={{ color: 'text.main', position: 'relative', letterSpacing: '.49em', top: '-40px', fontWeight: 700 }}>LUXE CAVALLO</Typography>
                 </Grid2>
-                <Grid2 xs={2}>
+                <Grid2 xs={2} sx={{zIndex: isMenuOpen ? -1 : 5}}>
                     <img src={cavaleLogo} ref={mainContrastHorse} alt='Dark Luxe Cavale Logo' className='cavaleLogoMobile' height="70px" width="70px"></img>
                 </Grid2>
                 <Grid2 xs={1}>

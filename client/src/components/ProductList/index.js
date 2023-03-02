@@ -42,18 +42,18 @@ export default function ProductList({ products }, { in: inProp }) {
           sx={{
             display: "flex",
             flexWrap: "wrap",
-            minHeight: "500px",
+            minHeight: product.size ? '600px' : '450px',
             justifyContent: "space-between",
             paddingBottom: "50px",
+            
           }}
         >
           <Link to={`/${product.category}/${product._id}`} underline='none' >
             <Card className='prodCards'
               sx={{
+                minHeight: product.size ? '600px' : '550px',
                 ":hover": {
                   boxShadow: 4,
-                  scale: "102%",
-                  transition: 'scale .5s'
                 },
               }}
             >
@@ -63,10 +63,10 @@ export default function ProductList({ products }, { in: inProp }) {
                   display: "flex",
                   flexWrap: "wrap",
                   justifyContent: "space-between",
-                  minHeight: '450px'
+                  height: '100%'
                 }}
               >
-                <Box sx={{ width: { s: "100%", md: "40%" } }}>
+                <Box sx={{ width: { xs: "100%"} }}>
                   <Image
                     src={`${product.imageURL}@0.25x.jpg`}
                     maxHeight="200px"
@@ -74,12 +74,15 @@ export default function ProductList({ products }, { in: inProp }) {
                     distance="100px"
                     className="productImage"
                     showLoading
+                    width='100%'
+                    height='auto'
+                    
                     alt={`${product.name} with ${product.attribution}`}
                   />
                 </Box>
                 <Typography
                   variant="body2"
-                  sx={{ width: { s: "100%", md: "45%" } }}
+                  sx={{ width: { s: "100%" }, paddingTop:'1em' }}
                 >
                   {product.description}
                 </Typography>

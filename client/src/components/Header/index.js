@@ -163,8 +163,8 @@ const Header = () => {
                         })}
                     </List>
                 </Drawer>
-                <Box sx={{ width: sideWidth, paddingTop: '1em' }}>
-                    <Link to={`/`}><img src={cavaleLogo} ref={mainContrastHorse} alt='Dark Luxe Cavale Logo' className='cavaleLogo'></img></Link>
+                <Box ref={mainContrastHorse} sx={{ width: sideWidth, paddingTop: '1em' }}>
+                    <Link  to={`/`}><img src={cavaleLogo} alt='Dark Luxe Cavale Logo' className='cavaleLogo'></img></Link>
                 </Box>
                 <Typography className='headerTitleDark' ref={mainContrastText} variant='h2' component='h1' sx={{ color: 'text.main', writingMode: 'vertical-lr', letterSpacing: '-.6em', textOrientation: 'upright', position: 'relative', left: '-45px', fontWeight: '900' }}>LUXE CAVALLO</Typography>
             </Box>

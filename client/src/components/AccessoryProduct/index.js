@@ -37,24 +37,24 @@ export default function AccessoryProduct() {
     // console.log(data.accessorySingleProd.name)
 
     return (
-        <Grid2 container component="main" sx={{ 
-            transition:'top .7s ease-in-out',
-            width: desktopView.isDesktop ? `calc(100% - 400px)` : `100%`, 
-            left: desktopView.isDesktop ? '400px' : 0,  
-            overflow: 'hidden', 
+        <Grid2 container component="main" sx={{
+            transition: 'top 1s ease-in-out, left 1s ease-in-out',
+            width: desktopView.isDesktop ? (menuValue.isMenuOpen ? `calc(100% - 400px)` : `calc(100% - 200px)`) : `100%`,
+            left: desktopView.isDesktop ? (menuValue.isMenuOpen ? `400px` : `200px`) : 0,
+            overflow: 'hidden',
             top: desktopView.isDesktop ? `0` : !menuValue.isMenuOpen ? `80px` : `calc(80px + ${drawerHeight}px)`,
             height: desktopView.isDesktop ? '' : '100%',
             maxHeight: desktopView.isDesktop ? "100vh" : '',
-            overflowY:'auto',
-            alignContent:'flex-start'
-            }}>
-            <Grid2 xs={7} sx={{ height: '300px', paddingLeft: '50px' }}>
+            overflowY: 'auto',
+            alignContent: 'flex-start'
+        }}>
+            <Grid2 xs={7} sx={{ height: '200px', paddingLeft: '50px' }}>
                 <Typography variant='h1' sx={{ marginBottom: '50px', paddingTop: '50px' }}>Accessories
                 </Typography>
 
             </Grid2>
             <Grid2 xs={4} sx={{ marginBottom: '30px' }}>
-                <Image height="300px" src={accessoryHeader} sx={{
+                <Image height="200px" src={accessoryHeader} sx={{
                     webkitMaskImage: 'linear-gradient(-90deg, rgba(0, 0, 0, 1), transparent)',
                     maskImage: 'linear-gradient(-90deg, rgba(0, 0, 0, 1), transparent)'
                 }}></Image>
@@ -100,7 +100,7 @@ export default function AccessoryProduct() {
                                 </Box>
                                 <Box sx={{ width: { s: "100%", md: "37%" } }}>
 
-                                    <Typography variant='body1'>{data.accessorySingleProd.description}</Typography>
+                                    <Typography variant='body1' sx={{paddingTop:'1em'}}>{data.accessorySingleProd.description}</Typography>
                                     <Typography variant='h4' className='price' sx={{ marginTop: '1em' }}>{`$ ${data.accessorySingleProd.price}`}</Typography>
                                     <Box sx={{ margin: '2em', textAlign: 'center' }}>
                                         <Button variant='contained' sx={{ width: '80%' }}>Add to Bag</Button>

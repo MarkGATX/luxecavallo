@@ -31,23 +31,23 @@ export default function AccessoryProducts() {
     // console.log(data)
 
     return (
-        <Grid2 container component="main" sx={{ 
-            transition:'top .7s ease-in-out',
-            width: desktopView.isDesktop ? `calc(100% - 400px)` : `100%`, 
-            left: desktopView.isDesktop ? '400px' : 0,  
-            overflow: 'hidden', 
+        <Grid2 container component="main" sx={{
+            transition: 'top 1s ease-in-out, left 1s ease-in-out',
+            width: desktopView.isDesktop ? (menuValue.isMenuOpen ? `calc(100% - 400px)` : `calc(100% - 200px)`) : `100%`,
+            left: desktopView.isDesktop ? (menuValue.isMenuOpen ? `400px` : `200px`) : 0,
+            overflow: 'hidden',
             top: desktopView.isDesktop ? `0` : !menuValue.isMenuOpen ? `80px` : `calc(80px + ${drawerHeight}px)`,
             height: desktopView.isDesktop ? '' : '100%',
             maxHeight: desktopView.isDesktop ? "100vh" : '',
-            overflowY:'auto',
-            alignContent:'flex-start'
-            }}>
-            <Grid2 xs={6} sx={{ height: '300px', paddingLeft: '50px' }}>
+            overflowY: 'auto',
+            alignContent: 'flex-start'
+        }}>
+            <Grid2 xs={6} sx={{ height: '200px', paddingLeft: '50px' }}>
                 <Typography variant='h1' sx={{ marginBottom: '50px', paddingTop: '50px' }}>Accessories
                 </Typography>
             </Grid2>
             <Grid2 xs={6} sx={{ marginBottom: '30px' }}>
-                <Image height="300px" src={accessoryHeader} sx={{
+                <Image height="200px" src={accessoryHeader} sx={{
                     webkitMaskImage: 'linear-gradient(-90deg, rgba(0, 0, 0, 1), transparent)',
                     maskImage: 'linear-gradient(-90deg, rgba(0, 0, 0, 1), transparent)'
                 }}></Image>
