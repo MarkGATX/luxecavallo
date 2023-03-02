@@ -75,7 +75,7 @@ export default function MensProduct() {
                     
                 </Grid2>
                 <Grid2 xs={4} sx={{ marginBottom: '30px' }}>
-                    <Image height="200px" src={mensHeader} sx={{
+                    <Image height="200px" src={mensHeader}  sx={{objectPosition: 'top',
                         webkitMaskImage: 'linear-gradient(-90deg, rgba(0, 0, 0, 1), transparent)',
                         maskImage: 'linear-gradient(-90deg, rgba(0, 0, 0, 1), transparent)'
                     }}></Image>
