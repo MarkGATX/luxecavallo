@@ -79,14 +79,6 @@ ___
 ___
 
 
-
-
-## Credits
-Thanks to all the UT-Austin Full-Stack Bootcamp for helping push me and giving me feedback and support on my projects.
-
-___
-
-
 ## License
 
 MIT License

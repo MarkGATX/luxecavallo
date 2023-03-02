@@ -26,6 +26,10 @@ import AccessoryProduct from './components/AccessoryProduct';
 import HousewareProduct from './components/HousewareProduct';
 import Sizing from './components/Sizing';
 import { HashRouter } from 'react-router-dom';
+import HeaderMobile from './components/HeaderMobile';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { SizeProvider } from './utils/sizeContext';
+
 
 
 
@@ -150,7 +154,7 @@ cavalloLightTheme = responsiveFontSizes(cavalloLightTheme)
 
 
 export default function App() {
-
+  const isDesktop = useMediaQuery('(min-width:1024px)')
   return (
     <ThemeProvider theme={cavalloLightTheme}>
       <CssBaseline />
@@ -158,22 +162,24 @@ export default function App() {
         <HashRouter>
 
           <MenuProvider>
-            <Header />
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/men' element={<MensProducts />} />
-              <Route path='/men/:id' element={<MensProduct />} />
-              <Route path='/women' element={<WomensProducts />} />
-              <Route path='/women/:id' element={<WomensProduct />} />
-              <Route path='/houseware' element={<HousewareProducts />} />
-              <Route path='/houseware/:id' element={<HousewareProduct />} />
-              <Route path='/accessories' element={<AccessoryProducts />} />
-              <Route path='/accessories/:id' element={<AccessoryProduct />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/contact' element={<Contact />} />
-              <Route path='/sizing' element={<Sizing />} />
+            {isDesktop ? <Header /> : <HeaderMobile />}
+            <SizeProvider>
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/men' element={<MensProducts />} />
+                <Route path='/men/:id' element={<MensProduct />} />
+                <Route path='/women' element={<WomensProducts />} />
+                <Route path='/women/:id' element={<WomensProduct />} />
+                <Route path='/houseware' element={<HousewareProducts />} />
+                <Route path='/houseware/:id' element={<HousewareProduct />} />
+                <Route path='/accessories' element={<AccessoryProducts />} />
+                <Route path='/accessories/:id' element={<AccessoryProduct />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/contact' element={<Contact />} />
+                <Route path='/sizing' element={<Sizing />} />
 
-            </Routes>
+              </Routes>
+            </SizeProvider>
           </MenuProvider>
 
         </HashRouter>

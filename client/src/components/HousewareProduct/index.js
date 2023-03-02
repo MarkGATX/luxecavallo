@@ -10,9 +10,20 @@ import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import { SizeContext } from "../../utils/sizeContext";
+import { useContext } from 'react';
+import { MenuContext } from '../../utils/menuContext';
 
 
 export default function HousewareProduct() {
+    const menuValue = useContext(MenuContext);
+    const desktopView = useContext(SizeContext)
+    
+    const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
+    let drawerHeight =''
+    if (menuDrawers.length === 1) {
+        drawerHeight = menuDrawers[0].clientHeight;
+    } 
 
     const { id } = useParams();
     const { loading, data } = useQuery(QUERY_HOUSEWARE_PRODUCT, {
@@ -21,14 +32,24 @@ export default function HousewareProduct() {
     // console.log(data.housewareSingleProd.name)
 
     return (
-        <Grid2 container component="main" sx={{ width: `calc(100% - 400px)`, alignContent: 'flex-start' }}>
-            <Grid2 xs={7} sx={{ height: '300px', paddingLeft: '50px' }}>
+        <Grid2 container component="main" sx={{
+            transition: 'top 1s ease-in-out, left 1s ease-in-out',
+            width: desktopView.isDesktop ? (menuValue.isMenuOpen ? `calc(100% - 400px)` : `calc(100% - 200px)`) : `100%`,
+            left: desktopView.isDesktop ? (menuValue.isMenuOpen ? `400px` : `200px`) : 0,
+            overflow: 'hidden',
+            top: desktopView.isDesktop ? `0` : !menuValue.isMenuOpen ? `80px` : `calc(80px + ${drawerHeight}px)`,
+            height: desktopView.isDesktop ? '' : '100%',
+            maxHeight: desktopView.isDesktop ? "100vh" : '',
+            overflowY: 'auto',
+            alignContent: 'flex-start'
+        }}>
+            <Grid2 xs={7} sx={{ height: '200px', paddingLeft: '50px' }}>
                 <Typography variant='h1' sx={{ marginBottom: '50px', paddingTop: '50px' }}>Houseware
                 </Typography>
                 <Typography>Shop our selection of Fine Housewares</Typography>
             </Grid2>
             <Grid2 xs={4} sx={{ marginBottom: '30px' }}>
-                <Image height="300px" src={mensHeader} sx={{
+                <Image height="200px" src={mensHeader} sx={{
                     webkitMaskImage: 'linear-gradient(-90deg, rgba(0, 0, 0, 1), transparent)',
                     maskImage: 'linear-gradient(-90deg, rgba(0, 0, 0, 1), transparent)'
                 }}></Image>
@@ -76,7 +97,7 @@ export default function HousewareProduct() {
                                 </Box>
                                 <Box sx={{ width: { s: "100%", md: "37%" } }}>
 
-                                    <Typography variant='body1'>{data.housewareSingleProd.description}</Typography>
+                                    <Typography variant='body1' sx={{paddingTop:'1em'}}>{data.housewareSingleProd.description}</Typography>
                                     <Typography variant='h4' className='price' sx={{ marginTop: '1em' }}>{`$ ${data.housewareSingleProd.price}`}</Typography>
 
                                     <Box sx={{ margin: '2em', textAlign: 'center' }}>

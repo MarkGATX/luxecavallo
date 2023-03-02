@@ -72,7 +72,12 @@ const Header = () => {
     return (
         <>
 
-            <Box className='headerContainer' sx={{ width: sideWidth, minHeight: '100vh', backgroundColor: 'headerBack.main', position: 'absolute', overflow: 'hidden', }}>
+            <Box className='headerContainer' sx={{ 
+                width: sideWidth, 
+                minHeight: '100vh', 
+                backgroundColor: 'headerBack.main', 
+                position: 'absolute', 
+                overflow: 'hidden', }}>
 
                 <Box sx={{ width: '200px', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', paddingTop: '1em' }}>
                     <Box ref={burger} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
@@ -158,8 +163,8 @@ const Header = () => {
                         })}
                     </List>
                 </Drawer>
-                <Box sx={{ width: sideWidth, paddingTop: '1em' }}>
-                    <Link to={`/`}><img src={cavaleLogo} ref={mainContrastHorse} alt='Dark Luxe Cavale Logo' className='cavaleLogo'></img></Link>
+                <Box ref={mainContrastHorse} sx={{ width: sideWidth, paddingTop: '1em' }}>
+                    <Link  to={`/`}><img src={cavaleLogo} alt='Dark Luxe Cavale Logo' className='cavaleLogo'></img></Link>
                 </Box>
                 <Typography className='headerTitleDark' ref={mainContrastText} variant='h2' component='h1' sx={{ color: 'text.main', writingMode: 'vertical-lr', letterSpacing: '-.6em', textOrientation: 'upright', position: 'relative', left: '-45px', fontWeight: '900' }}>LUXE CAVALLO</Typography>
             </Box>

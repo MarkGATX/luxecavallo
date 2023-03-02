@@ -20,6 +20,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { SizeContext } from "../../utils/sizeContext";
+import { useContext } from 'react';
+import { MenuContext } from '../../utils/menuContext';
 
 const style = {
     position: 'absolute',
@@ -34,7 +37,17 @@ const style = {
 };
 
 export default function MensProduct() {
-
+    const menuValue = useContext(MenuContext);
+    const desktopView = useContext(SizeContext)
+    
+    const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
+    let drawerHeight =''
+    if (menuDrawers.length === 1) {
+        drawerHeight = menuDrawers[0].clientHeight;
+        console.log(`The height of the drawer is ${drawerHeight}px.`);
+    } else {
+        console.log(`There are ${menuDrawers.length} matching elements.`);
+    }
     const { id } = useParams();
     const { loading, data } = useQuery(QUERY_MENS_PRODUCT, {
         variables: { id: id },
@@ -45,14 +58,24 @@ export default function MensProduct() {
 
     return (
         <>
-            <Grid2 container component="main" sx={{ width: `calc(100% - 400px)`, alignContent: 'flex-start' }}>
-                <Grid2 xs={7} sx={{ height: '300px', paddingLeft: '50px' }}>
+            <Grid2 container component="main" sx={{
+            transition: 'top 1s ease-in-out, left 1s ease-in-out',
+            width: desktopView.isDesktop ? (menuValue.isMenuOpen ? `calc(100% - 400px)` : `calc(100% - 200px)`) : `100%`,
+            left: desktopView.isDesktop ? (menuValue.isMenuOpen ? `400px` : `200px`) : 0,
+            overflow: 'hidden',
+            top: desktopView.isDesktop ? `0` : !menuValue.isMenuOpen ? `80px` : `calc(80px + ${drawerHeight}px)`,
+            height: desktopView.isDesktop ? '' : '100%',
+            maxHeight: desktopView.isDesktop ? "100vh" : '',
+            overflowY: 'auto',
+            alignContent: 'flex-start'
+        }}>
+                <Grid2 xs={7} sx={{ height: '200px', paddingLeft: '50px' }}>
                     <Typography variant='h1' sx={{ marginBottom: '50px', paddingTop: '50px' }}>Menswear
                     </Typography>
-                    <Typography>Shop our selection of Menswear</Typography>
+                    
                 </Grid2>
                 <Grid2 xs={4} sx={{ marginBottom: '30px' }}>
-                    <Image height="300px" src={mensHeader} sx={{
+                    <Image height="200px" src={mensHeader} sx={{
                         webkitMaskImage: 'linear-gradient(-90deg, rgba(0, 0, 0, 1), transparent)',
                         maskImage: 'linear-gradient(-90deg, rgba(0, 0, 0, 1), transparent)'
                     }}></Image>
@@ -97,7 +120,7 @@ export default function MensProduct() {
                                     </Box>
                                     <Box sx={{ width: { s: "100%", md: "37%" }, padding: '1em' }}>
 
-                                        <Typography variant='body1'>{data.menSingleProd.description}</Typography>
+                                        <Typography variant='body1' sx={{paddingTop:'1em'}}>{data.menSingleProd.description}</Typography>
                                         <Typography variant='h4' className='price' sx={{ marginTop: '1em' }}>{`$ ${data.menSingleProd.price}`}</Typography>
 
                                         <Typography variant='h4' sx={{ marginTop: '1em' }}>Sizes</Typography>
