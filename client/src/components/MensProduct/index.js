@@ -23,6 +23,12 @@ import Paper from '@mui/material/Paper';
 import { SizeContext } from "../../utils/sizeContext";
 import { useContext } from 'react';
 import { MenuContext } from '../../utils/menuContext';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+
 
 const style = {
     position: 'absolute',
@@ -39,6 +45,13 @@ const style = {
 export default function MensProduct() {
     const menuValue = useContext(MenuContext);
     const desktopView = useContext(SizeContext)
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => {
+        setOpen(true);
+    };
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
     let drawerHeight = ''
@@ -52,9 +65,9 @@ export default function MensProduct() {
     const { loading, data } = useQuery(QUERY_MENS_PRODUCT, {
         variables: { id: id },
     });
-    const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const [sizeOpen, setSizeOpen] = useState(false);
+    const handleSizeOpen = () => setSizeOpen(true);
+    const handleSizeClose = () => setSizeOpen(false);
 
     return (
         <>
@@ -126,11 +139,11 @@ export default function MensProduct() {
 
                                         <Typography variant='h4' sx={{ marginTop: '1em' }}>Sizes</Typography>
                                         <ul className="sizeList" >
-                                            {data.menSingleProd.size.xs === 0 ? (<li className='sizeButton'><Button variant='contained' disabled >XS</Button></li>) : (<li className='sizeButton'><Button variant='contained'>XS</Button></li>)}
-                                            {data.menSingleProd.size.s === 0 ? (<li className='sizeButton' ><Button variant='contained' disabled>S</Button></li>) : (<li className='sizeButton'><Button variant='contained' >S</Button></li>)}
-                                            {data.menSingleProd.size.m === 0 ? (<li className='sizeButton'><Button variant='contained' disabled >M</Button></li>) : (<li className='sizeButton'><Button variant='contained' >M</Button></li>)}
-                                            {data.menSingleProd.size.l === 0 ? (<li className='sizeButton'><Button variant='contained' disabled>L</Button></li>) : (<li className='sizeButton'><Button variant='contained' >L</Button></li>)}
-                                            {data.menSingleProd.size.xl === 0 ? (<li className='sizeButton'><Button variant='contained' disabled >XL</Button></li>) : (<li className='sizeButton'><Button variant='contained' >XL</Button></li>)}
+                                            {data.menSingleProd.size.xs === 0 ? (<li className='sizeButton'><Button variant='contained' disabled >XS</Button></li>) : (<li className='sizeButton' ><Button variant='contained' onClick={handleOpen}>XS</Button></li>)}
+                                            {data.menSingleProd.size.s === 0 ? (<li className='sizeButton' ><Button variant='contained' disabled>S</Button></li>) : (<li className='sizeButton'><Button variant='contained' onClick={handleOpen}>S</Button></li>)}
+                                            {data.menSingleProd.size.m === 0 ? (<li className='sizeButton'><Button variant='contained' disabled >M</Button></li>) : (<li className='sizeButton'><Button variant='contained' onClick={handleOpen}>M</Button></li>)}
+                                            {data.menSingleProd.size.l === 0 ? (<li className='sizeButton'><Button variant='contained' disabled>L</Button></li>) : (<li className='sizeButton'><Button variant='contained' onClick={handleOpen}>L</Button></li>)}
+                                            {data.menSingleProd.size.xl === 0 ? (<li className='sizeButton'><Button variant='contained' disabled >XL</Button></li>) : (<li className='sizeButton'><Button variant='contained' onClick={handleOpen}>XL</Button></li>)}
                                         </ul>
                                         {data.menSingleProd.size ? (
                                             <ul className="sizeList" >
@@ -147,9 +160,9 @@ export default function MensProduct() {
                                         ) : (
                                             <Box></Box>)}
                                         <Box sx={{ margin: '2em', textAlign: 'center' }}>
-                                            <Button variant='contained' sx={{ width: '80%' }}>Add to Bag</Button>
+                                            <Button variant='contained' sx={{ width: '80%' }} onClick={handleOpen}>Add to Bag</Button>
                                         </Box>
-                                        <Typography variant='body1' sx={{ textDecoration: 'underline', cursor: 'pointer', marginBottom: '1em' }} onClick={() => handleOpen()}>Sizing Guide</Typography>
+                                        <Typography variant='body1' sx={{ textDecoration: 'underline', cursor: 'pointer', marginBottom: '1em' }} onClick={() => handleSizeOpen()}>Sizing Guide</Typography>
                                         <Typography variant='h4' >Care</Typography>
                                         <Typography variant='body1'>{data.menSingleProd.care}</Typography>
                                     </Box>
@@ -162,8 +175,8 @@ export default function MensProduct() {
                 )}
             </Grid2>
             <Modal
-                open={open}
-                onClose={handleClose}
+                open={sizeOpen}
+                onClose={handleSizeClose}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
@@ -231,6 +244,24 @@ export default function MensProduct() {
                     </TableContainer>
                 </Box>
             </Modal>
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <DialogTitle id="alert-dialog-title">
+                    {"Want to purchase this?"}
+                </DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        That sounds great but this isn't really for sale. This is a work-in-progress demo project by Mark Gardner. The shopping cart functionality hasn't been implemented yet, but you can still contact Mark by going to the <a href='./#/Contact'>Contact page</a>.
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button variant='contained' onClick={handleClose}>Close</Button>
+                </DialogActions>
+            </Dialog>
         </>
     )
 }

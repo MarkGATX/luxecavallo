@@ -13,11 +13,27 @@ import Button from '@mui/material/Button';
 import { SizeContext } from "../../utils/sizeContext";
 import { useContext } from 'react';
 import { MenuContext } from '../../utils/menuContext';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import { useState } from 'react';
 
 
 export default function HousewareProduct() {
     const menuValue = useContext(MenuContext);
     const desktopView = useContext(SizeContext)
+    const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
 
     const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
     let drawerHeight = ''
@@ -32,6 +48,7 @@ export default function HousewareProduct() {
     // console.log(data.housewareSingleProd.name)
 
     return (
+        <>
         <Grid2 container component="main" sx={{
             transition: 'top 1s ease-in-out, left 1s ease-in-out',
             width: desktopView.isDesktop ? (menuValue.isMenuOpen ? `calc(100% - 400px)` : `calc(100% - 200px)`) : `100%`,
@@ -98,7 +115,7 @@ export default function HousewareProduct() {
                                     <Typography variant='h4' className='price' sx={{ marginTop: '1em' }}>{`$ ${data.housewareSingleProd.price}`}</Typography>
 
                                     <Box sx={{ margin: '2em', textAlign: 'center' }}>
-                                        <Button variant='contained' sx={{ width: '80%' }}>Add to Bag</Button>
+                                        <Button variant='contained' sx={{ width: '80%' }} onClick={handleClickOpen}>Add to Bag</Button>
                                     </Box>
                                 </Box>
 
@@ -109,5 +126,24 @@ export default function HousewareProduct() {
                 </Grid2>
             )}
         </Grid2>
+        <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+    >
+        <DialogTitle id="alert-dialog-title">
+            {"Want to purchase this?"}
+        </DialogTitle>
+        <DialogContent>
+            <DialogContentText id="alert-dialog-description">
+                That sounds great but this isn't really for sale. This is a work-in-progress demo project by Mark Gardner. The shopping cart functionality hasn't been implemented yet, but you can still contact Mark by going to the <a href='./#/Contact'>Contact page</a>.
+            </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+            <Button variant='contained' onClick={handleClose}>Close</Button>
+        </DialogActions>
+    </Dialog>
+</>
     )
 }

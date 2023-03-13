@@ -51,7 +51,9 @@ export default function HousewareProducts() {
       </Grid2>
       {/* If the data is still loading, render a loading message  */}
       {loading ? (
-        <div xs={12}>Loading...</div>
+        <Grid2 xs={12} sx={{ paddingLeft: '50px' }}>
+          <div >Loading...</div>
+        </Grid2>
       ) : (
         <ProductList products={data.housewares} />
       )}
