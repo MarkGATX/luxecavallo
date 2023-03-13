@@ -31,11 +31,9 @@ export default function ProductList({ products }, { in: inProp }) {
       ref={app}
       container
       spacing={4}
-      sx={{ justifyContent: "space-around", margin: "0 50px" }}
-    >
+      sx={{ justifyContent: "space-around", margin: "0 50px" }}>
       {products.map((product) => (
         <Grid2
-
           key={product._id}
           md={12}
           lg={6}
@@ -45,9 +43,7 @@ export default function ProductList({ products }, { in: inProp }) {
             minHeight: product.size ? '600px' : '450px',
             justifyContent: "space-between",
             paddingBottom: "50px",
-            
-          }}
-        >
+          }}>
           <Link to={`/${product.category}/${product._id}`} underline='none' >
             <Card className='prodCards'
               sx={{
@@ -55,8 +51,7 @@ export default function ProductList({ products }, { in: inProp }) {
                 ":hover": {
                   boxShadow: 4,
                 },
-              }}
-            >
+              }}>
               <CardHeader title={product.name} titleTypographyProps={{ style: { fontSize: '1.17em' } }}></CardHeader>
               <CardContent
                 sx={{
@@ -64,9 +59,8 @@ export default function ProductList({ products }, { in: inProp }) {
                   flexWrap: "wrap",
                   justifyContent: "space-between",
                   height: '100%'
-                }}
-              >
-                <Box sx={{ width: { xs: "100%"} }}>
+                }}>
+                <Box sx={{ width: { xs: "100%" } }}>
                   <Image
                     src={`${product.imageURL}@0.25x.jpg`}
                     maxHeight="200px"
@@ -76,14 +70,12 @@ export default function ProductList({ products }, { in: inProp }) {
                     showLoading
                     width='100%'
                     height='auto'
-                    
                     alt={`${product.name} with ${product.attribution}`}
                   />
                 </Box>
                 <Typography
                   variant="body2"
-                  sx={{ width: { s: "100%" }, paddingTop:'1em' }}
-                >
+                  sx={{ width: { s: "100%" }, paddingTop: '1em' }}>
                   {product.description}
                 </Typography>
                 {product.size ? (
@@ -104,7 +96,6 @@ export default function ProductList({ products }, { in: inProp }) {
             </Card>
           </Link>
         </Grid2>
-
       ))}
     </Grid2>
 

@@ -13,9 +13,9 @@ import { MenuContext } from '../../utils/menuContext';
 export default function AccessoryProducts() {
     const menuValue = useContext(MenuContext);
     const desktopView = useContext(SizeContext)
-    
+
     const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
-    let drawerHeight =''
+    let drawerHeight = ''
     if (menuDrawers.length === 1) {
         drawerHeight = menuDrawers[0].clientHeight;
         console.log(`The height of the drawer is ${drawerHeight}px.`);

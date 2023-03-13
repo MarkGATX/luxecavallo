@@ -34,7 +34,6 @@ export default function AccessoryProduct() {
     const { loading, data } = useQuery(QUERY_ACCESSORY_PRODUCT, {
         variables: { id: id },
     });
-    // console.log(data.accessorySingleProd.name)
 
     return (
         <Grid2 container component="main" sx={{
@@ -51,7 +50,6 @@ export default function AccessoryProduct() {
             <Grid2 xs={7} sx={{ height: '200px', paddingLeft: '50px' }}>
                 <Typography variant='h1' sx={{ marginBottom: '50px', paddingTop: '50px' }}>Accessories
                 </Typography>
-
             </Grid2>
             <Grid2 xs={4} sx={{ marginBottom: '30px' }}>
                 <Image height="200px" src={accessoryHeader} sx={{
@@ -99,19 +97,12 @@ export default function AccessoryProduct() {
                                     />
                                 </Box>
                                 <Box sx={{ width: { s: "100%", md: "37%" } }}>
-
-                                    <Typography variant='body1' sx={{paddingTop:'1em'}}>{data.accessorySingleProd.description}</Typography>
+                                    <Typography variant='body1' sx={{ paddingTop: '1em' }}>{data.accessorySingleProd.description}</Typography>
                                     <Typography variant='h4' className='price' sx={{ marginTop: '1em' }}>{`$ ${data.accessorySingleProd.price}`}</Typography>
                                     <Box sx={{ margin: '2em', textAlign: 'center' }}>
                                         <Button variant='contained' sx={{ width: '80%' }}>Add to Bag</Button>
                                     </Box>
-
-
-
-
                                 </Box>
-
-
                             </CardContent>
                         </Card>
                     </Grid2>

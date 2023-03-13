@@ -8,13 +8,11 @@ import { useContext } from "react";
 import { MenuContext } from "../../utils/menuContext";
 import { SizeContext } from "../../utils/sizeContext";
 
-
 export default function Home() {
     const luxe = useRef();
     const curated = useRef();
     const menuValue = useContext(MenuContext);
     const desktopView = useContext(SizeContext)
-
 
     const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
     let drawerHeight = ''
@@ -24,7 +22,6 @@ export default function Home() {
     } else {
         console.log(`There are ${menuDrawers.length} matching elements.`);
     }
-
     return (
         <>
             <Box component="main" sx={{
@@ -34,7 +31,6 @@ export default function Home() {
                 overflow: 'hidden',
                 top: desktopView.isDesktop ? `0` : !menuValue.isMenuOpen ? `80px` : `calc(80px + ${drawerHeight}px)`,
                 height: desktopView.isDesktop ? '' : `calc(100vh-80px)`,
-                // maxHeight: desktopView.isDesktop ? "100vh" : '',
                 overflowY: 'auto',
                 alignContent: 'flex-start',
                 zIndex: '-1'

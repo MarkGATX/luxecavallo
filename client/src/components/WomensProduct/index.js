@@ -39,9 +39,9 @@ const style = {
 export default function WomensProduct() {
     const menuValue = useContext(MenuContext);
     const desktopView = useContext(SizeContext)
-    
+
     const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
-    let drawerHeight =''
+    let drawerHeight = ''
     if (menuDrawers.length === 1) {
         drawerHeight = menuDrawers[0].clientHeight;
     }
@@ -56,16 +56,16 @@ export default function WomensProduct() {
     return (
         <>
             <Grid2 container component="main" sx={{
-            transition: 'top 1s ease-in-out, left 1s ease-in-out',
-            width: desktopView.isDesktop ? (menuValue.isMenuOpen ? `calc(100% - 400px)` : `calc(100% - 200px)`) : `100%`,
-            left: desktopView.isDesktop ? (menuValue.isMenuOpen ? `400px` : `200px`) : 0,
-            overflow: 'hidden',
-            top: desktopView.isDesktop ? `0` : !menuValue.isMenuOpen ? `80px` : `calc(80px + ${drawerHeight}px)`,
-            height: desktopView.isDesktop ? '' : '100%',
-            maxHeight: desktopView.isDesktop ? "100vh" : '',
-            overflowY: 'auto',
-            alignContent: 'flex-start'
-        }}>                                                
+                transition: 'top 1s ease-in-out, left 1s ease-in-out',
+                width: desktopView.isDesktop ? (menuValue.isMenuOpen ? `calc(100% - 400px)` : `calc(100% - 200px)`) : `100%`,
+                left: desktopView.isDesktop ? (menuValue.isMenuOpen ? `400px` : `200px`) : 0,
+                overflow: 'hidden',
+                top: desktopView.isDesktop ? `0` : !menuValue.isMenuOpen ? `80px` : `calc(80px + ${drawerHeight}px)`,
+                height: desktopView.isDesktop ? '' : '100%',
+                maxHeight: desktopView.isDesktop ? "100vh" : '',
+                overflowY: 'auto',
+                alignContent: 'flex-start'
+            }}>
                 <Grid2 xs={7} sx={{ height: '200px', paddingLeft: '50px' }}>
                     <Typography variant='h1' sx={{ marginBottom: '50px', paddingTop: '50px' }}>Womenswear
                     </Typography>
@@ -115,11 +115,11 @@ export default function WomensProduct() {
                                         />
                                     </Box>
                                     <Box sx={{ width: { s: "100%", md: "37%" } }}>
-                                        
-                                            <Typography variant='body1' sx={{paddingTop:'1em'}}>{data.womenSingleProd.description}</Typography>
-                                            <Typography variant='h4' className='price' sx={{marginTop:'1em'}}>{`$ ${data.womenSingleProd.price}`}</Typography>
-                                   
-                                        <Typography variant='h4'sx={{marginTop:'1em'}}>Sizes</Typography>
+
+                                        <Typography variant='body1' sx={{ paddingTop: '1em' }}>{data.womenSingleProd.description}</Typography>
+                                        <Typography variant='h4' className='price' sx={{ marginTop: '1em' }}>{`$ ${data.womenSingleProd.price}`}</Typography>
+
+                                        <Typography variant='h4' sx={{ marginTop: '1em' }}>Sizes</Typography>
                                         <ul className="sizeList" >
                                             {data.womenSingleProd.size.xs === 0 ? (<li className='sizeButton'><Button variant='contained' disabled >XS</Button></li>) : (<li className='sizeButton'><Button variant='contained'>XS</Button></li>)}
                                             {data.womenSingleProd.size.s === 0 ? (<li className='sizeButton' ><Button variant='contained' disabled>S</Button></li>) : (<li className='sizeButton'><Button variant='contained' >S</Button></li>)}
@@ -141,10 +141,10 @@ export default function WomensProduct() {
                                             </ul>
                                         ) : (
                                             <Box></Box>)}
-                                            <Box sx={{margin:'2em', textAlign:'center'}}>
-                                                <Button variant='contained' sx={{width:'80%'}}>Add to Bag</Button>
-                                            </Box>
-                                        <Typography variant='body1' sx={{textDecoration:'underline', cursor:'pointer', marginBottom:'1em'}} onClick={() => handleOpen()}>Sizing Guide</Typography>
+                                        <Box sx={{ margin: '2em', textAlign: 'center' }}>
+                                            <Button variant='contained' sx={{ width: '80%' }}>Add to Bag</Button>
+                                        </Box>
+                                        <Typography variant='body1' sx={{ textDecoration: 'underline', cursor: 'pointer', marginBottom: '1em' }} onClick={() => handleOpen()}>Sizing Guide</Typography>
                                         <Typography variant='h4' >Care</Typography>
                                         <Typography variant='body1'>{data.womenSingleProd.care}</Typography>
                                     </Box>

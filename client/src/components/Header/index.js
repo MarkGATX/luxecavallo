@@ -50,7 +50,7 @@ const Header = () => {
         console.log(isMenuOpen)
         const menuDrawer = document.querySelector('.MuiDrawer-paper')
         // true = drawer open, so if false, open drawer
-        isMenuOpen ? setMenuAction('Open') : setMenuAction('Close') 
+        isMenuOpen ? setMenuAction('Open') : setMenuAction('Close')
         if (!isMenuOpen) {
             gsap.to(sideContrastText.current, { duration: 1, x: -120 })
             gsap.to(sideContrastHorse.current, { duration: 1, x: -120 })
@@ -65,19 +65,19 @@ const Header = () => {
             gsap.to(mainContrastText.current, { duration: 1, x: 0 })
             gsap.to(mainContrastHorse.current, { duration: 1, x: 0 })
             gsap.to(burger.current, { duration: 1, x: 0 })
-
         }
     }
 
     return (
         <>
 
-            <Box className='headerContainer' sx={{ 
-                width: sideWidth, 
-                minHeight: '100vh', 
-                backgroundColor: 'headerBack.main', 
-                position: 'absolute', 
-                overflow: 'hidden', }}>
+            <Box className='headerContainer' sx={{
+                width: sideWidth,
+                minHeight: '100vh',
+                backgroundColor: 'headerBack.main',
+                position: 'absolute',
+                overflow: 'hidden',
+            }}>
 
                 <Box sx={{ width: '200px', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', paddingTop: '1em' }}>
                     <Box ref={burger} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
@@ -92,7 +92,6 @@ const Header = () => {
                 <Drawer
                     sx={{
                         width: drawerWidth,
-
                         flexShrink: 0,
                         '& .MuiDrawer-paper': {
                             backgroundColor: 'secondary.main',
@@ -109,7 +108,6 @@ const Header = () => {
                     variant="permanent"
                     anchor="left"
                 >
-                    {/* <Toolbar /> */}
                     <List>
                         {menuItems.map((item, index) => {
                             const text = Object.keys(item)[0];
@@ -138,7 +136,6 @@ const Header = () => {
                                             </ListItemButton>
                                         </ListItem>
                                     </Link>)
-
                             );
                         })}
                     </List>
@@ -164,7 +161,7 @@ const Header = () => {
                     </List>
                 </Drawer>
                 <Box ref={mainContrastHorse} sx={{ width: sideWidth, paddingTop: '1em' }}>
-                    <Link  to={`/`}><img src={cavaleLogo} alt='Dark Luxe Cavale Logo' className='cavaleLogo'></img></Link>
+                    <Link to={`/`}><img src={cavaleLogo} alt='Dark Luxe Cavale Logo' className='cavaleLogo'></img></Link>
                 </Box>
                 <Typography className='headerTitleDark' ref={mainContrastText} variant='h2' component='h1' sx={{ color: 'text.main', writingMode: 'vertical-lr', letterSpacing: '-.6em', textOrientation: 'upright', position: 'relative', left: '-45px', fontWeight: '900' }}>LUXE CAVALLO</Typography>
             </Box>

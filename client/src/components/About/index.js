@@ -53,11 +53,11 @@ export default function About() {
             </Grid2>
             <Grid2 xs={12} sx={{ padding: '0 50px' }}>
                 <Grid2 container>
-                <Grid2 xs={6} sx={{ paddingRight: '50px' }}><Typography variant="body1">Luxe Cavallo is a fictional luxury boutique designed by Front End and Full Stack Developer, Mark Gardner. That's me, by the way. It was designed to be an exercise in continuing to develop my skills in React, Material UI, GraphQL, and GreenSock while continuing my job search.</Typography>
-                </Grid2>
-                <Grid2 xs={6} sx={{ paddingRight: '50px' }}>
-                    <Image src={markPic} alt="Mark Gardner interviewed at IAWTV event" width="100%" height="auto"></Image>
-                </Grid2>
+                    <Grid2 xs={6} sx={{ paddingRight: '50px' }}><Typography variant="body1">Luxe Cavallo is a fictional luxury boutique designed by Front End and Full Stack Developer, Mark Gardner. That's me, by the way. It was designed to be an exercise in continuing to develop my skills in React, Material UI, GraphQL, and GreenSock while continuing my job search.</Typography>
+                    </Grid2>
+                    <Grid2 xs={6} sx={{ paddingRight: '50px' }}>
+                        <Image src={markPic} alt="Mark Gardner interviewed at IAWTV event" width="100%" height="auto"></Image>
+                    </Grid2>
                 </Grid2>
                 <br />
                 <Typography variant='h4' sx={{ marginBottom: '1em' }}>Tech Stack</Typography>

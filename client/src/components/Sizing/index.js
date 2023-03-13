@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Typography } from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 import sizeHeader from '../../images/sizing_header.jpg'
@@ -19,16 +18,15 @@ import { MenuContext } from '../../utils/menuContext';
 export default function Sizing() {
     const menuValue = useContext(MenuContext);
     const desktopView = useContext(SizeContext)
-    
     const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
-    let drawerHeight =''
+    let drawerHeight = ''
     if (menuDrawers.length === 1) {
         drawerHeight = menuDrawers[0].clientHeight;
         console.log(`The height of the drawer is ${drawerHeight}px.`);
     } else {
         console.log(`There are ${menuDrawers.length} matching elements.`);
     }
-   
+
 
     return (
         <Grid2 container component="main" sx={{
@@ -52,15 +50,15 @@ export default function Sizing() {
                     maskImage: 'linear-gradient(-90deg, rgba(0, 0, 0, 1), transparent)'
                 }}></Image>
             </Grid2>
-            <Grid2 xs={12} sx={{paddingLeft:'50px'}}>
+            <Grid2 xs={12} sx={{ paddingLeft: '50px' }}>
                 <Typography variant="body1">Use the charts below to find your size. If the measurements for chest and waist match two different sizes, order the size that matches your chest size. All measurements are listed in inches.</Typography>
             </Grid2>
-            <Grid2 xs={12} sx={{paddingLeft:'50px'}}>
+            <Grid2 xs={12} sx={{ paddingLeft: '50px' }}>
                 <Typography id="modal-modal-title" variant="h3" component="h3" sx={{ marginBottom: '1em' }}>
                     Men's Sizing Guide
                 </Typography>
             </Grid2>
-            <Grid2 xs={10} sx={{paddingLeft:'50px'}}>
+            <Grid2 xs={10} sx={{ paddingLeft: '50px' }}>
                 <TableContainer component={Paper}>
                     <Table aria-label="Mens' sizing guide">
                         <TableHead>
@@ -120,12 +118,12 @@ export default function Sizing() {
                     </Table>
                 </TableContainer>
             </Grid2>
-            <Grid2 xs={12} sx={{paddingLeft:'50px'}}>
+            <Grid2 xs={12} sx={{ paddingLeft: '50px' }}>
                 <Typography id="modal-modal-title" variant="h3" component="h3" sx={{ marginBottom: '1em' }}>
                     Women's Sizing Guide
                 </Typography>
             </Grid2>
-            <Grid2 xs={10} sx={{paddingLeft:'50px'}}> 
+            <Grid2 xs={10} sx={{ paddingLeft: '50px' }}>
                 <TableContainer component={Paper}>
                     <Table aria-label="Womens' sizing guide">
                         <TableHead>

@@ -23,16 +23,15 @@ export default function Contact() {
   const form = useRef();
 
   const menuValue = useContext(MenuContext);
-    const desktopView = useContext(SizeContext)
-    
-    const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
-    let drawerHeight =''
-    if (menuDrawers.length === 1) {
-        drawerHeight = menuDrawers[0].clientHeight;
-        console.log(`The height of the drawer is ${drawerHeight}px.`);
-    } else {
-        console.log(`There are ${menuDrawers.length} matching elements.`);
-    }
+  const desktopView = useContext(SizeContext)
+  const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
+  let drawerHeight = ''
+  if (menuDrawers.length === 1) {
+    drawerHeight = menuDrawers[0].clientHeight;
+    console.log(`The height of the drawer is ${drawerHeight}px.`);
+  } else {
+    console.log(`There are ${menuDrawers.length} matching elements.`);
+  }
 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
@@ -49,7 +48,6 @@ export default function Contact() {
     } else {
       setMessage(inputValue);
     }
-
   };
 
   const HandleFormSubmit = (e) => {
@@ -61,7 +59,6 @@ export default function Contact() {
       setErrorMessage('Please use a valid email address');
       // We want to exit out of this code block if something is wrong so that the user can correct it
       return;
-
     }
     emailjs.sendForm('default_service', 'portfolio_contact', form.current, '9YVbKkrKLvP796bXY')
       .then((result) => {
@@ -90,7 +87,7 @@ export default function Contact() {
       maxHeight: desktopView.isDesktop ? "100vh" : '',
       overflowY: 'auto',
       alignContent: 'flex-start'
-  }}>
+    }}>
       <Grid2 xs={7} sx={{ height: '200px', paddingLeft: '50px' }}>
         <Typography variant='h1' sx={{ marginBottom: '50px', paddingTop: '50px' }}>Contact
         </Typography>
@@ -111,55 +108,48 @@ export default function Contact() {
         <Typography variant='body1' sx={{ marginBottom: '50px' }}>You can also email him at at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#104;&#101;&#109;&#97;&#114;&#107;&#103;&#97;&#114;&#100;&#110;&#101;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#116;&#104;&#101;&#109;&#97;&#114;&#107;&#103;&#97;&#114;&#100;&#110;&#101;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a> or with this form.</Typography>
       </Grid2>
       <Grid2 xs={10} sx={{ paddingLeft: '50px' }} >
-        
-            <Card component="form" ref={form} sx={{ padding: '50px', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', backgroundColor: 'tertiary.main', alignSelf: 'center' }} onSubmit={HandleFormSubmit}>
-              <TextField
-                required
-                id="outlined-required-email"
-                label="E-mail"
-
-                value={email}
-                onChange={handleInputChange}
-                type='email'
-                name='user_email'
-                sx={{ width: '80%', margin: '20px', backgroundColor: 'background.default' }}
-              />
-              <TextField
-                required
-                id="outlined-required-name"
-                label="Name"
-                value={name}
-                onChange={handleInputChange}
-                type='text'
-                name='user_name'
-                sx={{ width: '80%', margin: '20px', backgroundColor: 'background.default' }}
-              />
-              <TextField
-                required
-                id="outlined-required-message"
-                label="Message"
-                value={message}
-                onChange={handleInputChange}
-                name="message"
-                sx={{ width: '80%', margin: '20px', backgroundColor: 'background.default' }}
-              />{errorMessage && (
-                <Box xs={12}>
-                  <Typography variant='body2' sx={{ width: '100%', display: 'block' }} className="error-text">{errorMessage}</Typography>
-                </Box>
-              )}
-              <Button variant='contained' type="submit" className="button" sx={{ width: '80%', marginBottom: '20px', '&:hover': { color: 'secondary.contrastText', fontWeight: 'bold' } }}>Submit</Button>
-              {show && (
-                <Box xs={12}>
-                  <Typography variant='h4' sx={{ width: '100%', display: 'block', textAlign: 'center' }} >Thanks for reaching out!<br /> We'll be in touch soon!</Typography>
-                </Box>
-              )}
-
-            </Card>
-         
-
+        <Card component="form" ref={form} sx={{ padding: '50px', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', backgroundColor: 'tertiary.main', alignSelf: 'center' }} onSubmit={HandleFormSubmit}>
+          <TextField
+            required
+            id="outlined-required-email"
+            label="E-mail"
+            value={email}
+            onChange={handleInputChange}
+            type='email'
+            name='user_email'
+            sx={{ width: '80%', margin: '20px', backgroundColor: 'background.default' }}
+          />
+          <TextField
+            required
+            id="outlined-required-name"
+            label="Name"
+            value={name}
+            onChange={handleInputChange}
+            type='text'
+            name='user_name'
+            sx={{ width: '80%', margin: '20px', backgroundColor: 'background.default' }}
+          />
+          <TextField
+            required
+            id="outlined-required-message"
+            label="Message"
+            value={message}
+            onChange={handleInputChange}
+            name="message"
+            sx={{ width: '80%', margin: '20px', backgroundColor: 'background.default' }}
+          />{errorMessage && (
+            <Box xs={12}>
+              <Typography variant='body2' sx={{ width: '100%', display: 'block' }} className="error-text">{errorMessage}</Typography>
+            </Box>
+          )}
+          <Button variant='contained' type="submit" className="button" sx={{ width: '80%', marginBottom: '20px', '&:hover': { color: 'secondary.contrastText', fontWeight: 'bold' } }}>Submit</Button>
+          {show && (
+            <Box xs={12}>
+              <Typography variant='h4' sx={{ width: '100%', display: 'block', textAlign: 'center' }} >Thanks for reaching out!<br /> We'll be in touch soon!</Typography>
+            </Box>
+          )}
+        </Card>
       </Grid2>
-
-
     </Grid2>
   )
 }

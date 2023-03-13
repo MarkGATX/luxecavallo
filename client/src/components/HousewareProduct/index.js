@@ -18,12 +18,12 @@ import { MenuContext } from '../../utils/menuContext';
 export default function HousewareProduct() {
     const menuValue = useContext(MenuContext);
     const desktopView = useContext(SizeContext)
-    
+
     const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
-    let drawerHeight =''
+    let drawerHeight = ''
     if (menuDrawers.length === 1) {
         drawerHeight = menuDrawers[0].clientHeight;
-    } 
+    }
 
     const { id } = useParams();
     const { loading, data } = useQuery(QUERY_HOUSEWARE_PRODUCT, {
@@ -60,13 +60,10 @@ export default function HousewareProduct() {
                 <Grid2
                     container
                     xs={12}
-
                     sx={{ justifyContent: "space-around", margin: "0 50px" }}
                 >
-
                     <Grid2
                         xs={12}
-
                         sx={{
                             display: "flex",
                             flexWrap: "wrap",
@@ -97,7 +94,7 @@ export default function HousewareProduct() {
                                 </Box>
                                 <Box sx={{ width: { s: "100%", md: "37%" } }}>
 
-                                    <Typography variant='body1' sx={{paddingTop:'1em'}}>{data.housewareSingleProd.description}</Typography>
+                                    <Typography variant='body1' sx={{ paddingTop: '1em' }}>{data.housewareSingleProd.description}</Typography>
                                     <Typography variant='h4' className='price' sx={{ marginTop: '1em' }}>{`$ ${data.housewareSingleProd.price}`}</Typography>
 
                                     <Box sx={{ margin: '2em', textAlign: 'center' }}>

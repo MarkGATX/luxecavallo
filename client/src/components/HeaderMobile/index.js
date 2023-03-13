@@ -27,10 +27,8 @@ import HomeIcon from '@mui/icons-material/Home';
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import Divider from "@mui/material/Divider";
 
-
 const menuItems = [{ 'Home': HomeIcon }, { 'Men': MaleIcon }, { 'Women': FemaleIcon }, { 'Accessories': DiamondIcon }, { 'Houseware': BlenderIcon }]
 const contactItems = [{ 'Sizing': StraightenIcon }, { 'About': InfoIcon }, { 'Contact': CallIcon }]
-
 
 const HeaderMobile = () => {
     const [menuAction, setMenuAction] = useState('Open')
@@ -40,8 +38,6 @@ const HeaderMobile = () => {
     const sideContrastHorse = useRef();
     const mainContrastHorse = useRef();
     const burger = useRef();
-    
-
 
     function slideDrawer() {
         toggleMenu();
@@ -54,7 +50,6 @@ const HeaderMobile = () => {
             gsap.to(sideContrastHorse.current, { duration: 1, y: -40 })
             gsap.to(mainContrastText.current, { duration: 1, y: -40 })
             gsap.to(mainContrastHorse.current, { duration: 1, y: -40 })
-
             gsap.to(menuDrawer, { duration: .8, ease: 'ease-out-in', y: 160 })
         } else {
             gsap.to(menuDrawer, { delay: .3, duration: .8, ease: 'ease-out-in', y: 60 })
@@ -67,7 +62,7 @@ const HeaderMobile = () => {
         }
     }
 
-    
+
 
     return (
         <>
@@ -141,7 +136,7 @@ const HeaderMobile = () => {
                                 );
                             })}
                         </List>
-                        <Divider sx={{borderColor:'headerBack.main'}}/>
+                        <Divider sx={{ borderColor: 'headerBack.main' }} />
                         <List className='mobileMenuList'>
                             {contactItems.map((item, index) => {
                                 const text = Object.keys(item)[0];
@@ -168,17 +163,12 @@ const HeaderMobile = () => {
                 <Grid2 xs={8} sx={{ width: '100%', textAlign: 'center', }}>
                     <Typography className='headerTitleDarkMobile' ref={mainContrastText} variant='h1' component='h1' sx={{ color: 'text.main', position: 'relative', letterSpacing: '.49em', top: '-40px', fontWeight: 700 }}>LUXE CAVALLO</Typography>
                 </Grid2>
-                <Grid2 xs={2} sx={{zIndex: isMenuOpen ? -1 : 5}}>
+                <Grid2 xs={2} sx={{ zIndex: isMenuOpen ? -1 : 5 }}>
                     <img src={cavaleLogo} ref={mainContrastHorse} alt='Dark Luxe Cavale Logo' className='cavaleLogoMobile' height="70px" width="70px"></img>
                 </Grid2>
                 <Grid2 xs={1}>
-
                 </Grid2>
             </Grid2>
-
-
-
-
         </>
     )
 }

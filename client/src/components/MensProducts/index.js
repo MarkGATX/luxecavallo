@@ -17,17 +17,17 @@ export default function MensProducts() {
   // const products = data?.Name || [];
 
   const menuValue = useContext(MenuContext);
-    const desktopView = useContext(SizeContext)
-    
-    const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
-    let drawerHeight =''
-    if (menuDrawers.length === 1) {
-        drawerHeight = menuDrawers[0].clientHeight;
-        console.log(`The height of the drawer is ${drawerHeight}px.`);
-    } else {
-        console.log(`There are ${menuDrawers.length} matching elements.`);
-    }
-  
+  const desktopView = useContext(SizeContext)
+
+  const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
+  let drawerHeight = ''
+  if (menuDrawers.length === 1) {
+    drawerHeight = menuDrawers[0].clientHeight;
+    console.log(`The height of the drawer is ${drawerHeight}px.`);
+  } else {
+    console.log(`There are ${menuDrawers.length} matching elements.`);
+  }
+
   return (
     <Grid2 container component="main" sx={{
       transition: 'top 1s ease-in-out, left 1s ease-in-out',
@@ -39,14 +39,15 @@ export default function MensProducts() {
       maxHeight: desktopView.isDesktop ? "100vh" : '',
       overflowY: 'auto',
       alignContent: 'flex-start'
-  }}>
+    }}>
       <Grid2 xs={7} sx={{ height: '200px', paddingLeft: '50px' }}>
         <Typography variant='h1' sx={{ marginBottom: '50px', paddingTop: '50px' }}>Menswear
         </Typography>
-      
+
       </Grid2>
-      <Grid2 xs={4} sx={{marginBottom:'30px'}}>
-        <Image height="200px" src={mensHeader} sx={{objectPosition: 'top',
+      <Grid2 xs={4} sx={{ marginBottom: '30px' }}>
+        <Image height="200px" src={mensHeader} sx={{
+          objectPosition: 'top',
           webkitMaskImage: 'linear-gradient(-90deg, rgba(0, 0, 0, 1), transparent)',
           maskImage: 'linear-gradient(-90deg, rgba(0, 0, 0, 1), transparent)'
         }}></Image>
