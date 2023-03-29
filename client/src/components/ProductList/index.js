@@ -37,6 +37,7 @@ export default function ProductList({ products }, { in: inProp }) {
           key={product._id}
           md={12}
           lg={6}
+          xl={4}
           sx={{
             display: "flex",
             flexWrap: "wrap",
