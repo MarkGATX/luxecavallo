@@ -78,11 +78,11 @@ export default function Contact() {
 
   return (
     <Grid2 container component="main" sx={{
-      transition: 'top 1s ease-in-out, left 1s ease-in-out',
+      transition: 'top .65s ease-out, left .65s ease-out',
       width: desktopView.isDesktop ? (menuValue.isMenuOpen ? `calc(100% - 400px)` : `calc(100% - 200px)`) : `100%`,
       left: desktopView.isDesktop ? (menuValue.isMenuOpen ? `400px` : `200px`) : 0,
       overflow: 'hidden',
-      top: desktopView.isDesktop ? `0` : !menuValue.isMenuOpen ? `80px` : `calc(80px + ${drawerHeight}px)`,
+      top: desktopView.isDesktop ? `0` : !menuValue.isMenuOpen ? `80px` : `calc(30px + ${drawerHeight}px)`,
       height: desktopView.isDesktop ? '' : '100%',
       maxHeight: desktopView.isDesktop ? "100vh" : '',
       overflowY: 'auto',

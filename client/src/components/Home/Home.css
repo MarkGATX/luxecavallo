@@ -5,6 +5,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index:1;
 }
 
 .videoText{
@@ -12,7 +13,7 @@
 }
 
 .homeSubtitle {
-    font-size: 2.5vw !important;
+    font-size: 2.5vw     !important;
 }
 
 .homeTitle {

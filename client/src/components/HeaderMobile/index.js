@@ -46,17 +46,17 @@ const HeaderMobile = () => {
         // true = drawer open, so if false, open drawer
         isMenuOpen ? setMenuAction('Open') : setMenuAction('Close')
         if (!isMenuOpen) {
-            gsap.to(sideContrastText.current, { duration: .7, y: -40 })
-            gsap.to(sideContrastHorse.current, { duration: .7, y: -40 })
-            gsap.to(mainContrastText.current, { duration: .7, y: -40 })
-            gsap.to(mainContrastHorse.current, { duration: .7, y: -40 })
-            gsap.to(menuDrawer, { duration: .7, ease: 'ease-out-in', y: 160 })
+            gsap.to(sideContrastText.current, { duration: .8, y: -40 })
+            gsap.to(sideContrastHorse.current, { duration: .8, y: -40 })
+            gsap.to(mainContrastText.current, { duration: .8, y: -40 })
+            gsap.to(mainContrastHorse.current, { duration: .8, y: -40 })
+            gsap.to(menuDrawer, { duration: .8, ease: 'ease-out-in', y: 160 })
         } else {
-            gsap.to(menuDrawer, { duration: .7, ease: 'ease-out-in', y: 0})
-            gsap.to(sideContrastText.current, { duration: .7, y: 0 })
-            gsap.to(sideContrastHorse.current, { duration: .7, y: 0 })
-            gsap.to(mainContrastText.current, { duration: .7, y: 0 })
-            gsap.to(mainContrastHorse.current, { duration: .7, y: 0 })
+            gsap.to(menuDrawer, { duration: .8, ease: 'ease-out-in', y: 0})
+            gsap.to(sideContrastText.current, { duration: .8, y: 0 })
+            gsap.to(sideContrastHorse.current, { duration: .8, y: 0 })
+            gsap.to(mainContrastText.current, { duration: .8, y: 0 })
+            gsap.to(mainContrastHorse.current, { duration: .8, y: 0 })
 
 
         }
@@ -72,7 +72,7 @@ const HeaderMobile = () => {
                     <Typography className='headerTitleLightMobile' ref={sideContrastText} variant='h1' component='h1' sx={{ color: 'headerBack.contrastText', position: 'relative', letterSpacing: '.5em', top: '40px' }}>LUXE CAVALLO</Typography>
                 </Grid2>
                 <Grid2 xs={2}>
-                    <img src={cavaleLogo} ref={sideContrastHorse} alt='Gold Luxe Cavale Logo' className='cavaleLogoGoldMobile' height="70px" width="70px"></img>
+                    <img src={cavaleLogo} ref={sideContrastHorse} alt='Gold Luxe Cavale Logo' className='cavaleLogoGoldMobile' height="80px" width="70px"></img>
                 </Grid2>
                 <Grid2 xs={1}>
                     <Grid2 ref={burger} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>

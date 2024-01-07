@@ -16,6 +16,10 @@ a {
   font-weight:bold;
 }
 
+body {
+  overflow-x:hidden;
+}
+
 /* Classes */
 
 

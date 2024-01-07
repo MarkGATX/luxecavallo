@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.a768770a.css",
-    "main.js": "/static/js/main.434c15a2.js",
+    "main.js": "/static/js/main.a0a70e50.js",
     "static/js/787.1854ea56.chunk.js": "/static/js/787.1854ea56.chunk.js",
     "static/media/cavallo_bg_vid5.mp4": "/static/media/cavallo_bg_vid5.b3e5afdcb5c0aa2ad76c.mp4",
+    "static/media/cavallo_bg_vid6.webm": "/static/media/cavallo_bg_vid6.ca1aca1d9fc245ecc38a.webm",
     "static/media/accessory_header.jpg": "/static/media/accessory_header.c8a4790fbc9f3e73ac78.jpg",
     "static/media/houseware_header.jpg": "/static/media/houseware_header.8d1ed78ae527e441ba4a.jpg",
     "static/media/womenswear_header.jpg": "/static/media/womenswear_header.24168331900f1ded13ce.jpg",
@@ -11,17 +12,18 @@
     "static/media/live_cavallo.jpg": "/static/media/live_cavallo.9bb295713e48de3bfa70.jpg",
     "static/media/sizing_header.jpg": "/static/media/sizing_header.12703827585a53d706ca.jpg",
     "static/media/step_repeat_LA.jpg": "/static/media/step_repeat_LA.2af0b4e74720ff34a1d6.jpg",
+    "static/media/cavallo_bg_mov_fallback.webp": "/static/media/cavallo_bg_mov_fallback.52f8e5e19a5440b55939.webp",
     "static/media/menswear_header.jpg": "/static/media/menswear_header.f0ea97c312c2ef3ae02a.jpg",
     "static/media/gsap-greensock.svg": "/static/media/gsap-greensock.dff87e2debbe5d37479732018b2a575a.svg",
     "static/media/cavale_logo.svg": "/static/media/cavale_logo.bbee40bdbb7cd5f8fe3fb1bd58c03ed3.svg",
     "static/media/Adobe_Fonts.svg": "/static/media/Adobe_Fonts.bf94f46a4ce1fd0b838d33545f0f160e.svg",
     "index.html": "/index.html",
     "main.a768770a.css.map": "/static/css/main.a768770a.css.map",
-    "main.434c15a2.js.map": "/static/js/main.434c15a2.js.map",
+    "main.a0a70e50.js.map": "/static/js/main.a0a70e50.js.map",
     "787.1854ea56.chunk.js.map": "/static/js/787.1854ea56.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a768770a.css",
-    "static/js/main.434c15a2.js"
+    "static/js/main.a0a70e50.js"
   ]
 }

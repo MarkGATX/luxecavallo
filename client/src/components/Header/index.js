@@ -77,6 +77,7 @@ const Header = () => {
                 backgroundColor: 'headerBack.main',
                 position: 'absolute',
                 overflow: 'hidden',
+                
             }}>
 
                 <Box sx={{ width: '200px', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', paddingTop: '1em' }}>

@@ -9,12 +9,14 @@ import { SizeContext } from "../../utils/sizeContext";
 import { useContext } from 'react';
 import { MenuContext } from '../../utils/menuContext';
 import fontsLogo from '../../images/Adobe_Fonts.svg'
+import { useTheme } from '@emotion/react';
 
 
 
 export default function About() {
     const menuValue = useContext(MenuContext);
     const desktopView = useContext(SizeContext)
+    const theme=useTheme();
 
     const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
     let drawerHeight = ''
@@ -27,11 +29,11 @@ export default function About() {
 
     return (
         <Grid2 container component="main" sx={{
-            transition: 'top 1s ease-in-out, left 1s ease-in-out',
+            transition: 'top .65s ease-out, left .65s ease-out',
             width: desktopView.isDesktop ? (menuValue.isMenuOpen ? `calc(100% - 400px)` : `calc(100% - 200px)`) : `100%`,
             left: desktopView.isDesktop ? (menuValue.isMenuOpen ? `400px` : `200px`) : 0,
             overflow: 'hidden',
-            top: desktopView.isDesktop ? `0` : !menuValue.isMenuOpen ? `80px` : `calc(80px + ${drawerHeight}px)`,
+            top: desktopView.isDesktop ? `0` : !menuValue.isMenuOpen ? `80px` : `calc(30px + ${drawerHeight}px)`,
             height: desktopView.isDesktop ? '' : '100%',
             maxHeight: desktopView.isDesktop ? "100vh" : '',
             overflowY: 'auto',
@@ -53,72 +55,69 @@ export default function About() {
             </Grid2>
             <Grid2 xs={12} sx={{ padding: '0 50px' }}>
                 <Grid2 container>
-                    <Grid2 xs={6} sx={{ paddingRight: '50px' }}><Typography variant="body1">Luxe Cavallo is a fictional luxury boutique designed by Front End and Full Stack Developer, Mark Gardner. That's me, by the way. It was designed to be an exercise in continuing to develop my skills in React, Material UI, GraphQL, and GreenSock while continuing my job search.</Typography>
+                    <Grid2 xs={12} md={8} sx={{ [theme.breakpoints.up('md')]: { paddingRight: '50px' } }}><Typography variant="body1">Luxe Cavallo is a fictional luxury boutique designed by Front End and Full Stack Developer, Mark Gardner. That's me, by the way. It was designed to be an exercise in continuing to develop my skills in React, Material UI, GraphQL, and GreenSock while continuing my job search.</Typography>
                     </Grid2>
-                    <Grid2 xs={6} sx={{ paddingRight: '50px' }}>
+                    <Grid2 xs={12} md={4} sx={{ [theme.breakpoints.up('md')]: { paddingRight: '50px' } }}>
                         <Image src={markPic} alt="Mark Gardner interviewed at IAWTV event" width="100%" height="auto"></Image>
                     </Grid2>
                 </Grid2>
                 <br />
                 <Typography variant='h4' sx={{ marginBottom: '1em' }}>Tech Stack</Typography>
                 <Grid2 container spacing={2} sx={{ justifyContent: 'center', flexWrap: 'wrap' }}>
-                    <Grid2 xs={3} sx={{ textAlign: 'center', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
+                    <Grid2 xs={4} sm={2} lg={2} sx={{ textAlign: 'center', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
                         <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width='50%' height="auto" />
                         <Typography xs={12} sx={{ width: '100%' }} variant='body1'>React</Typography>
                     </Grid2>
-                    <Grid2 xs={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                    <Grid2 xs={4} sm={2} lg={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
                         <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" width='50%' height="auto" />
                         <Typography variant='body1' sx={{ width: '100%' }}>GraphQL</Typography>
                     </Grid2>
-                    <Grid2 xs={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width='50%' height="auto" />
-                        <Typography variant='body1' sx={{ width: '100%' }}>CSS3</Typography>
-                    </Grid2>
-                    <Grid2 xs={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width='50%' height="auto" />
-                        <Typography variant='body1' sx={{ width: '100%' }}>Express</Typography>
-                    </Grid2>
-                    <Grid2 xs={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width='50%' height="auto" />
-                        <Typography variant='body1' sx={{ width: '100%' }}>GitHub</Typography>
-                    </Grid2>
-                    <Grid2 xs={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" width='50%' height="auto" />
-                        <Typography variant='body1' sx={{ width: '100%' }}>Heroku</Typography>
-                    </Grid2>
-                    <Grid2 xs={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width='50%' height="auto" />
-                        <Typography variant='body1' sx={{ width: '100%' }}>HTML5</Typography>
-                    </Grid2>
-                    <Grid2 xs={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width='50%' height="auto" />
-                        <Typography variant='body1' sx={{ width: '100%' }}>JavaScript</Typography>
-                    </Grid2>
-                    <Grid2 xs={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                    <Grid2 xs={4} sm={2} lg={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
                         <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" width='50%' height="auto" />
                         <Typography variant='body1' sx={{ width: '100%' }}>MaterialUI</Typography>
                     </Grid2>
-                    <Grid2 xs={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                    <Grid2 xs={4} sm={2} lg={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width='50%' height="auto" />
+                        <Typography variant='body1' sx={{ width: '100%' }}>JavaScript</Typography>
+                    </Grid2>
+                    <Grid2 xs={4} sm={2} lg={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
                         <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width='50%' height="auto" />
                         <Typography variant='body1' sx={{ width: '100%' }}>MongoDB</Typography>
                     </Grid2>
-                    <Grid2 xs={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" width='50%' height="auto" />
-                        <Typography variant='body1' sx={{ width: '100%' }}>npm</Typography>
-                    </Grid2>
-                    <Grid2 xs={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" width='50%' height="auto" />
-                        <Typography variant='body1' sx={{ width: '100%' }}>Photoshop</Typography>
-                    </Grid2>
-                    <Grid2 xs={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-plain.svg" width='50%' height="auto" />
-                        <Typography variant='body1' sx={{ width: '100%' }}>Premiere</Typography>
-                    </Grid2>
-                    <Grid2 xs={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                    <Grid2 xs={4} sm={2} lg={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
                         <Image src={gsapLogo} width='50%' height="auto" />
                         <Typography variant='body1' sx={{ width: '100%' }}>Greensock</Typography>
                     </Grid2>
-                    <Grid2 xs={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                    <Grid2 xs={4} sm={2} lg={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width='50%' height="auto" />
+                        <Typography variant='body1' sx={{ width: '100%' }}>CSS3</Typography>
+                    </Grid2>
+                    <Grid2 xs={4} sm={2} lg={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width='50%' height="auto" />
+                        <Typography variant='body1' sx={{ width: '100%' }}>HTML5</Typography>
+                    </Grid2>
+                    <Grid2 xs={4} sm={2} lg={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width='50%' height="auto" />
+                        <Typography variant='body1' sx={{ width: '100%' }}>GitHub</Typography>
+                    </Grid2>
+                    <Grid2 xs={4} sm={2} lg={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" width='50%' height="auto" />
+                        <Typography variant='body1' sx={{ width: '100%' }}>Heroku</Typography>
+                    </Grid2>
+                    <Grid2 xs={4} sm={2} lg={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" width='50%' height="auto" />
+                        <Typography variant='body1' sx={{ width: '100%' }}>npm</Typography>
+                    </Grid2>
+                    <Grid2 xs={4} sm={2} lg={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" width='50%' height="auto" />
+                        <Typography variant='body1' sx={{ width: '100%' }}>Photoshop</Typography>
+                    </Grid2>
+                    <Grid2 xs={4} sm={2} lg={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                        <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-plain.svg" width='50%' height="auto" />
+                        <Typography variant='body1' sx={{ width: '100%' }}>Premiere</Typography>
+                    </Grid2>
+
+                    <Grid2 xs={4} sm={2} lg={2}  sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
                         <Image src={fontsLogo} width='50%' height="auto" />
                         <Typography variant='body1' sx={{ width: '100%' }}>Adobe Fonts</Typography>
                     </Grid2>
