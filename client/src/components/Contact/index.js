@@ -60,7 +60,7 @@ export default function Contact() {
       // We want to exit out of this code block if something is wrong so that the user can correct it
       return;
     }
-    emailjs.sendForm('default_service', 'portfolio_contact', form.current, '9YVbKkrKLvP796bXY')
+    emailjs.sendForm('contact_service', 'portfolio_contact', form.current, '9YVbKkrKLvP796bXY')
       .then((result) => {
 
       }, (error) => {
