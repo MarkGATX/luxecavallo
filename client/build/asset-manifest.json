@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a768770a.css",
-    "main.js": "/static/js/main.a0a70e50.js",
+    "main.css": "/static/css/main.c8a8ca81.css",
+    "main.js": "/static/js/main.db968296.js",
     "static/js/787.1854ea56.chunk.js": "/static/js/787.1854ea56.chunk.js",
     "static/media/cavallo_bg_vid5.mp4": "/static/media/cavallo_bg_vid5.b3e5afdcb5c0aa2ad76c.mp4",
     "static/media/cavallo_bg_vid6.webm": "/static/media/cavallo_bg_vid6.ca1aca1d9fc245ecc38a.webm",
@@ -18,12 +18,12 @@
     "static/media/cavale_logo.svg": "/static/media/cavale_logo.bbee40bdbb7cd5f8fe3fb1bd58c03ed3.svg",
     "static/media/Adobe_Fonts.svg": "/static/media/Adobe_Fonts.bf94f46a4ce1fd0b838d33545f0f160e.svg",
     "index.html": "/index.html",
-    "main.a768770a.css.map": "/static/css/main.a768770a.css.map",
-    "main.a0a70e50.js.map": "/static/js/main.a0a70e50.js.map",
+    "main.c8a8ca81.css.map": "/static/css/main.c8a8ca81.css.map",
+    "main.db968296.js.map": "/static/js/main.db968296.js.map",
     "787.1854ea56.chunk.js.map": "/static/js/787.1854ea56.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a768770a.css",
-    "static/js/main.a0a70e50.js"
+    "static/css/main.c8a8ca81.css",
+    "static/js/main.db968296.js"
   ]
 }

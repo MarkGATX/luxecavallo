@@ -1,18 +1,18 @@
 import React from "react";
-import { Typography } from "@mui/material"
+// import { Typography } from "@mui/material"
 import splashVidmp4 from '../../images/cavallo_bg_vid5.mp4'
 import splashVid from '../../images/cavallo_bg_vid6.webm'
 import vidFallback from '../../images/cavallo_bg_mov_fallback.webp'
 import './Home.css'
 import Box from "@mui/material/Box";
-import { useRef } from "react";
+// import { useRef } from "react";
 import { useContext } from "react";
 import { MenuContext } from "../../utils/menuContext";
 import { SizeContext } from "../../utils/sizeContext";
 
 export default function Home() {
-    const luxe = useRef();
-    const curated = useRef();
+    // const luxe = useRef();
+    // const curated = useRef();
     const menuValue = useContext(MenuContext);
     const desktopView = useContext(SizeContext)
     console.log(desktopView)
@@ -25,9 +25,9 @@ export default function Home() {
     } else {
  
     }
-    const mainWidthValue = menuValue.isMenuOpen ? (window.innerWidth - 400) : (window.innerWidth - 200);
-    const mainHeightValue = desktopView.isDesktop ? '100dvh' : (window.innerHeight-80);
-    const mainTopValue = menuValue.isMenuOpen ? `${80 + drawerHeight}px`  : `80px`;
+    // const mainWidthValue = menuValue.isMenuOpen ? (window.innerWidth - 400) : (window.innerWidth - 200);
+    // const mainHeightValue = desktopView.isDesktop ? '100dvh' : (window.innerHeight-80);
+    // const mainTopValue = menuValue.isMenuOpen ? `${80 + drawerHeight}px`  : `80px`;
     return (
         <>
             <Box component="main" sx={{
