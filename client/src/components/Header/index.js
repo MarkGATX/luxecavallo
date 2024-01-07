@@ -52,19 +52,19 @@ const Header = () => {
         // true = drawer open, so if false, open drawer
         isMenuOpen ? setMenuAction('Open') : setMenuAction('Close')
         if (!isMenuOpen) {
-            gsap.to(sideContrastText.current, { duration: 1, x: -120 })
-            gsap.to(sideContrastHorse.current, { duration: 1, x: -120 })
-            gsap.to(mainContrastText.current, { duration: 1, x: -120 })
-            gsap.to(mainContrastHorse.current, { duration: 1, x: -120 })
-            gsap.to(burger.current, { duration: 1, x: 90 })
-            gsap.to(menuDrawer, { duration: 1, ease: 'power1.out', x: 200, zIndex: 1200 })
+            gsap.to(sideContrastText.current, { duration: .7, x: -120 })
+            gsap.to(sideContrastHorse.current, { duration: .7, x: -120 })
+            gsap.to(mainContrastText.current, { duration: .7, x: -120 })
+            gsap.to(mainContrastHorse.current, { duration: .7, x: -120 })
+            gsap.to(burger.current, { duration: .7, x: 90 })
+            gsap.to(menuDrawer, { duration: .7, ease: 'power1.out', x: 200, zIndex: 1200 })
         } else {
-            gsap.to(menuDrawer, { duration: 1, ease: 'none', x: -200, zIndex: -1 })
-            gsap.to(sideContrastText.current, { duration: 1, x: 0 })
-            gsap.to(sideContrastHorse.current, { duration: 1, x: 0 })
-            gsap.to(mainContrastText.current, { duration: 1, x: 0 })
-            gsap.to(mainContrastHorse.current, { duration: 1, x: 0 })
-            gsap.to(burger.current, { duration: 1, x: 0 })
+            gsap.to(menuDrawer, { duration: .7, ease: 'none', x: -200, zIndex: -1 })
+            gsap.to(sideContrastText.current, { duration: .7, x: 0 })
+            gsap.to(sideContrastHorse.current, { duration: .7, x: 0 })
+            gsap.to(mainContrastText.current, { duration: .7, x: 0 })
+            gsap.to(mainContrastHorse.current, { duration: .7, x: 0 })
+            gsap.to(burger.current, { duration: .7, x: 0 })
         }
     }
 

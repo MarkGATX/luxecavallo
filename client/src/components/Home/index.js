@@ -1,6 +1,8 @@
 import React from "react";
 import { Typography } from "@mui/material"
-import splashVid from '../../images/cavallo_bg_vid5.mp4'
+import splashVidmp4 from '../../images/cavallo_bg_vid5.mp4'
+import splashVid from '../../images/cavallo_bg_vid6.webm'
+import vidFallback from '../../images/cavallo_bg_mov_fallback.webp'
 import './Home.css'
 import Box from "@mui/material/Box";
 import { useRef } from "react";
@@ -35,8 +37,9 @@ export default function Home() {
                 alignContent: 'flex-start',
                 zIndex: '-1'
             }}>
-                <video autoPlay muted loop id="splashVid" >
-                    <source src={splashVid} type="video/mp4" />
+                <video autoPlay muted loop id="splashVid" poster={vidFallback}>
+                    <source src={splashVid} type="video/webm" />
+                    <source src={splashVidmp4} type="video/mp4" />
                 </video>
 
                 {!menuValue.isMenuOpen ?

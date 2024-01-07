@@ -46,17 +46,17 @@ const HeaderMobile = () => {
         // true = drawer open, so if false, open drawer
         isMenuOpen ? setMenuAction('Open') : setMenuAction('Close')
         if (!isMenuOpen) {
-            gsap.to(sideContrastText.current, { duration: 1, y: -40 })
-            gsap.to(sideContrastHorse.current, { duration: 1, y: -40 })
-            gsap.to(mainContrastText.current, { duration: 1, y: -40 })
-            gsap.to(mainContrastHorse.current, { duration: 1, y: -40 })
-            gsap.to(menuDrawer, { duration: .8, ease: 'ease-out-in', y: 160 })
+            gsap.to(sideContrastText.current, { duration: .7, y: -40 })
+            gsap.to(sideContrastHorse.current, { duration: .7, y: -40 })
+            gsap.to(mainContrastText.current, { duration: .7, y: -40 })
+            gsap.to(mainContrastHorse.current, { duration: .7, y: -40 })
+            gsap.to(menuDrawer, { duration: .7, ease: 'ease-out-in', y: 160 })
         } else {
-            gsap.to(menuDrawer, { delay: .3, duration: .8, ease: 'ease-out-in', y: 60 })
-            gsap.to(sideContrastText.current, { duration: 1, y: 0 })
-            gsap.to(sideContrastHorse.current, { duration: 1, y: 0 })
-            gsap.to(mainContrastText.current, { duration: 1, y: 0 })
-            gsap.to(mainContrastHorse.current, { duration: 1, y: 0 })
+            gsap.to(menuDrawer, { duration: .7, ease: 'ease-out-in', y: 0})
+            gsap.to(sideContrastText.current, { duration: .7, y: 0 })
+            gsap.to(sideContrastHorse.current, { duration: .7, y: 0 })
+            gsap.to(mainContrastText.current, { duration: .7, y: 0 })
+            gsap.to(mainContrastHorse.current, { duration: .7, y: 0 })
 
 
         }
@@ -108,7 +108,6 @@ const HeaderMobile = () => {
                             {menuItems.map((item, index) => {
                                 const text = Object.keys(item)[0];
                                 const Icon = Object.values(item)[0];
-                                console.log(Icon)
                                 return (
                                     text === 'Home' ? (<Link key={index} to={`/`}>
                                         <ListItem disablePadding>

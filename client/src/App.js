@@ -30,16 +30,9 @@ import HeaderMobile from './components/HeaderMobile';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { SizeProvider } from './utils/sizeContext';
 
-
-
-
-
-
 const client = new ApolloClient({
   uri: 'https://luxecavallo.herokuapp.com/graphql' || 'http://localhost:3001/graphql',
-  // uri: "mongodb+srv://themarkgardner:<password>@luxecavallo.8oswhiw.mongodb.net/?retryWrites=true&w=majority",
-  // uri: process.env.MONGODB_URI || 'http://localhost:3001/graphql',
-  // uri: process.env.MONGODB_URI,
+
   cache: new InMemoryCache(),
 });
 
@@ -59,8 +52,6 @@ let cavalloLightTheme = createTheme({
       contrastText: '#ffffff'
     },
     tertiary: {
-      // main:'#4d616c',
-      // contrastText:'#ffffff',
       main: '#efe2bc',
       contrastText: '#211b04',
     },
@@ -114,7 +105,7 @@ cavalloLightTheme = createTheme(cavalloLightTheme, {
         // Name of the slot
         root: {
           // Some CSS
-          backgroundColor: cavalloLightTheme.palette.secondary.main,
+          // backgroundColor: cavalloLightTheme.palette.secondary.main,
           color: cavalloLightTheme.palette.secondary.contrastText,
 
           '&:hover, &.Mui-focusVisible': {
