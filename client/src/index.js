@@ -7,9 +7,6 @@ import reportWebVitals from './reportWebVitals';
 
 // dotenv.config()
 
-
-console.log(process.env) 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

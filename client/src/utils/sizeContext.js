@@ -12,7 +12,7 @@ export const useSizeContext = () => useContext(SizeContext);
 // MenuProvider component that holds initial state, returns provider component
 export const SizeProvider = ({ children }) => {
   const isDesktop = useMediaQuery('(min-width:1024px)');
-  console.log(isDesktop)
+
 
   // Provider components expect a value prop to be passed
   return (

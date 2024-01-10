@@ -57,9 +57,6 @@ export default function MensProduct() {
     let drawerHeight = ''
     if (menuDrawers.length === 1) {
         drawerHeight = menuDrawers[0].clientHeight;
-        console.log(`The height of the drawer is ${drawerHeight}px.`);
-    } else {
-        console.log(`There are ${menuDrawers.length} matching elements.`);
     }
     const { id } = useParams();
     const { loading, data } = useQuery(QUERY_MENS_PRODUCT, {

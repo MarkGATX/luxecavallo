@@ -41,7 +41,6 @@ const HeaderMobile = () => {
 
     function slideDrawer() {
         toggleMenu();
-        console.log(isMenuOpen)
         const menuDrawer = document.querySelector('.MuiDrawer-paper')
         // true = drawer open, so if false, open drawer
         isMenuOpen ? setMenuAction('Open') : setMenuAction('Close')
@@ -140,7 +139,6 @@ const HeaderMobile = () => {
                             {contactItems.map((item, index) => {
                                 const text = Object.keys(item)[0];
                                 const Icon = Object.values(item)[0];
-                                console.log(Icon)
                                 return (
                                     <Link key={index} to={`/${text}`}>
                                         <ListItem disablePadding>

@@ -45,7 +45,6 @@ export default function HousewareProduct() {
     const { loading, data } = useQuery(QUERY_HOUSEWARE_PRODUCT, {
         variables: { id: id },
     });
-    // console.log(data.housewareSingleProd.name)
 
     return (
         <>

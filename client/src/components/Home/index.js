@@ -15,7 +15,6 @@ export default function Home() {
     // const curated = useRef();
     const menuValue = useContext(MenuContext);
     const desktopView = useContext(SizeContext)
-    console.log(desktopView)
     
     const menuDrawers = document.querySelectorAll('.menuDrawer .MuiPaper-root');
     let drawerHeight = ''

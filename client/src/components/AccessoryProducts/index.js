@@ -18,14 +18,10 @@ export default function AccessoryProducts() {
     let drawerHeight = ''
     if (menuDrawers.length === 1) {
         drawerHeight = menuDrawers[0].clientHeight;
-        console.log(`The height of the drawer is ${drawerHeight}px.`);
-    } else {
-        console.log(`There are ${menuDrawers.length} matching elements.`);
     }
 
     // Execute the query on component load
     const { loading, data } = useQuery(QUERY_ACCESSORY);
-    console.log(data)
     // Use optional chaining to check if data exists and if it has a Name property. If not, return an empty array to use.
     // const products = data?.Name || [];
     // console.log(data)

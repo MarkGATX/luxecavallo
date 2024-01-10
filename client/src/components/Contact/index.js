@@ -28,9 +28,6 @@ export default function Contact() {
   let drawerHeight = ''
   if (menuDrawers.length === 1) {
     drawerHeight = menuDrawers[0].clientHeight;
-    console.log(`The height of the drawer is ${drawerHeight}px.`);
-  } else {
-    console.log(`There are ${menuDrawers.length} matching elements.`);
   }
 
   const handleInputChange = (e) => {
@@ -42,7 +39,6 @@ export default function Contact() {
 
     if (inputType === 'outlined-required-email') {
       setEmail(inputValue);
-      console.log(email)
     } else if (inputType === 'outlined-required-name') {
       setName(inputValue);
     } else {
@@ -51,7 +47,6 @@ export default function Contact() {
   };
 
   const HandleFormSubmit = (e) => {
-    console.log('submit')
     e.preventDefault();
 
     // First we check to see if the email is not valid. If so we set an error message to be displayed on the page.

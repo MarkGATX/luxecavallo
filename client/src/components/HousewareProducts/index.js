@@ -24,7 +24,6 @@ export default function HousewareProducts() {
 
   // Use optional chaining to check if data exists and if it has a Name property. If not, return an empty array to use.
   // const products = data?.Name || [];
-  // console.log(data)
 
   return (
     <Grid2 container component="main" sx={{

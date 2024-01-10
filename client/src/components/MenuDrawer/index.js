@@ -17,7 +17,7 @@ const menuItems = [{ 'Clothes': CheckroomIcon }, { 'Accessories': DiamondIcon },
 
 const MenuDrawer = forwardRef((props, ref)=> {
 // export default function MenuDrawer() {
-    console.log(menuItems)
+
 
     return (
     <Drawer ref={ref}
@@ -39,7 +39,6 @@ const MenuDrawer = forwardRef((props, ref)=> {
         {menuItems.map((item, index) => {
                 const text = Object.keys(item)[0];
                 const Icon = Object.values(item)[0];
-                console.log(Icon)
                 return (
                     <ListItem key={index} disablePadding>
                         <ListItemButton>

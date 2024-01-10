@@ -18,8 +18,6 @@ export const MenuProvider = ({ children }) => {
 
       useEffect(() => {
         // Update the localStorage count variable using the setItem method
-        console.log('%cisMenuOpen', 'color:green')
-        console.log(isMenuOpen +'context for menu')
       },[isMenuOpen]);
 
   // Provider components expect a value prop to be passed
