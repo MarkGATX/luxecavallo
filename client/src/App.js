@@ -31,7 +31,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { SizeProvider } from './utils/sizeContext';
 
 const client = new ApolloClient({
-  uri: 'https://luxecavallo.herokuapp.com/graphql' || 'http://localhost:3001/graphql',
+  uri: 'https://luxecavallo.vercel.app/graphql' || 'http://localhost:3001/graphql',
 
   cache: new InMemoryCache(),
 });

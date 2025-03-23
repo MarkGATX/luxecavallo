@@ -10,7 +10,7 @@ I started this project to reinforce my skills in React and a full MERN stack whi
 
 My original idea came purely from a concept of a vertical header/menu that would only really work on desktop. So the project started off as mainly focusing on that challenge while maintaining backend code as well. Then it expanded into a full application.
 
-[You can see it live here to take a look. ](https://luxecavallo.herokuapp.com/)
+[You can see it live here to take a look. ](https://luxecavallo.vercel.app/)
 
 ___
 

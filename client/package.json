@@ -1,6 +1,6 @@
 {
   "name": "luxecavallo-client",
-  "homepage": "https://luxecavallo.herokuapp.com",
+  "homepage": "https://luxecavallo.vercel.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

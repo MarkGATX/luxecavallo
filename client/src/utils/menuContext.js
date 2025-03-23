@@ -17,7 +17,7 @@ export const MenuProvider = ({ children }) => {
       };
 
       useEffect(() => {
-        // Update the localStorage count variable using the setItem method
+       
       },[isMenuOpen]);
 
   // Provider components expect a value prop to be passed
